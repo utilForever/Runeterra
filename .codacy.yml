@@ -1,0 +1,9 @@
+exclude_paths:
+  - README.md
+  - 3RD-PARTY.md
+  - Dockerfile
+  - .github/**
+  - Documents/**
+  - Libraries/**
+  - Resources/**
+  - Scripts/**
