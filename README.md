@@ -2,13 +2,21 @@
 
 <img src="./Medias/Logos/Logo.png" width=256 height=256 />
 
-[![License](https://img.shields.io/badge/Licence-MIT-blue.svg)](https://github.com/utilForever/Runeterra/blob/master/LICENSE)
+[![License](https://img.shields.io/badge/Licence-MIT-blue.svg)](https://github.com/utilForever/Runeterra/blob/master/LICENSE) ![Windows](https://github.com/utilForever/Runeterra/workflows/Windows/badge.svg) ![Ubuntu](https://github.com/utilForever/Runeterra/workflows/Ubuntu/badge.svg) ![macOS](https://github.com/utilForever/Runeterra/workflows/macOS/badge.svg) ![Ubuntu - Codecov](https://github.com/utilForever/Runeterra/workflows/Ubuntu%20-%20Codecov/badge.svg) [![Build Status](https://travis-ci.com/utilForever/Runeterra.svg?branch=main)](https://travis-ci.com/utilForever/Runeterra)
 
-Runeterra is Runeterra simulator using C++ with some reinforcement learning. The code is built on C++17 and can be compiled with commonly available compilers such as g++, clang++, or Microsoft Visual Studio. Runeterra currently supports macOS (10.14 or later), Ubuntu (18.04 or later), Windows (Visual Studio 2017 or later), and Windows Subsystem for Linux (WSL). Other untested platforms that support C++17 also should be able to build Runeterra.
+[![codecov](https://codecov.io/gh/utilForever/Runeterra/branch/main/graph/badge.svg)](https://codecov.io/gh/utilForever/Runeterra)
+[![Codacy Badge](https://app.codacy.com/project/badge/Grade/048c90cb358f4132982cb9be4d776b29)](https://www.codacy.com/gh/utilForever/Runeterra/dashboard?utm_source=github.com&amp;utm_medium=referral&amp;utm_content=utilForever/Runeterra&amp;utm_campaign=Badge_Grade)
+[![Total alerts](https://img.shields.io/lgtm/alerts/g/utilForever/Runeterra.svg?logo=lgtm&logoWidth=18)](https://lgtm.com/projects/g/utilForever/Runeterra/alerts/)
+[![Language grade: C/C++](https://img.shields.io/lgtm/grade/cpp/g/utilForever/Runeterra.svg?logo=lgtm&logoWidth=18)](https://lgtm.com/projects/g/utilForever/Runeterra/context:cpp)
+[![CodeFactor](https://www.codefactor.io/repository/github/utilforever/Runeterra/badge)](https://www.codefactor.io/repository/github/utilforever/Runeterra) [![Discord](https://img.shields.io/discord/789794895493726258.svg)](https://discord.gg/b8B77nrgwm)
+
+[![Quality Gate Status](https://sonarcloud.io/api/project_badges/measure?project=Runeterra&metric=alert_status)](https://sonarcloud.io/dashboard?id=Runeterra) [![Lines of Code](https://sonarcloud.io/api/project_badges/measure?project=Runeterra&metric=ncloc)](https://sonarcloud.io/dashboard?id=Runeterra) [![Maintainability Rating](https://sonarcloud.io/api/project_badges/measure?project=Runeterra&metric=sqale_rating)](https://sonarcloud.io/dashboard?id=Runeterra) [![Reliability Rating](https://sonarcloud.io/api/project_badges/measure?project=Runeterra&metric=reliability_rating)](https://sonarcloud.io/dashboard?id=Runeterra) [![Security Rating](https://sonarcloud.io/api/project_badges/measure?project=Runeterra&metric=security_rating)](https://sonarcloud.io/dashboard?id=Runeterra)
+
+Runeterra is Legends of Runeterra simulator using C++ with some reinforcement learning. The code is built on C++17 and can be compiled with commonly available compilers such as g++, clang++, or Microsoft Visual Studio. Runeterra currently supports macOS (10.14 or later), Ubuntu (18.04 or later), Windows (Visual Studio 2017 or later), and Windows Subsystem for Linux (WSL). Other untested platforms that support C++17 also should be able to build Runeterra.
 
 ## Key Features
 
-  * C++17 based Runeterra game library
+  * C++17 based Legends of Runeterra game library
   * Console and GUI simulator program
   * C++ and Python API
 
