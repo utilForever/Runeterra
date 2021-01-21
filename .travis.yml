@@ -1,0 +1,36 @@
+language: cpp
+os: linux
+dist: focal
+
+addons:
+  sonarcloud:
+    organization: "utilforever-github"
+    token:
+      secure: "eJMLcqJZVZ5VhaeHtIXauKc36NpoMccWe4N0CfoMxbZShnqdB2fsOiUac7KlHJKRDTRyBvrjt+TyhrUO+o3sCn5Mm3HqsxZKkZHlO/zb2IqbSVYMd8EUbofuQsQD0186+ESWCNILNs7FWfDK/0LicUWXbTgktN1O0J4kTkRuG22mQ+RZAiO8OkXB1JDK6nLLepx+Udkz51TMp0XVYmvt2hmePyGOhqNSuLWKS+emShSFepGt/jgRD25Su8IDyKCzgVX+0aeHOZZGnxvx8bKFGUbDChtyC/kbRRCAi2cDkJv4Ys4z95qaUMyUXA4u5V4mtsVdLx3DAC88PDHHaOe8IlqvmefvxvbHGRXuqoItD2OgeMO+JlvDcO2A4AXXNBUDVW8vCTa9dSKcPbZ2kSAhx+V8LdB3BOPNdwlPelMFMiN4KaTeGPxNuMcvC9G7sSkh6A2pEweQf5jSNgL06lGpZdgkIAZ2WFGABOuCXp95gR4qOavBF48wltwVHy/yhvZhfm3JBpNEfvIEkspNl50hnNlljQEwJivu9pVBJSrdylH4MAESBaWbKFtFlOya1By9I8B6B+qn7ghVXOfWcX1QT7MaSxYLcg9MhlsswVW0BOtqDXMNo1/noONCySW/mYX6aSqqY6pN0Xi0u50q+aDQ1avmY6TzbW43818OhOfC3Ac="
+
+script:
+  # Install packages
+  - sudo apt-get install -yq gcovr ggcov lcov curl
+  # Configure build
+  - mkdir build
+  - cd build
+  - cmake .. -DCMAKE_BUILD_TYPE=Debug -DBUILD_COVERAGE=ON
+  # Wraps the compilation with the Build Wrapper to generate configuration
+  # (used later by the SonarQube Scanner) into the "bw-output" folder
+  - build-wrapper-linux-x86-64 --out-dir ../bw-output make all
+  # Execute some tests
+  - lcov --gcov-tool /usr/bin/gcov -c -i -d Tests/UnitTests -o base.info
+  - bin/UnitTests
+  - lcov --gcov-tool /usr/bin/gcov -c -d Tests/UnitTests -o test.info
+  - lcov --gcov-tool /usr/bin/gcov -a base.info -a test.info -o coverage.info
+  - lcov --gcov-tool /usr/bin/gcov -r coverage.info '*/Includes/*' -o coverage.info
+  - lcov --gcov-tool /usr/bin/gcov -r coverage.info '*/Libraries/*' -o coverage.info
+  - lcov --gcov-tool /usr/bin/gcov -l coverage.info
+  # And finally run the SonarQube analysis - read the "sonar-project.properties"
+  # file to see the specific configuration
+  - cd ..
+  - sonar-scanner
+
+cache:
+  directories:
+    - '$HOME/.sonar/cache'
