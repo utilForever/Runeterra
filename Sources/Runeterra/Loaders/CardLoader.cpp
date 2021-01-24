@@ -4,11 +4,12 @@
 // personal capacity and are not conveying any rights to any intellectual
 // property of any third parties.
 
-#ifndef RUNETERRA_HPP
-#define RUNETERRA_HPP
-
-#include <Runeterra/Cards/Card.hpp>
 #include <Runeterra/Loaders/CardLoader.hpp>
-#include <Runeterra/Runeterra.hpp>
 
-#endif  // RUNETERRA_HPP
+namespace Runeterra
+{
+void CardLoader::Load(std::vector<std::unique_ptr<Card>>& cards)
+{
+    (void)cards;
+}
+}  // namespace Runeterra
