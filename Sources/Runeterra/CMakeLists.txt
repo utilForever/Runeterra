@@ -61,6 +61,10 @@ target_compile_options(${target}
 
     INTERFACE
 )
+target_compile_definitions(${target}
+    PRIVATE
+    RESOURCES_DIR="${RUNETERRA_ROOT}/Resources/"
+)
 
 target_link_libraries(${target}
     PRIVATE

@@ -7,6 +7,11 @@ list(APPEND CMAKE_MODULE_PATH "${CMAKE_CURRENT_SOURCE_DIR}/CMake")
 # Declare project
 project(Runeterra)
 
+# Set Runeterra's root directory
+if (NOT RUNETERRA_ROOT)
+	set(RUNETERRA_ROOT ${PROJECT_SOURCE_DIR})
+endif()
+
 # Set output directories
 set(DEFAULT_CMAKE_LIBRARY_OUTPUT_DIRECTORY ${CMAKE_LIBRARY_OUTPUT_DIRECTORY})
 set(CMAKE_RUNTIME_OUTPUT_DIRECTORY ${PROJECT_BINARY_DIR}/bin)
@@ -31,6 +36,14 @@ endif()
 
 # Overrides
 set(CMAKE_MACOSX_RPATH ON)
+
+# Set resources
+set(RESOURCES_DIR ${RUNETERRA_ROOT}/Resources)
+set(RESOURCES_JSONS
+    ${RESOURCES_DIR}/globals-en_us.json
+    ${RESOURCES_DIR}/set1-en_us.json
+    ${RESOURCES_DIR}/set2-en_us.json
+    ${RESOURCES_DIR}/set3-en_us.json)
 
 # Project modules
 add_subdirectory(Libraries/doctest)
