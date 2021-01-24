@@ -10,6 +10,9 @@ namespace Runeterra
 {
 void CardLoader::Load(std::vector<std::unique_ptr<Card>>& cards)
 {
+    LoadInternal(cards, "set1-en_us.json");
+    LoadInternal(cards, "set2-en_us.json");
+    LoadInternal(cards, "set3-en_us.json");
 }
 
 void CardLoader::LoadInternal(std::vector<std::unique_ptr<Card>>& cards,
