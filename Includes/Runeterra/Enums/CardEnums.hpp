@@ -23,6 +23,17 @@ enum class Region
     Targon,
 };
 
+//! \brief An enumerator for identifying the rarity of the card.
+enum class Rarity
+{
+    Invalid,
+    None,
+    Common,
+    Rare,
+    Epic,
+    Champion,
+};
+
 //! \brief An enumerator for identifying the type of the card.
 enum class CardType
 {
