@@ -17,10 +17,10 @@ jobs:
           #  compiler: gcc
           #  version: "7"
           # Ubuntu 18.04 + gcc-8
-          - name: "Ubuntu 18.04 + gcc-8"
-            os: ubuntu-18.04
-            compiler: gcc
-            version: "8"
+          #- name: "Ubuntu 18.04 + gcc-8"
+          #  os: ubuntu-18.04
+          #  compiler: gcc
+          #  version: "8"
           # Ubuntu 20.04 + gcc-9
           - name: "Ubuntu 20.04 + gcc-9"
             os: ubuntu-20.04
