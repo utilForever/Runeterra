@@ -9,11 +9,10 @@
 
 namespace Runeterra
 {
-Cards Cards::m_instance;
-
 Cards& Cards::GetInstance()
 {
-    return m_instance;
+    static Cards instance;
+    return instance;
 }
 
 const std::vector<std::unique_ptr<Card>>& Cards::GetAllCards() const

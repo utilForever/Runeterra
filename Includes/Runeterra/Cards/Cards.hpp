@@ -49,8 +49,6 @@ class Cards
     //! Releases card data.
     ~Cards();
 
-    static Cards m_instance;
-
     std::vector<std::unique_ptr<Card>> m_cards;
 };
 }  // namespace Runeterra
