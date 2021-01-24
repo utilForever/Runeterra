@@ -29,9 +29,9 @@ class CardLoader
  private:
     //! An internal method of Load().
     //! \param cards A data storage to store added cards with power.
-    //! \param fileName The resource file name to load.
+    //! \param stream An input file stream to read data.
     static void LoadInternal(std::vector<std::unique_ptr<Card>>& cards,
-                             const char* fileName);
+                             std::ifstream&& stream);
 };
 }  // namespace Runeterra
 
