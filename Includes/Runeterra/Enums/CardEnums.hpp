@@ -43,6 +43,15 @@ enum class CardType
     Ability,
     Landmark,
 };
+
+//! \brief An enumerator for identifying the set of the card.
+enum class CardSet
+{
+    Invalid,
+    Set1,
+    Set2,
+    Set3,
+};
 }  // namespace Runeterra
 
 #endif  // RUNETERRA_CARD_ENUMS_HPP
