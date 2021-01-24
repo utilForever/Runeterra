@@ -11,5 +11,4 @@ namespace Runeterra
 void Card::Initialize()
 {
 }
-
 }  // namespace Runeterra

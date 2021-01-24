@@ -7,6 +7,11 @@
 #ifndef RUNETERRA_CARD_HPP
 #define RUNETERRA_CARD_HPP
 
+#include <Runeterra/Enums/CardEnums.hpp>
+
+#include <string_view>
+#include <vector>
+
 namespace Runeterra
 {
 //!
@@ -19,6 +24,19 @@ class Card
  public:
     //! Initializes card data.
     void Initialize();
+
+    CardSet set;
+    Region region;
+    Rarity rarity;
+    CardType type;
+    SpellSpeed spellSpeed;
+    std::vector<Keyword> keywords;
+    std::string_view name;
+    std::string_view cardCode;
+    int attack;
+    int cost;
+    int health;
+    bool isCollectible;
 };
 }  // namespace Runeterra
 
