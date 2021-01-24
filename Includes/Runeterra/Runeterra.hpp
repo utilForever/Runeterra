@@ -8,6 +8,5 @@
 #define RUNETERRA_HPP
 
 #include <Runeterra/Runeterra.hpp>
-#include <Runeterra/Test.hpp>
 
 #endif  // RUNETERRA_HPP
