@@ -5,6 +5,7 @@
 // property of any third parties.
 
 #include <Runeterra/Cards/Cards.hpp>
+#include <Runeterra/Commons/Constants.hpp>
 #include <Runeterra/Loaders/CardLoader.hpp>
 
 namespace Runeterra
@@ -22,6 +23,8 @@ const std::vector<std::unique_ptr<Card>>& Cards::GetAllCards() const
 
 Cards::Cards()
 {
+    m_cards.reserve(NUM_ALL_CARDS);
+
     CardLoader::Load(m_cards);
 }
 
