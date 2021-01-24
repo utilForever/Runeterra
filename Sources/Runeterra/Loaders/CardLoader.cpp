@@ -25,12 +25,6 @@ void CardLoader::LoadInternal(std::vector<std::unique_ptr<Card>>& cards,
 {
     // Read card data from JSON file
     nlohmann::json cardData;
-
-    if (!stream.is_open())
-    {
-        throw std::runtime_error("Can't open file - Path: " RESOURCES_DIR);
-    }
-
     stream >> cardData;
 
     for (auto& data : cardData)
