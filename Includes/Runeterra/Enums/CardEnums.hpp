@@ -23,6 +23,42 @@ enum class Region
     Targon,
 };
 
+//! \brief An enumerator for identifying the keyword of the card.
+enum class Keyword
+{
+    Invalid,
+    Attune,
+    Augment,
+    Autoplay,
+    Barrier,
+    Burst,
+    CantBlock,
+    Challenger,
+    Deep,
+    DoubleStrike,
+    Elusive,
+    Ephemeral,
+    Fast,
+    Fearsome,
+    Fleeting,
+    Fury,
+    Imbue,
+    Immobile,
+    LandmarkVisualOnly,
+    LastBreath,
+    Lifesteal,
+    Overwhelm,
+    QuickStrike,
+    Regeneration,
+    Scout,
+    Skill,
+    Slow,
+    SpellOverwhelm,
+    SpellShield,
+    Tough,
+    Vulnerable,
+};
+
 //! \brief An enumerator for identifying the spell speed of the card.
 enum class SpellSpeed
 {
