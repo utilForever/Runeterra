@@ -23,6 +23,15 @@ enum class Region
     Targon,
 };
 
+//! \brief An enumerator for identifying the spell speed of the card.
+enum class SpellSpeed
+{
+    Invalid,
+    Slow,
+    Fast,
+    Burst,
+};
+
 //! \brief An enumerator for identifying the rarity of the card.
 enum class Rarity
 {
