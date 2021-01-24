@@ -9,6 +9,7 @@
 
 #include <Runeterra/Cards/Card.hpp>
 #include <Runeterra/Commons/Macros.hpp>
+#include <Runeterra/Enums/CardEnums.hpp>
 #include <Runeterra/Loaders/CardLoader.hpp>
 #include <Runeterra/Runeterra.hpp>
 
