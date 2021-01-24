@@ -4,12 +4,11 @@
 // personal capacity and are not conveying any rights to any intellectual
 // property of any third parties.
 
-#ifndef RUNETERRA_HPP
-#define RUNETERRA_HPP
+#ifndef RUNETERRA_MACROS_HPP
+#define RUNETERRA_MACROS_HPP
 
-#include <Runeterra/Cards/Card.hpp>
-#include <Runeterra/Commons/Macros.hpp>
-#include <Runeterra/Loaders/CardLoader.hpp>
-#include <Runeterra/Runeterra.hpp>
+#if defined(RUNETERRA_USE_MACRO_NAME_OF)
+#define NAME_OF(x) #x
+#endif
 
-#endif  // RUNETERRA_HPP
+#endif  // RUNETERRA_MACROS_HPP
