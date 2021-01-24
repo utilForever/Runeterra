@@ -25,6 +25,13 @@ class CardLoader
     //! Loads card data from set{1|2|3}-en_us.json.
     //! \param cards A data storage to store added cards with power.
     static void Load(std::vector<std::unique_ptr<Card>>& cards);
+
+ private:
+    //! An internal method of Load().
+    //! \param cards A data storage to store added cards with power.
+    //! \param fileName The resource file name to load.
+    static void LoadInternal(std::vector<std::unique_ptr<Card>>& cards,
+                             const char* fileName);
 };
 }  // namespace Runeterra
 

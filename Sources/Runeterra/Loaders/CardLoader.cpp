@@ -10,6 +10,10 @@ namespace Runeterra
 {
 void CardLoader::Load(std::vector<std::unique_ptr<Card>>& cards)
 {
-    (void)cards;
+}
+
+void CardLoader::LoadInternal(std::vector<std::unique_ptr<Card>>& cards,
+                              const char* fileName)
+{
 }
 }  // namespace Runeterra
