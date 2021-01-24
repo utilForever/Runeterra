@@ -9,6 +9,20 @@
 
 namespace Runeterra
 {
+//! \brief An enumerator for identifying the region of the card.
+enum class Region
+{
+    Invalid,
+    Bilgewater,
+    Demacia,
+    Freljord,
+    Ionia,
+    Noxus,
+    PiltoverZaun,
+    ShadowIsles,
+    Targon,
+};
+
 //! \brief An enumerator for identifying the type of the card.
 enum class CardType
 {
