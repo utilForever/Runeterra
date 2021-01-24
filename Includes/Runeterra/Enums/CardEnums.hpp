@@ -12,11 +12,11 @@ namespace Runeterra
 //! \brief An enumerator for identifying the type of the card.
 enum class CardType
 {
-    INVALID,
-    UNIT,
-    SPELL,
-    ABILITY,
-    LANDMARK,
+    Invalid,
+    Unit,
+    Spell,
+    Ability,
+    Landmark,
 };
 }  // namespace Runeterra
 
