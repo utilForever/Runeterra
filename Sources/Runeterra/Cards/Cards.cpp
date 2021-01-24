@@ -9,9 +9,16 @@
 
 namespace Runeterra
 {
+Cards Cards::m_instance;
+
 Cards& Cards::GetInstance()
 {
     return m_instance;
+}
+
+const std::vector<std::unique_ptr<Card>>& Cards::GetAllCards() const
+{
+    return m_cards;
 }
 
 Cards::Cards()
@@ -23,5 +30,4 @@ Cards::~Cards()
 {
     m_cards.clear();
 }
-
 }  // namespace Runeterra

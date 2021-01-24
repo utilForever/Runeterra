@@ -38,11 +38,15 @@ class Cards
     //! \return An instance of Cards class.
     static Cards& GetInstance();
 
+    //! Returns a list of all cards.
+    //! \return A list of all cards.
+    [[nodiscard]] const std::vector<std::unique_ptr<Card>>& GetAllCards() const;
+
  private:
-    //! Constructor: Loads card data.
+    //! Loads card data.
     Cards();
 
-    //! Destructor: Releases card data.
+    //! Releases card data.
     ~Cards();
 
     static Cards m_instance;
