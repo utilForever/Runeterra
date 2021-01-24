@@ -26,6 +26,11 @@ Cards::Cards()
     m_cards.reserve(NUM_ALL_CARDS);
 
     CardLoader::Load(m_cards);
+
+    for (auto& card : m_cards)
+    {
+        card->Initialize();
+    }
 }
 
 Cards::~Cards()
