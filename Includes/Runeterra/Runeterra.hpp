@@ -7,7 +7,12 @@
 #ifndef RUNETERRA_HPP
 #define RUNETERRA_HPP
 
+#include <Runeterra/Cards/Card.hpp>
+#include <Runeterra/Cards/Cards.hpp>
+#include <Runeterra/Commons/Constants.hpp>
+#include <Runeterra/Commons/Macros.hpp>
+#include <Runeterra/Enums/CardEnums.hpp>
+#include <Runeterra/Loaders/CardLoader.hpp>
 #include <Runeterra/Runeterra.hpp>
-#include <Runeterra/Test.hpp>
 
 #endif  // RUNETERRA_HPP
