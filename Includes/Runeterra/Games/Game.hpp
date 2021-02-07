@@ -24,6 +24,9 @@ class Game
     //! \param config The game config holds all configuration values.
     explicit Game(const GameConfig& config);
 
+    Step step = Step::BeginDraw;
+    Step nextStep = Step::BeginDraw;
+
  private:
     GameConfig m_gameConfig;
 };
