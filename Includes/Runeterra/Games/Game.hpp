@@ -7,6 +7,8 @@
 #ifndef RUNETERRA_GAME_HPP
 #define RUNETERRA_GAME_HPP
 
+#include <Runeterra/Games/GameConfig.hpp>
+
 namespace Runeterra
 {
 //!
@@ -17,6 +19,13 @@ namespace Runeterra
 //!
 class Game
 {
+ public:
+    //! Constructs game with given \p config.
+    //! \param config The game config holds all configuration values.
+    explicit Game(const GameConfig& config);
+
+ private:
+    GameConfig m_gameConfig;
 };
 }  // namespace Runeterra
 
