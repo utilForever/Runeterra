@@ -7,8 +7,12 @@
 #ifndef RUNETERRA_GAME_MANAGER_HPP
 #define RUNETERRA_GAME_MANAGER_HPP
 
+#include <Runeterra/Enums/GameEnums.hpp>
+
 namespace Runeterra
 {
+class Game;
+
 //!
 //! \brief GameManager class.
 //!
@@ -16,6 +20,11 @@ namespace Runeterra
 //!
 class GameManager
 {
+ public:
+    //! Invokes method when a state is changed.
+    //! \param game The game context.
+    //! \param step The next step.
+    static void ProcessNextStep(Game& game, Step step);
 };
 }  // namespace Runeterra
 
