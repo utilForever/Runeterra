@@ -16,6 +16,26 @@ enum class PlayerType
     Player1,  //!< The first player.
     Player2,  //!< The second player.
 };
+
+//! \brief An enumerator for indicating the game step.
+enum class Step
+{
+    BeginShuffle,
+    BeginDraw,
+    BeginMulligan,
+    MainBegin,
+    MainReady,
+    MainStartTriggers,
+    MainResource,
+    MainDraw,
+    MainStart,
+    MainAction,
+    MainEnd,
+    MainCleanUp,
+    MainNext,
+    FinalWrapUp,
+    FinalGameOver,
+};
 }  // namespace Runeterra
 
 #endif  // RUNETERRA_GAME_ENUMS_HPP
