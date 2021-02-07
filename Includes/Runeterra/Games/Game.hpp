@@ -24,6 +24,51 @@ class Game
     //! \param config The game config holds all configuration values.
     explicit Game(const GameConfig& config);
 
+    //! Part of the game state.
+    void BeginShuffle();
+
+    //! Part of the game state.
+    void BeginDraw();
+
+    //! Part of the game state.
+    void BeginMulligan();
+
+    //! Part of the game state.
+    void MainBegin();
+
+    //! Part of the game state.
+    void MainReady();
+
+    //! Part of the game state.
+    void MainStartTriggers();
+
+    //! Part of the game state.
+    void MainResource();
+
+    //! Part of the game state.
+    void MainDraw();
+
+    //! Part of the game state.
+    void MainStart();
+
+    //! Part of the game state.
+    void MainAction();
+
+    //! Part of the game state.
+    void MainEnd();
+
+    //! Part of the game state.
+    void MainCleanUp();
+
+    //! Part of the game state.
+    void MainNext();
+
+    //! Part of the game state.
+    void FinalWrapUp();
+
+    //! Part of the game state.
+    void FinalGameOver();
+
     Step step = Step::BeginDraw;
     Step nextStep = Step::BeginDraw;
 
