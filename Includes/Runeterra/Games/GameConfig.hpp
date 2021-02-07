@@ -19,6 +19,8 @@ namespace Runeterra
 struct GameConfig
 {
     PlayerType startPlayer = PlayerType::Random;
+
+    bool autoRun = true;
 };
 }  // namespace Runeterra
 
