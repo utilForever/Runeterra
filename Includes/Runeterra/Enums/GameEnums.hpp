@@ -20,6 +20,7 @@ enum class PlayerType
 //! \brief An enumerator for indicating the game step.
 enum class Step
 {
+    BeginFirst,
     BeginShuffle,
     BeginDraw,
     BeginMulligan,

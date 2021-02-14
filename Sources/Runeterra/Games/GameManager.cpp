@@ -13,6 +13,10 @@ void GameManager::ProcessNextStep(Game& game, Step step)
 {
     switch (step)
     {
+        case Step::BeginFirst:
+            game.step = step;
+            game.BeginFirst();
+            break;
         case Step::BeginShuffle:
             game.step = step;
             game.BeginShuffle();
