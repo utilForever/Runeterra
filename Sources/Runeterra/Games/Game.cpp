@@ -75,7 +75,8 @@ void Game::BeginShuffle()
 void Game::BeginDraw()
 {
     // Set next step
-    nextStep = Step::BeginMulligan;
+    nextStep =
+        m_gameConfig.skipMulligan ? Step::MainBegin : Step::BeginMulligan;
     if (m_gameConfig.autoRun)
     {
         GameManager::ProcessNextStep(*this, nextStep);
