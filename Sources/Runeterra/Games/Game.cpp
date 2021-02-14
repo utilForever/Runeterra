@@ -32,6 +32,16 @@ void Game::ProcessUntil(Step untilStep)
     }
 }
 
+Player& Game::GetCurPlayer()
+{
+    if (m_curPlayer == PlayerType::Player1)
+    {
+        return m_players[0];
+    }
+
+    return m_players[1];
+}
+
 void Game::BeginShuffle()
 {
     // Set next step
