@@ -8,6 +8,9 @@
 #define RUNETERRA_GAME_HPP
 
 #include <Runeterra/Games/GameConfig.hpp>
+#include <Runeterra/Models/Player.hpp>
+
+#include <array>
 
 namespace Runeterra
 {
@@ -81,6 +84,8 @@ class Game
 
  private:
     GameConfig m_gameConfig;
+
+    std::array<Player, 2> m_players;
 };
 }  // namespace Runeterra
 
