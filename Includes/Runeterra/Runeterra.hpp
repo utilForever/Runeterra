@@ -13,6 +13,7 @@
 #include <Runeterra/Commons/Macros.hpp>
 #include <Runeterra/Enums/CardEnums.hpp>
 #include <Runeterra/Enums/GameEnums.hpp>
+#include <Runeterra/Enums/TaskEnums.hpp>
 #include <Runeterra/Games/Game.hpp>
 #include <Runeterra/Games/GameConfig.hpp>
 #include <Runeterra/Games/GameManager.hpp>
