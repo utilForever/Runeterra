@@ -20,5 +20,6 @@
 #include <Runeterra/Loaders/CardLoader.hpp>
 #include <Runeterra/Models/Player.hpp>
 #include <Runeterra/Runeterra.hpp>
+#include <Runeterra/Tasks/ITask.hpp>
 
 #endif  // RUNETERRA_HPP
