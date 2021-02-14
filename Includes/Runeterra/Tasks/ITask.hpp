@@ -8,10 +8,12 @@
 #define RUNETERRA_ITASK_HPP
 
 #include <Runeterra/Enums/TaskEnums.hpp>
-#include <Runeterra/Models/Player.hpp>
 
 namespace Runeterra
 {
+class Game;
+class Player;
+
 //!
 //! \brief ITask class.
 //!
@@ -22,26 +24,29 @@ class ITask
 {
  public:
     //! Calls Impl method and returns meta data.
+    //! \param game The game context.
     //! \param player The player to run task.
     //! \return The result of task processing.
-    TaskStatus Run(Player& player);
+    TaskStatus Run(Game& game, Player& player);
 
  private:
     //! Processes task logic internally and returns meta data.
+    //! \param game The game context.
     //! \param player The player to run task.
     //! \return The result of task processing.
-    virtual TaskStatus Impl(Player& player) = 0;
+    virtual TaskStatus Impl(Game& game, Player& player) = 0;
 };
 
 namespace Task
 {
 //! Calls Impl method and returns meta data.
+//! \param game The game context.
 //! \param player The player to run task.
 //! \param task The task to run.
 //! \return The result of task processing.
-inline TaskStatus Run(Player& player, ITask&& task)
+inline TaskStatus Run(Game& game, Player& player, ITask&& task)
 {
-    return task.Run(player);
+    return task.Run(game, player);
 }
 }  // namespace Task
 }  // namespace Runeterra

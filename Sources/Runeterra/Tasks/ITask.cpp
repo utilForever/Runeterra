@@ -8,8 +8,8 @@
 
 namespace Runeterra
 {
-TaskStatus ITask::Run(Player& player)
+TaskStatus ITask::Run(Game& game, Player& player)
 {
-    return Impl(player);
+    return Impl(game, player);
 }
 }  // namespace Runeterra

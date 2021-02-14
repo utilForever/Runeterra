@@ -34,7 +34,7 @@ void Game::ProcessUntil(Step untilStep)
 
 void Game::Process(Player& player, ITask&& task) const
 {
-    Task::Run(player, std::move(task));
+    Task::Run(const_cast<Game&>(*this), player, std::move(task));
 }
 
 int Game::GetCurRound() const
