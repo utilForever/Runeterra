@@ -32,6 +32,11 @@ void Game::ProcessUntil(Step untilStep)
     }
 }
 
+int Game::GetCurRound() const
+{
+    return m_round;
+}
+
 Player& Game::GetCurPlayer()
 {
     if (m_curPlayer == PlayerType::Player1)

@@ -34,6 +34,10 @@ class Game
     //! \param step The game step to process until arrival.
     void ProcessUntil(Step step);
 
+    //! Gets the current round of the game.
+    //! \return The current round of the game.
+    int GetCurRound() const;
+
     //! Returns the player controlling the current round.
     //! \return The player controlling the current round.
     Player& GetCurPlayer();
@@ -95,6 +99,8 @@ class Game
 
     std::array<Player, 2> m_players;
     PlayerType m_curPlayer = PlayerType::Player1;
+
+    int m_round = 0;
 };
 }  // namespace Runeterra
 
