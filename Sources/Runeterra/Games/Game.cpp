@@ -24,6 +24,14 @@ void Game::Start()
     }
 }
 
+void Game::ProcessUntil(Step untilStep)
+{
+    while (nextStep != untilStep)
+    {
+        GameManager::ProcessNextStep(*this, nextStep);
+    }
+}
+
 void Game::BeginShuffle()
 {
     // Set next step

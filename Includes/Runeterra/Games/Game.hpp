@@ -27,6 +27,10 @@ class Game
     //! Starts the game.
     void Start();
 
+    //! Process game until given step arriving.
+    //! \param step The game step to process until arrival.
+    void ProcessUntil(Step step);
+
     //! Part of the game state.
     void BeginShuffle();
 
