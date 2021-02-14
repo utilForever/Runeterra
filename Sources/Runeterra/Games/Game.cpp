@@ -11,6 +11,17 @@ namespace Runeterra
 {
 Game::Game(const GameConfig& config) : m_gameConfig{ config }
 {
+    // Do nothing
+}
+
+void Game::Start()
+{
+    // Set next step
+    nextStep = Step::BeginShuffle;
+    if (m_gameConfig.autoRun)
+    {
+        GameManager::ProcessNextStep(*this, nextStep);
+    }
 }
 
 void Game::BeginShuffle()

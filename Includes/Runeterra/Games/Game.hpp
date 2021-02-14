@@ -24,6 +24,9 @@ class Game
     //! \param config The game config holds all configuration values.
     explicit Game(const GameConfig& config);
 
+    //! Starts the game.
+    void Start();
+
     //! Part of the game state.
     void BeginShuffle();
 
