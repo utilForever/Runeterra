@@ -17,7 +17,7 @@ Game::Game(const GameConfig& config) : m_gameConfig{ config }
 void Game::Start()
 {
     // Set next step
-    nextStep = Step::BeginShuffle;
+    nextStep = Step::BeginFirst;
     if (m_gameConfig.autoRun)
     {
         GameManager::ProcessNextStep(*this, nextStep);
@@ -60,6 +60,16 @@ Player& Game::GetOpPlayer()
     }
 
     return m_players[0];
+}
+
+void Game::BeginFirst()
+{
+    // Set next step
+    nextStep = Step::BeginShuffle;
+    if (m_gameConfig.autoRun)
+    {
+        GameManager::ProcessNextStep(*this, nextStep);
+    }
 }
 
 void Game::BeginShuffle()

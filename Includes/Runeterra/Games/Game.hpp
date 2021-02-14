@@ -53,6 +53,9 @@ class Game
     Player& GetOpPlayer();
 
     //! Part of the game state.
+    void BeginFirst();
+
+    //! Part of the game state.
     void BeginShuffle();
 
     //! Part of the game state.
