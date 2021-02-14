@@ -17,6 +17,7 @@
 #include <Runeterra/Games/GameConfig.hpp>
 #include <Runeterra/Games/GameManager.hpp>
 #include <Runeterra/Loaders/CardLoader.hpp>
+#include <Runeterra/Models/Player.hpp>
 #include <Runeterra/Runeterra.hpp>
 
 #endif  // RUNETERRA_HPP
