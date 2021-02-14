@@ -9,6 +9,7 @@
 
 #include <Runeterra/Games/GameConfig.hpp>
 #include <Runeterra/Models/Player.hpp>
+#include <Runeterra/Tasks/ITask.hpp>
 
 #include <array>
 
@@ -33,6 +34,11 @@ class Game
     //! Process game until given step arriving.
     //! \param step The game step to process until arrival.
     void ProcessUntil(Step step);
+
+    //! Process the specified task.
+    //! \param player A player to run task.
+    //! \param task The game task to execute.
+    void Process(Player& player, ITask&& task) const;
 
     //! Gets the current round of the game.
     //! \return The current round of the game.
@@ -97,7 +103,7 @@ class Game
  private:
     GameConfig m_gameConfig;
 
-    std::array<Player, 2> m_players;
+    std::array<Player, 2> m_players{};
     PlayerType m_curPlayer = PlayerType::Player1;
 
     int m_round = 0;

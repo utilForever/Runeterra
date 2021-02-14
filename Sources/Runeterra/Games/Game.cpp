@@ -32,6 +32,11 @@ void Game::ProcessUntil(Step untilStep)
     }
 }
 
+void Game::Process(Player& player, ITask&& task) const
+{
+    Task::Run(player, std::move(task));
+}
+
 int Game::GetCurRound() const
 {
     return m_round;
