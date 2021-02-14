@@ -42,6 +42,16 @@ Player& Game::GetCurPlayer()
     return m_players[1];
 }
 
+Player& Game::GetOpPlayer()
+{
+    if (m_curPlayer == PlayerType::Player1)
+    {
+        return m_players[1];
+    }
+
+    return m_players[0];
+}
+
 void Game::BeginShuffle()
 {
     // Set next step

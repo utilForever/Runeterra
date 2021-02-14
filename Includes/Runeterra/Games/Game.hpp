@@ -38,6 +38,10 @@ class Game
     //! \return The player controlling the current round.
     Player& GetCurPlayer();
 
+    //! Returns the opponent player.
+    //! \return The opponent player.
+    Player& GetOpPlayer();
+
     //! Part of the game state.
     void BeginShuffle();
 
