@@ -8,6 +8,11 @@
 
 namespace Runeterra
 {
+Player::Player(PlayerType type) : m_type{ type }
+{
+    // Do nothing
+}
+
 PlayerType Player::GetType() const
 {
     return m_type;

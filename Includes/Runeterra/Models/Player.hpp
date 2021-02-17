@@ -21,6 +21,10 @@ namespace Runeterra
 class Player
 {
  public:
+    //! Constructs a player with given \p type.
+    //! \param type The type of the player.
+    Player(PlayerType type);
+
     //! Returns the type of the player.
     //! \return The type of the player.
     [[nodiscard]] PlayerType GetType() const;
