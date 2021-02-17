@@ -64,6 +64,9 @@ Player& Game::GetOpPlayer()
 
 void Game::BeginFirst()
 {
+    // Set first round
+    m_round = 1;
+
     // Set next step
     nextStep = Step::BeginShuffle;
     if (m_gameConfig.autoRun)
