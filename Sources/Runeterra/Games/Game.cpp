@@ -188,6 +188,9 @@ void Game::MainCleanUp()
 
 void Game::MainNext()
 {
+    // Increase the number of round
+    ++m_round;
+
     // Set next step
     nextStep = Step::MainReady;
     if (m_gameConfig.autoRun)
