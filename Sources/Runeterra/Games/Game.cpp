@@ -190,6 +190,10 @@ void Game::MainCleanUp()
 
 void Game::MainNext()
 {
+    // Set player for next round
+    m_curPlayer = (m_curPlayer == PlayerType::Player1) ? PlayerType::Player2
+                                                       : PlayerType::Player1;
+
     // Increase the number of round
     ++m_round;
 
