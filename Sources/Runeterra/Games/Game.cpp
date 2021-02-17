@@ -9,7 +9,9 @@
 
 namespace Runeterra
 {
-Game::Game(const GameConfig& config) : m_gameConfig{ config }
+Game::Game(const GameConfig& config)
+    : m_gameConfig{ config },
+      m_players{ PlayerType::Player1, PlayerType::Player2 }
 {
     // Do nothing
 }

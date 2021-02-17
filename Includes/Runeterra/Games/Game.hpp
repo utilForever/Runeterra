@@ -106,7 +106,7 @@ class Game
  private:
     GameConfig m_gameConfig;
 
-    std::array<Player, 2> m_players{};
+    std::array<Player, 2> m_players;
     PlayerType m_curPlayer = PlayerType::Player1;
 
     int m_round = 0;
