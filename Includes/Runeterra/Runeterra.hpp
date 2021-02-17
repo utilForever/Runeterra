@@ -12,7 +12,15 @@
 #include <Runeterra/Commons/Constants.hpp>
 #include <Runeterra/Commons/Macros.hpp>
 #include <Runeterra/Enums/CardEnums.hpp>
+#include <Runeterra/Enums/GameEnums.hpp>
+#include <Runeterra/Enums/TaskEnums.hpp>
+#include <Runeterra/Games/Game.hpp>
+#include <Runeterra/Games/GameConfig.hpp>
+#include <Runeterra/Games/GameManager.hpp>
 #include <Runeterra/Loaders/CardLoader.hpp>
+#include <Runeterra/Models/Player.hpp>
 #include <Runeterra/Runeterra.hpp>
+#include <Runeterra/Tasks/ITask.hpp>
+#include <Runeterra/Tasks/PlayerTasks/EndRoundTask.hpp>
 
 #endif  // RUNETERRA_HPP
