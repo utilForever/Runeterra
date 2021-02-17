@@ -7,6 +7,8 @@
 #ifndef RUNETERRA_PLAYER_HPP
 #define RUNETERRA_PLAYER_HPP
 
+#include <Runeterra/Enums/GameEnums.hpp>
+
 namespace Runeterra
 {
 //!
@@ -18,6 +20,13 @@ namespace Runeterra
 //!
 class Player
 {
+ public:
+    //! Returns the type of the player.
+    //! \return The type of the player.
+    [[nodiscard]] PlayerType GetType() const;
+
+ private:
+    PlayerType m_type;
 };
 }  // namespace Runeterra
 
