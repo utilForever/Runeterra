@@ -21,6 +21,19 @@ const std::vector<Card>& Cards::GetAllCards() const
     return m_cards;
 }
 
+std::optional<Card> Cards::FindCardByCode(const std::string_view& code)
+{
+    for (const auto& card : m_cards)
+    {
+        if (card.cardCode == code)
+        {
+            return card;
+        }
+    }
+
+    return std::nullopt;
+}
+
 Cards::Cards()
 {
     m_cards.reserve(NUM_ALL_CARDS);

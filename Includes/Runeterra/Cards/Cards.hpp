@@ -9,6 +9,7 @@
 
 #include <Runeterra/Cards/Card.hpp>
 
+#include <optional>
 #include <vector>
 
 namespace Runeterra
@@ -40,6 +41,12 @@ class Cards
     //! Returns a list of all cards.
     //! \return A list of all cards.
     [[nodiscard]] const std::vector<Card>& GetAllCards() const;
+
+    //! Returns a card that matches \p code.
+    //! \param code The card code to find.
+    //! \return A card that matches \p code.
+    [[nodiscard]] std::optional<Card> FindCardByCode(
+        const std::string_view& code);
 
  private:
     //! Loads card data.
