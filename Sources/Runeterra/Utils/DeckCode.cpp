@@ -34,7 +34,8 @@ Deck DeckCode::Decode(const std::string& deckCode)
     version = version & 0xf;
     if (version > MAX_KNOWN_VERSION)
     {
-        std::string msg = "Invalid version: " + version;
+        const std::string msg =
+            std::string{ "Invalid version: " }.append(std::to_string(version));
         throw std::runtime_error{ msg };
     }
 
