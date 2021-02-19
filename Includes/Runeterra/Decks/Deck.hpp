@@ -9,6 +9,8 @@
 
 #include <Runeterra/Cards/Card.hpp>
 
+#include <tuple>
+
 namespace Runeterra
 {
 //!
