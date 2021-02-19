@@ -9,7 +9,6 @@
 
 #include <Runeterra/Cards/Card.hpp>
 
-#include <memory>
 #include <vector>
 
 namespace Runeterra
@@ -40,7 +39,7 @@ class Cards
 
     //! Returns a list of all cards.
     //! \return A list of all cards.
-    [[nodiscard]] const std::vector<std::unique_ptr<Card>>& GetAllCards() const;
+    [[nodiscard]] const std::vector<Card>& GetAllCards() const;
 
  private:
     //! Loads card data.
@@ -49,7 +48,7 @@ class Cards
     //! Releases card data.
     ~Cards();
 
-    std::vector<std::unique_ptr<Card>> m_cards;
+    std::vector<Card> m_cards;
 };
 }  // namespace Runeterra
 

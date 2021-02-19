@@ -16,7 +16,7 @@ Cards& Cards::GetInstance()
     return instance;
 }
 
-const std::vector<std::unique_ptr<Card>>& Cards::GetAllCards() const
+const std::vector<Card>& Cards::GetAllCards() const
 {
     return m_cards;
 }
@@ -29,7 +29,7 @@ Cards::Cards()
 
     for (auto& card : m_cards)
     {
-        card->Initialize();
+        card.Initialize();
     }
 }
 
