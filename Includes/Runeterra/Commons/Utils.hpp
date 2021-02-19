@@ -7,6 +7,8 @@
 #ifndef RUNETERRA_UTILS_HPP
 #define RUNETERRA_UTILS_HPP
 
+#include <Runeterra/Enums/CardEnums.hpp>
+
 #include <vector>
 
 namespace Runeterra
@@ -40,6 +42,29 @@ inline int GetNextVarInt(std::vector<uint8_t>* stream)
     stream->erase(stream->begin(), stream->begin() + numRead);
 
     return result;
+}
+
+//! Converts enum value region to string.
+//! \param region A enum value to convert.
+//! \return A converted region string.
+inline std::string RegionToString(const Region& region)
+{
+    const std::vector<std::pair<std::string, Region>> regionMap{
+        { "DE", Region::Demacia },      { "FR", Region::Freljord },
+        { "IO", Region::Ionia },        { "NX", Region::Noxus },
+        { "PZ", Region::PiltoverZaun }, { "SI", Region::ShadowIsles },
+        { "BW", Region::Bilgewater }
+    };
+
+    for (const auto& elem : regionMap)
+    {
+        if (elem.second == region)
+        {
+            return elem.first;
+        }
+    }
+
+    return "";
 }
 }  // namespace Runeterra
 
