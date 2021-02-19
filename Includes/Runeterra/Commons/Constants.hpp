@@ -10,4 +10,7 @@
 //! The number of all cards.
 constexpr int NUM_ALL_CARDS = 844;
 
+//! The max known version.
+const int MAX_KNOWN_VERSION = 2;
+
 #endif  // RUNETERRA_CARD_CONSTANTS_HPP
