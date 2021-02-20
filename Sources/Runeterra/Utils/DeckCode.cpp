@@ -39,40 +39,47 @@ Deck DeckCode::Decode(const std::string& deckCode)
         throw std::runtime_error{ msg };
     }
 
-    std::vector<std::vector<Card>> cardGroups;
-    cardGroups.emplace_back(DecodeGroup(&base32Decoded));
-    cardGroups.emplace_back(DecodeGroup(&base32Decoded));
-    cardGroups.emplace_back(DecodeGroup(&base32Decoded));
+    DecodeGroup(&base32Decoded, deck);
+    DecodeGroup(&base32Decoded, deck);
+    DecodeGroup(&base32Decoded, deck);
 
     return deck;
 }
 
-std::vector<Card> DeckCode::DecodeGroup(std::vector<uint8_t>* cardStream)
+void DeckCode::DecodeGroup(std::vector<uint8_t>* cardStream, Deck& deck)
 {
-    std::vector<Card> groupCards;
-
     const int setFactions = GetNextVarInt(cardStream);
     for (int i = 0; i < setFactions; i++)
     {
         const int numFactionCards = GetNextVarInt(cardStream);
         std::string set = std::to_string(GetNextVarInt(cardStream));
         std::string region =
-            RegionToString(static_cast<Region>(GetNextVarInt(cardStream)));
+            RegionToString(static_cast<Region>(GetNextVarInt(cardStream) + 1));
+
+        if (set.size() < 2)
+        {
+            set.insert(set.begin(), 2 - set.size(), '0');
+        }
 
         for (int j = 0; j < numFactionCards; j++)
         {
             std::string cardNum = std::to_string(GetNextVarInt(cardStream));
-            std::string cardCode = set.append(region).append(cardNum);
+
+            if (cardNum.size() < 3)
+            {
+                cardNum.insert(cardNum.begin(), 3 - cardNum.size(), '0');
+            }
+
+            const std::string cardCode =
+                std::string{ set }.append(region).append(cardNum);
 
             std::optional<Card> card =
                 Cards::GetInstance().FindCardByCode(cardCode);
             if (card.has_value())
             {
-                groupCards.emplace_back();
+                deck.AddCard(card.value(), 1);
             }
         }
     }
-
-    return groupCards;
 }
 }  // namespace Runeterra

@@ -27,7 +27,7 @@ class DeckCode
     static Deck Decode(const std::string& deckCode);
 
     //! Decodes a group and returns a list of matched cards.
-    static std::vector<Card> DecodeGroup(std::vector<uint8_t>* cardStream);
+    static void DecodeGroup(std::vector<uint8_t>* cardStream, Deck& deck);
 };
 }  // namespace Runeterra
 
