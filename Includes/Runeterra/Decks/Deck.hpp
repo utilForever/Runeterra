@@ -22,8 +22,16 @@ namespace Runeterra
 //!
 class Deck
 {
+ public:
+    //! Add card(s) to deck with given \p card and \p amount.
+    //! \param card The card to add to deck.
+    //! \param amount The amount of card to add to deck.
+    //! \return true if card(s) is added to deck successfully,
+    //! and false otherwise.
+    bool AddCard(Card card, int amount);
+
  private:
-    std::vector<std::tuple<Card&, int>> m_cards;
+    std::vector<std::tuple<Card, int>> m_cards;
 };
 }  // namespace Runeterra
 
