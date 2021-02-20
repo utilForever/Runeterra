@@ -18,7 +18,7 @@ bool Deck::AddCard(Card card, int amount)
         return false;
     }
 
-    if (m_cards.size() + amount > START_DECK_SIZE)
+    if (m_numCards + amount > START_DECK_SIZE)
     {
         return false;
     }
@@ -42,6 +42,8 @@ bool Deck::AddCard(Card card, int amount)
     {
         m_cards.emplace_back(std::make_tuple(card, amount));
     }
+
+    m_numCards += amount;
 
     return true;
 }

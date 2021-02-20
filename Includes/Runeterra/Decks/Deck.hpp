@@ -37,6 +37,7 @@ class Deck
 
  private:
     std::vector<std::tuple<Card, int>> m_cards;
+    int m_numCards = 0;
 };
 }  // namespace Runeterra
 
