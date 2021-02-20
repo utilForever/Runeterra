@@ -30,32 +30,32 @@ void CardLoader::LoadInternal(std::vector<Card>& cards, std::ifstream&& stream)
     {
         Card card;
 
-        card.region = magic_enum::enum_cast<Region>(
-                          data["regionRef"].get<std::string_view>())
-                          .value_or(Region::Invalid);
+        card.region =
+            magic_enum::enum_cast<Region>(data["regionRef"].get<std::string>())
+                .value_or(Region::Invalid);
         card.attack = data["attack"].get<int>();
         card.cost = data["cost"].get<int>();
         card.health = data["health"].get<int>();
-        card.name = data["name"].get<std::string_view>();
-        card.cardCode = data["cardCode"].get<std::string_view>();
+        card.name = data["name"].get<std::string>();
+        card.cardCode = data["cardCode"].get<std::string>();
         for (auto& keyword : data["keywordRefs"])
         {
             card.keywords.emplace_back(
-                magic_enum::enum_cast<Keyword>(keyword.get<std::string_view>())
+                magic_enum::enum_cast<Keyword>(keyword.get<std::string>())
                     .value_or(Keyword::Invalid));
         }
         card.spellSpeed = magic_enum::enum_cast<SpellSpeed>(
-                              data["spellSpeedRef"].get<std::string_view>())
+                              data["spellSpeedRef"].get<std::string>())
                               .value_or(SpellSpeed::Invalid);
-        card.rarity = magic_enum::enum_cast<Rarity>(
-                          data["rarityRef"].get<std::string_view>())
-                          .value_or(Rarity::Invalid);
-        card.type = magic_enum::enum_cast<CardType>(
-                        data["type"].get<std::string_view>())
-                        .value_or(CardType::Invalid);
+        card.rarity =
+            magic_enum::enum_cast<Rarity>(data["rarityRef"].get<std::string>())
+                .value_or(Rarity::Invalid);
+        card.type =
+            magic_enum::enum_cast<CardType>(data["type"].get<std::string>())
+                .value_or(CardType::Invalid);
         card.isCollectible = data["collectible"].get<bool>();
         card.set =
-            magic_enum::enum_cast<CardSet>(data["set"].get<std::string_view>())
+            magic_enum::enum_cast<CardSet>(data["set"].get<std::string>())
                 .value_or(CardSet::Invalid);
 
         cards.emplace_back(std::move(card));
