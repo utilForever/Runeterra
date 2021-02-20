@@ -9,7 +9,7 @@
 
 #include <Runeterra/Enums/CardEnums.hpp>
 
-#include <string_view>
+#include <string>
 #include <vector>
 
 namespace Runeterra
@@ -31,8 +31,8 @@ class Card
     CardType type;
     SpellSpeed spellSpeed;
     std::vector<Keyword> keywords;
-    std::string_view name;
-    std::string_view cardCode;
+    std::string name;
+    std::string cardCode;
     int attack;
     int cost;
     int health;

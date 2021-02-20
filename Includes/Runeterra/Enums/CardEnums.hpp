@@ -10,17 +10,18 @@
 namespace Runeterra
 {
 //! \brief An enumerator for identifying the region of the card.
+//! References: https://github.com/RiotGames/LoRDeckCodes#faction-identifiers
 enum class Region
 {
-    Invalid,
-    Bilgewater,
-    Demacia,
-    Freljord,
-    Ionia,
-    Noxus,
-    PiltoverZaun,
-    ShadowIsles,
-    Targon,
+    Invalid = -1,
+    Demacia = 0,
+    Freljord = 1,
+    Ionia = 2,
+    Noxus = 3,
+    PiltoverZaun = 4,
+    ShadowIsles = 5,
+    Bilgewater = 6,
+    Targon = 9,
 };
 
 //! \brief An enumerator for identifying the keyword of the card.

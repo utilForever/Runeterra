@@ -9,7 +9,6 @@
 
 #include <Runeterra/Cards/Card.hpp>
 
-#include <memory>
 #include <vector>
 
 namespace Runeterra
@@ -24,14 +23,13 @@ class CardLoader
  public:
     //! Loads card data from set{1|2|3}-en_us.json.
     //! \param cards A data storage to store added cards with power.
-    static void Load(std::vector<std::unique_ptr<Card>>& cards);
+    static void Load(std::vector<Card>& cards);
 
  private:
     //! An internal method of Load().
     //! \param cards A data storage to store added cards with power.
     //! \param stream An input file stream to read data.
-    static void LoadInternal(std::vector<std::unique_ptr<Card>>& cards,
-                             std::ifstream&& stream);
+    static void LoadInternal(std::vector<Card>& cards, std::ifstream&& stream);
 };
 }  // namespace Runeterra
 

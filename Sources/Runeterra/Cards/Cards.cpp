@@ -16,9 +16,22 @@ Cards& Cards::GetInstance()
     return instance;
 }
 
-const std::vector<std::unique_ptr<Card>>& Cards::GetAllCards() const
+const std::vector<Card>& Cards::GetAllCards() const
 {
     return m_cards;
+}
+
+std::optional<Card> Cards::FindCardByCode(const std::string_view& code)
+{
+    for (const auto& card : m_cards)
+    {
+        if (card.cardCode == code)
+        {
+            return card;
+        }
+    }
+
+    return std::nullopt;
 }
 
 Cards::Cards()
@@ -29,7 +42,7 @@ Cards::Cards()
 
     for (auto& card : m_cards)
     {
-        card->Initialize();
+        card.Initialize();
     }
 }
 

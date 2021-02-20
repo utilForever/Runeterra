@@ -11,6 +11,8 @@
 #include <Runeterra/Cards/Cards.hpp>
 #include <Runeterra/Commons/Constants.hpp>
 #include <Runeterra/Commons/Macros.hpp>
+#include <Runeterra/Commons/Utils.hpp>
+#include <Runeterra/Decks/Deck.hpp>
 #include <Runeterra/Enums/CardEnums.hpp>
 #include <Runeterra/Enums/GameEnums.hpp>
 #include <Runeterra/Enums/TaskEnums.hpp>
@@ -22,5 +24,6 @@
 #include <Runeterra/Runeterra.hpp>
 #include <Runeterra/Tasks/ITask.hpp>
 #include <Runeterra/Tasks/PlayerTasks/EndRoundTask.hpp>
+#include <Runeterra/Utils/DeckCode.hpp>
 
 #endif  // RUNETERRA_HPP
