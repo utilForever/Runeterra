@@ -9,6 +9,7 @@
 
 #include <Runeterra/Enums/CardEnums.hpp>
 
+#include <string>
 #include <vector>
 
 namespace Runeterra
