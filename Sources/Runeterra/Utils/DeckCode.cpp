@@ -48,10 +48,10 @@ Deck DeckCode::Decode(const std::string& deckCode)
 
 void DeckCode::DecodeGroup(std::vector<uint8_t>* cardStream, Deck& deck)
 {
-    const int setFactions = GetNextVarInt(cardStream);
-    for (int i = 0; i < setFactions; i++)
+    const int setRegions = GetNextVarInt(cardStream);
+    for (int i = 0; i < setRegions; i++)
     {
-        const int numFactionCards = GetNextVarInt(cardStream);
+        const int numRegionCards = GetNextVarInt(cardStream);
         std::string set = std::to_string(GetNextVarInt(cardStream));
         std::string region =
             RegionToString(static_cast<Region>(GetNextVarInt(cardStream) + 1));
@@ -61,7 +61,7 @@ void DeckCode::DecodeGroup(std::vector<uint8_t>* cardStream, Deck& deck)
             set.insert(set.begin(), 2 - set.size(), '0');
         }
 
-        for (int j = 0; j < numFactionCards; j++)
+        for (int j = 0; j < numRegionCards; j++)
         {
             std::string cardNum = std::to_string(GetNextVarInt(cardStream));
 
