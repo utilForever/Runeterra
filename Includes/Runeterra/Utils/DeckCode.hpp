@@ -26,8 +26,13 @@ class DeckCode
     //! \return The decoded deck that contains card information.
     static Deck Decode(const std::string& deckCode);
 
+ private:
     //! Decodes a group and returns a list of matched cards.
-    static void DecodeGroup(std::vector<uint8_t>* cardStream, Deck& deck);
+    //! \param cardStream A card stream for decoded base32 string.
+    //! \param deck A deck instance to add card(s).
+    //! \param amount The number of card(s) to add.
+    static void DecodeGroup(std::vector<uint8_t>* cardStream, Deck& deck,
+                            int amount);
 };
 }  // namespace Runeterra
 

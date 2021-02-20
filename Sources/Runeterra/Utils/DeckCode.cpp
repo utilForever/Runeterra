@@ -39,14 +39,16 @@ Deck DeckCode::Decode(const std::string& deckCode)
         throw std::runtime_error{ msg };
     }
 
-    DecodeGroup(&base32Decoded, deck);
-    DecodeGroup(&base32Decoded, deck);
-    DecodeGroup(&base32Decoded, deck);
+    // References: https://github.com/RiotGames/LoRDeckCodes#process
+    DecodeGroup(&base32Decoded, deck, 3);
+    DecodeGroup(&base32Decoded, deck, 2);
+    DecodeGroup(&base32Decoded, deck, 1);
 
     return deck;
 }
 
-void DeckCode::DecodeGroup(std::vector<uint8_t>* cardStream, Deck& deck)
+void DeckCode::DecodeGroup(std::vector<uint8_t>* cardStream, Deck& deck,
+                           int amount)
 {
     const int setRegions = GetNextVarInt(cardStream);
     for (int i = 0; i < setRegions; i++)
@@ -54,7 +56,7 @@ void DeckCode::DecodeGroup(std::vector<uint8_t>* cardStream, Deck& deck)
         const int numRegionCards = GetNextVarInt(cardStream);
         std::string set = std::to_string(GetNextVarInt(cardStream));
         std::string region =
-            RegionToString(static_cast<Region>(GetNextVarInt(cardStream) + 1));
+            RegionToString(static_cast<Region>(GetNextVarInt(cardStream)));
 
         if (set.size() < 2)
         {
@@ -77,7 +79,7 @@ void DeckCode::DecodeGroup(std::vector<uint8_t>* cardStream, Deck& deck)
                 Cards::GetInstance().FindCardByCode(cardCode);
             if (card.has_value())
             {
-                deck.AddCard(card.value(), 1);
+                deck.AddCard(card.value(), amount);
             }
         }
     }
