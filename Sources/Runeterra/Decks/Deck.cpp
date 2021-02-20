@@ -7,6 +7,8 @@
 #include <Runeterra/Commons/Constants.hpp>
 #include <Runeterra/Decks/Deck.hpp>
 
+#include <algorithm>
+
 namespace Runeterra
 {
 bool Deck::AddCard(Card card, int amount)
