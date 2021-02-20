@@ -43,4 +43,20 @@ bool Deck::AddCard(Card card, int amount)
 
     return true;
 }
+
+int Deck::GetCardCount(std::string_view cardCode) const
+{
+    const auto cardIter =
+        std::find_if(m_cards.begin(), m_cards.end(),
+                     [&cardCode](const std::tuple<Card, int>& elem) {
+                         return std::get<0>(elem).cardCode == cardCode;
+                     });
+
+    if (cardIter != m_cards.end())
+    {
+        return std::get<1>(*cardIter);
+    }
+
+    return 0;
+}
 }  // namespace Runeterra

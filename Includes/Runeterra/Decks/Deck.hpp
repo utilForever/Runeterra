@@ -30,6 +30,11 @@ class Deck
     //! and false otherwise.
     bool AddCard(Card card, int amount);
 
+    //! Returns the count of \p cardCode.
+    //! \param cardCode The card code to count.
+    //! \return The count of \p cardCode.
+    [[nodiscard]] int GetCardCount(std::string_view cardCode) const;
+
  private:
     std::vector<std::tuple<Card, int>> m_cards;
 };
