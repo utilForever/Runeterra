@@ -13,4 +13,7 @@ constexpr int NUM_ALL_CARDS = 844;
 //! The max known version.
 const int MAX_KNOWN_VERSION = 2;
 
+//! The maximum number of cards that is allowed in the deck.
+constexpr int MAX_ALLOWED_IN_DECK = 3;
+
 #endif  // RUNETERRA_CARD_CONSTANTS_HPP
