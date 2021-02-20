@@ -4,9 +4,15 @@
 // personal capacity and are not conveying any rights to any intellectual
 // property of any third parties.
 
-#include <doctest.h>
-
+#include <Runeterra/Commons/Macros.hpp>
 #include <Runeterra/Commons/Utils.hpp>
+
+#if defined(RUNETERRA_WINDOWS) || defined(RUNETERRA_LINUX)
+#include <doctest.h>
+#else
+#include <doctest.h>
+#include <iostream>
+#endif
 
 using namespace Runeterra;
 
