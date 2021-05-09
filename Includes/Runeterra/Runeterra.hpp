@@ -12,6 +12,7 @@
 #include <Runeterra/Commons/Constants.hpp>
 #include <Runeterra/Commons/Macros.hpp>
 #include <Runeterra/Commons/Utils.hpp>
+#include <Runeterra/Core/Engine.hpp>
 #include <Runeterra/Decks/Deck.hpp>
 #include <Runeterra/Enums/CardEnums.hpp>
 #include <Runeterra/Enums/GameEnums.hpp>
