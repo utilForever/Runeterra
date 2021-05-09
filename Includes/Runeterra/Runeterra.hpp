@@ -13,6 +13,7 @@
 #include <Runeterra/Commons/Utils.hpp>
 #include <Runeterra/Components/CardCode.hpp>
 #include <Runeterra/Components/Collectible.hpp>
+#include <Runeterra/Components/Cost.hpp>
 #include <Runeterra/Components/Name.hpp>
 #include <Runeterra/Core/Engine.hpp>
 #include <Runeterra/Decks/Deck.hpp>
