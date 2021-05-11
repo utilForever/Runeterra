@@ -4,6 +4,13 @@
 // personal capacity and are not conveying any rights to any intellectual
 // property of any third parties.
 
+#include <Runeterra/Components/Attack.hpp>
+#include <Runeterra/Components/CardCode.hpp>
+#include <Runeterra/Components/Collectible.hpp>
+#include <Runeterra/Components/Cost.hpp>
+#include <Runeterra/Components/Health.hpp>
+#include <Runeterra/Components/Name.hpp>
+#include <Runeterra/Enums/CardEnums.hpp>
 #include <Runeterra/Loaders/CardLoader.hpp>
 
 #include <json/json.hpp>
@@ -13,14 +20,14 @@
 
 namespace Runeterra
 {
-void CardLoader::Load(std::vector<Card>& cards)
+void CardLoader::Load(entt::registry& registry)
 {
-    LoadInternal(cards, std::ifstream{ RESOURCES_DIR "set1-en_us.json" });
-    LoadInternal(cards, std::ifstream{ RESOURCES_DIR "set2-en_us.json" });
-    LoadInternal(cards, std::ifstream{ RESOURCES_DIR "set3-en_us.json" });
+    LoadInternal(registry, std::ifstream{ RESOURCES_DIR "set1-en_us.json" });
+    LoadInternal(registry, std::ifstream{ RESOURCES_DIR "set2-en_us.json" });
+    LoadInternal(registry, std::ifstream{ RESOURCES_DIR "set3-en_us.json" });
 }
 
-void CardLoader::LoadInternal(std::vector<Card>& cards, std::ifstream&& stream)
+void CardLoader::LoadInternal(entt::registry& registry, std::ifstream&& stream)
 {
     // Read card data from JSON file
     nlohmann::json cardData;
@@ -28,37 +35,56 @@ void CardLoader::LoadInternal(std::vector<Card>& cards, std::ifstream&& stream)
 
     for (auto& data : cardData)
     {
-        Card card;
+        auto cardCode = data["cardCode"].get<std::string>();
+        auto name = data["name"].get<std::string>();
 
-        card.region =
-            magic_enum::enum_cast<Region>(data["regionRef"].get<std::string>())
-                .value_or(Region::Invalid);
-        card.attack = data["attack"].get<int>();
-        card.cost = data["cost"].get<int>();
-        card.health = data["health"].get<int>();
-        card.name = data["name"].get<std::string>();
-        card.cardCode = data["cardCode"].get<std::string>();
-        for (auto& keyword : data["keywordRefs"])
-        {
-            card.keywords.emplace_back(
-                magic_enum::enum_cast<Keyword>(keyword.get<std::string>())
-                    .value_or(Keyword::Invalid));
-        }
-        card.spellSpeed = magic_enum::enum_cast<SpellSpeed>(
-                              data["spellSpeedRef"].get<std::string>())
-                              .value_or(SpellSpeed::Invalid);
-        card.rarity =
-            magic_enum::enum_cast<Rarity>(data["rarityRef"].get<std::string>())
-                .value_or(Rarity::Invalid);
-        card.type =
-            magic_enum::enum_cast<CardType>(data["type"].get<std::string>())
-                .value_or(CardType::Invalid);
-        card.isCollectible = data["collectible"].get<bool>();
-        card.set =
+        auto cardSet =
             magic_enum::enum_cast<CardSet>(data["set"].get<std::string>())
                 .value_or(CardSet::Invalid);
+        auto region =
+            magic_enum::enum_cast<Region>(data["regionRef"].get<std::string>())
+                .value_or(Region::Invalid);
+        auto cardType =
+            magic_enum::enum_cast<CardType>(data["type"].get<std::string>())
+                .value_or(CardType::Invalid);
+        auto rarity =
+            magic_enum::enum_cast<Rarity>(data["rarityRef"].get<std::string>())
+                .value_or(Rarity::Invalid);
+        auto collectible = data["collectible"].get<bool>();
+        auto cost = data["cost"].get<int>();
 
-        cards.emplace_back(std::move(card));
+        const auto entity = registry.create();
+        registry.emplace<CardCode>(entity, cardCode);
+        registry.emplace<Name>(entity, name);
+        registry.emplace<CardSet>(entity, cardSet);
+        registry.emplace<Region>(entity, region);
+        registry.emplace<CardType>(entity, cardType);
+        registry.emplace<Rarity>(entity, rarity);
+        registry.emplace<Collectible>(entity, collectible);
+        registry.emplace<Cost>(entity, cost);
+
+        if (cardType == CardType::Unit)
+        {
+            auto attack = data["attack"].get<int>();
+            auto health = data["health"].get<int>();
+            registry.emplace<Attack>(entity, attack);
+            registry.emplace<Health>(entity, health, health);
+        }
+        if (cardType == CardType::Spell)
+        {
+            auto spellSpeed = magic_enum::enum_cast<SpellSpeed>(
+                                  data["spellSpeedRef"].get<std::string>())
+                                  .value_or(SpellSpeed::Invalid);
+            registry.emplace<SpellSpeed>(entity, spellSpeed);
+        }
+
+        // TODO: Process keywords
+        //for (auto& keyword : data["keywordRefs"])
+        //{
+        //    card.keywords.emplace_back(
+        //        magic_enum::enum_cast<Keyword>(keyword.get<std::string>())
+        //            .value_or(Keyword::Invalid));
+        //}
     }
 
     stream.close();
