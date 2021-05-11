@@ -11,6 +11,7 @@
 #include <Runeterra/Commons/Constants.hpp>
 #include <Runeterra/Commons/Macros.hpp>
 #include <Runeterra/Commons/Utils.hpp>
+#include <Runeterra/Components/Attack.hpp>
 #include <Runeterra/Components/CardCode.hpp>
 #include <Runeterra/Components/Collectible.hpp>
 #include <Runeterra/Components/Cost.hpp>
