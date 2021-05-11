@@ -7,8 +7,15 @@
 #include <doctest.h>
 
 #include <Runeterra/Commons/Constants.hpp>
+#include <Runeterra/Core/Engine.hpp>
 
 using namespace Runeterra;
+
+TEST_CASE("[Cards] - GetAllCards")
+{
+    Engine engine;
+    CHECK_EQ(engine.NumAllCards(), NUM_ALL_CARDS);
+}
 
 //TEST_CASE("[Cards] - FindCardByCode")
 //{
