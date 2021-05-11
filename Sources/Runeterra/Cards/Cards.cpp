@@ -5,10 +5,17 @@
 // property of any third parties.
 
 #include <Runeterra/Cards/Cards.hpp>
+#include <Runeterra/Components/CardCode.hpp>
 #include <Runeterra/Loaders/CardLoader.hpp>
 
 namespace Runeterra
 {
+int Cards::NumAllCards(entt::registry& registry)
+{
+    const auto view = registry.view<CardCode>();
+    return static_cast<int>(view.size());
+}
+
 // std::optional<Card> Cards::FindCardByCode(const std::string_view& code)
 //{
 //    for (const auto& card : m_cards)

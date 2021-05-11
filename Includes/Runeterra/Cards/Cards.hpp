@@ -9,6 +9,8 @@
 
 #include <optional>
 
+#include <entt/entt.hpp>
+
 namespace Runeterra
 {
 //!
@@ -19,6 +21,11 @@ namespace Runeterra
 class Cards
 {
  public:
+    //! Returns the number of all cards.
+    //! \param registry A registry of the entity-component system.
+    //! \return The number of all cards.
+    [[nodiscard]] static int NumAllCards(entt::registry& registry);
+
     //! Returns a card that matches \p code.
     //! \param code The card code to find.
     //! \return A card that matches \p code.
