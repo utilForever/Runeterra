@@ -7,55 +7,23 @@
 #ifndef RUNETERRA_CARDS_HPP
 #define RUNETERRA_CARDS_HPP
 
-#include <Runeterra/Cards/Card.hpp>
-
 #include <optional>
-#include <vector>
 
 namespace Runeterra
 {
 //!
 //! \brief Cards class.
 //!
-//! This class stores a list of cards and provides several search methods.
+//! This class provides several search methods.
 //!
 class Cards
 {
  public:
-    //! Deleted copy constructor.
-    Cards(const Cards& cards) = delete;
-
-    //! Deleted move constructor.
-    Cards(Cards&& cards) = delete;
-
-    //! Deleted copy assignment operator.
-    Cards& operator=(const Cards& cards) = delete;
-
-    //! Deleted move assignment operator.
-    Cards& operator=(Cards&& cards) = delete;
-
-    //! Returns an instance of Cards class.
-    //! \return An instance of Cards class.
-    static Cards& GetInstance();
-
-    //! Returns a list of all cards.
-    //! \return A list of all cards.
-    [[nodiscard]] const std::vector<Card>& GetAllCards() const;
-
     //! Returns a card that matches \p code.
     //! \param code The card code to find.
     //! \return A card that matches \p code.
-    [[nodiscard]] std::optional<Card> FindCardByCode(
-        const std::string_view& code);
-
- private:
-    //! Loads card data.
-    Cards();
-
-    //! Releases card data.
-    ~Cards();
-
-    std::vector<Card> m_cards;
+    //[[nodiscard]] std::optional<Card> FindCardByCode(
+    //    const std::string_view& code);
 };
 }  // namespace Runeterra
 
