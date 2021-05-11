@@ -5,10 +5,17 @@
 // property of any third parties.
 
 #include <Runeterra/Core/Engine.hpp>
+#include <Runeterra/Loaders/CardLoader.hpp>
 
 namespace Runeterra
 {
 Engine::Engine()
 {
+    LoadCardData();
+}
+
+void Engine::LoadCardData()
+{
+    CardLoader::Load(m_registry);
 }
 }  // namespace Runeterra

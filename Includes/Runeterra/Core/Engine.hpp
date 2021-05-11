@@ -23,6 +23,9 @@ class Engine
     Engine();
 
  private:
+    //! Loads a card data from JSON files.
+    void LoadCardData();
+
     entt::registry m_registry;
 };
 }  // namespace Runeterra
