@@ -22,6 +22,10 @@ class Engine
     //! Constructs a default engine and initializes card data.
     Engine();
 
+    //! Returns the number of all cards.
+    //! \return The number of all cards.
+    [[nodiscard]] int NumAllCards();
+
  private:
     //! Loads a card data from JSON files.
     void LoadCardData();
