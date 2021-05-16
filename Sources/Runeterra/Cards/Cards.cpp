@@ -15,17 +15,4 @@ int Cards::NumAllCards(entt::registry& registry)
     const auto view = registry.view<CardCode>();
     return static_cast<int>(view.size());
 }
-
-// std::optional<Card> Cards::FindCardByCode(const std::string_view& code)
-//{
-//    for (const auto& card : m_cards)
-//    {
-//        if (card.cardCode == code)
-//        {
-//            return card;
-//        }
-//    }
-//
-//    return std::nullopt;
-//}
 }  // namespace Runeterra

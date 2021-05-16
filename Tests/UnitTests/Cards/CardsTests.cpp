@@ -16,9 +16,3 @@ TEST_CASE("[Cards] - GetAllCards")
     Engine engine;
     CHECK_EQ(engine.NumAllCards(), NUM_ALL_CARDS);
 }
-
-//TEST_CASE("[Cards] - FindCardByCode")
-//{
-//    CHECK_EQ(Cards::GetInstance().FindCardByCode("01SI015").has_value(), true);
-//    CHECK_EQ(Cards::GetInstance().FindCardByCode("HELLO12").has_value(), false);
-//}

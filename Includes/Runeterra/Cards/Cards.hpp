@@ -25,12 +25,6 @@ class Cards
     //! \param registry A registry of the entity-component system.
     //! \return The number of all cards.
     [[nodiscard]] static int NumAllCards(entt::registry& registry);
-
-    //! Returns a card that matches \p code.
-    //! \param code The card code to find.
-    //! \return A card that matches \p code.
-    //[[nodiscard]] std::optional<Card> FindCardByCode(
-    //    const std::string_view& code);
 };
 }  // namespace Runeterra
 
