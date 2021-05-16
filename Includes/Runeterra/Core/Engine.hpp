@@ -9,6 +9,8 @@
 
 #include <entt/entt.hpp>
 
+#include <optional>
+
 namespace Runeterra
 {
 //!
@@ -25,6 +27,12 @@ class Engine
     //! Returns the number of all cards.
     //! \return The number of all cards.
     [[nodiscard]] int NumAllCards();
+
+    //! Returns a card code that matches \p nameToFind.
+    //! \param nameToFind The card name to find.
+    //! \return A card code that matches \p nameToFind.
+    [[nodiscard]] std::optional<std::string> FindCardCodeByName(
+        std::string_view&& nameToFind);
 
  private:
     //! Loads a card data from JSON files.

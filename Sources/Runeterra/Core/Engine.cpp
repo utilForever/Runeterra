@@ -20,6 +20,12 @@ int Engine::NumAllCards()
     return Cards::NumAllCards(m_registry);
 }
 
+std::optional<std::string> Engine::FindCardCodeByName(
+    std::string_view&& nameToFind)
+{
+    return Cards::FindCardCodeByName(m_registry, nameToFind);
+}
+
 void Engine::LoadCardData()
 {
     CardLoader::Load(m_registry);
