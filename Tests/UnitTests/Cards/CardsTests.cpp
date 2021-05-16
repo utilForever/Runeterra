@@ -16,3 +16,15 @@ TEST_CASE("[Cards] - GetAllCards")
     Engine engine;
     CHECK_EQ(engine.NumAllCards(), NUM_ALL_CARDS);
 }
+
+TEST_CASE("[Cards] - FindCardCodeByName")
+{
+    Engine engine;
+
+    auto code1 = engine.FindCardCodeByName("The Ruination");
+    CHECK_EQ(code1.has_value(), true);
+    CHECK_EQ(code1.value(), "01SI015");
+
+    auto code2 = engine.FindCardCodeByName("Hello, World");
+    CHECK_EQ(code2.has_value(), false);
+}
