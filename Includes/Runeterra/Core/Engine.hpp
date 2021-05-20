@@ -24,6 +24,12 @@ class Engine
     //! Constructs a default engine and initializes card data.
     Engine();
 
+    //! Creates two players.
+    //! \param deck1 A list of cards to create the deck for player 1.
+    //! \param deck2 A list of cards to create the deck for player 2.
+    void CreatePlayers(const std::vector<std::string>& deck1,
+                       const std::vector<std::string>& deck2);
+
     //! Returns the number of all cards.
     //! \return The number of all cards.
     [[nodiscard]] int NumAllCards();
