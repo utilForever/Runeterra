@@ -11,13 +11,13 @@
 
 using namespace Runeterra;
 
-TEST_CASE("[Cards] - GetAllCards")
+TEST_CASE("[Engine] - GetAllCards")
 {
     Engine engine;
     CHECK_EQ(engine.NumAllCards(), NUM_ALL_CARDS);
 }
 
-TEST_CASE("[Cards] - FindCardCodeByName")
+TEST_CASE("[Engine] - FindCardCodeByName")
 {
     Engine engine;
 
