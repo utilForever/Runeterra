@@ -8,6 +8,8 @@
 
 #include <Runeterra/Utils/DeckCode.hpp>
 
+#include <algorithm>
+
 using namespace Runeterra;
 
 TEST_CASE("[DeckCode] - Decode")
