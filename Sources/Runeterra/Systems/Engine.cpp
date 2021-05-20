@@ -37,20 +37,23 @@ void Engine::CreatePlayers(const std::vector<std::string>& deck1,
 
 bool Engine::CanStartGame()
 {
+    if (const auto view = m_registry.view<Tag::Player>();
+        view.size() != NUM_PLAYERS)
+    {
+        return false;
+    }
+
     const auto view = m_registry.view<Tag::Player, Deck>();
-    int numPlayer = 0;
 
     for (auto [entity, deck] : view.each())
     {
-        ++numPlayer;
-
         if (deck.cards.size() != START_DECK_SIZE)
         {
             return false;
         }
     }
 
-    return numPlayer == NUM_PLAYERS;
+    return true;
 }
 
 int Engine::NumAllCards()
