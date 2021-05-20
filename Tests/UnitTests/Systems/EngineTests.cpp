@@ -10,6 +10,8 @@
 #include <Runeterra/Systems/Engine.hpp>
 #include <Runeterra/Utils/DeckCode.hpp>
 
+#include <iostream>
+
 using namespace Runeterra;
 
 TEST_CASE("[Engine] - CanStartGame")
