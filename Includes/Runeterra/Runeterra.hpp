@@ -19,7 +19,6 @@
 #include <Runeterra/Components/Health.hpp>
 #include <Runeterra/Components/Name.hpp>
 #include <Runeterra/Core/Engine.hpp>
-#include <Runeterra/Decks/Deck.hpp>
 #include <Runeterra/Enums/CardEnums.hpp>
 #include <Runeterra/Enums/GameEnums.hpp>
 #include <Runeterra/Enums/TaskEnums.hpp>
