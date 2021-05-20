@@ -4,9 +4,14 @@
 // personal capacity and are not conveying any rights to any intellectual
 // property of any third parties.
 
-#include <Runeterra/Cards/Cards.hpp>
+#include <Runeterra/Commons/Tags.hpp>
+#include <Runeterra/Components/Deck.hpp>
+#include <Runeterra/Components/Name.hpp>
 #include <Runeterra/Core/Engine.hpp>
 #include <Runeterra/Loaders/CardLoader.hpp>
+#include <Runeterra/Components/CardCode.hpp>
+
+using namespace entt::literals;
 
 namespace Runeterra
 {
@@ -17,13 +22,24 @@ Engine::Engine()
 
 int Engine::NumAllCards()
 {
-    return Cards::NumAllCards(m_registry);
+    const auto view = m_registry.view<CardCode>();
+    return static_cast<int>(view.size());
 }
 
 std::optional<std::string> Engine::FindCardCodeByName(
     std::string_view&& nameToFind)
 {
-    return Cards::FindCardCodeByName(m_registry, nameToFind);
+    const auto view = m_registry.view<CardCode, Name>();
+
+    for (auto [entity, cardCode, name] : view.each())
+    {
+        if (nameToFind == name.name)
+        {
+            return cardCode.cardCode;
+        }
+    }
+
+    return std::nullopt;
 }
 
 void Engine::LoadCardData()
