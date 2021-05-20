@@ -18,6 +18,7 @@ namespace Runeterra
 std::vector<std::string> DeckCode::Decode(const std::string& deckCode)
 {
     std::vector<std::string> deck;
+    deck.reserve(START_DECK_SIZE);
 
     // Fix padding and decode
     const std::size_t missingPaddingLen =
