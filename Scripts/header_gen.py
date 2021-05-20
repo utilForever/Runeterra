@@ -20,7 +20,7 @@ def main():
     header_tmp = header + ".tmp"
     with open(header_tmp, "w") as header_file:
         header_file.write("""// Copyright (c) 2021 Runeterra Team
-// Chris Ohk, Dongyeon Park, Seungwon Seo
+// Chris Ohk, Seokmin Hong
 // We are making my contributions/submissions to this project solely in our
 // personal capacity and are not conveying any rights to any intellectual
 // property of any third parties.\n

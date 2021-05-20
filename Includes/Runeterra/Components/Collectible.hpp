@@ -4,17 +4,22 @@
 // personal capacity and are not conveying any rights to any intellectual
 // property of any third parties.
 
-#ifndef RUNETERRA_TASK_ENUMS_HPP
-#define RUNETERRA_TASK_ENUMS_HPP
+#ifndef RUNETERRA_COLLECTIBLE_HPP
+#define RUNETERRA_COLLECTIBLE_HPP
+
+#include <string>
 
 namespace Runeterra
 {
-//! \brief An enumerator for identifying the result of the task.
-enum class TaskStatus
+//!
+//! \brief Collectible struct.
+//!
+//! This struct stores a boolean value that indicates it is collectible.
+//!
+struct Collectible
 {
-    COMPLETE,
-    STOP
+    bool collectible;
 };
 }  // namespace Runeterra
 
-#endif  // RUNETERRA_TASK_ENUMS_HPP
+#endif  // RUNETERRA_COLLECTIBLE_HPP

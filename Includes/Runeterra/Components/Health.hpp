@@ -4,17 +4,21 @@
 // personal capacity and are not conveying any rights to any intellectual
 // property of any third parties.
 
-#include <Runeterra/Models/Player.hpp>
+#ifndef RUNETERRA_HEALTH_HPP
+#define RUNETERRA_HEALTH_HPP
 
 namespace Runeterra
 {
-Player::Player(PlayerType type) : m_type{ type }
+//!
+//! \brief Health struct.
+//!
+//! This struct stores the health of the unit.
+//!
+struct Health
 {
-    // Do nothing
-}
-
-PlayerType Player::GetType() const
-{
-    return m_type;
-}
+    int health;
+    int baseHealth;
+};
 }  // namespace Runeterra
+
+#endif  // RUNETERRA_HEALTH_HPP

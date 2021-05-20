@@ -1,5 +1,5 @@
 // Copyright (c) 2021 Runeterra Team
-// Chris Ohk, Dongyeon Park, Seungwon Seo
+// Chris Ohk, Seokmin Hong
 // We are making my contributions/submissions to this project solely in our
 // personal capacity and are not conveying any rights to any intellectual
 // property of any third parties.
@@ -7,9 +7,7 @@
 #ifndef RUNETERRA_CARD_LOADER_HPP
 #define RUNETERRA_CARD_LOADER_HPP
 
-#include <Runeterra/Cards/Card.hpp>
-
-#include <vector>
+#include <entt/entt.hpp>
 
 namespace Runeterra
 {
@@ -22,14 +20,14 @@ class CardLoader
 {
  public:
     //! Loads card data from set{1|2|3}-en_us.json.
-    //! \param cards A data storage to store added cards with power.
-    static void Load(std::vector<Card>& cards);
+    //! \param registry A registry of the entity-component system.
+    static void Load(entt::registry& registry);
 
  private:
-    //! An internal method of Load().
-    //! \param cards A data storage to store added cards with power.
+    //! Internal method of Load().
+    //! \param registry A registry of the entity-component system.
     //! \param stream An input file stream to read data.
-    static void LoadInternal(std::vector<Card>& cards, std::ifstream&& stream);
+    static void LoadInternal(entt::registry& registry, std::ifstream&& stream);
 };
 }  // namespace Runeterra
 

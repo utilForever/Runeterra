@@ -4,17 +4,19 @@
 // personal capacity and are not conveying any rights to any intellectual
 // property of any third parties.
 
-#include <Runeterra/Models/Player.hpp>
+#ifndef RUNETERRA_TAGS_HPP
+#define RUNETERRA_TAGS_HPP
+
+#include <entt/entt.hpp>
 
 namespace Runeterra
 {
-Player::Player(PlayerType type) : m_type{ type }
+namespace Tag
 {
-    // Do nothing
-}
+using namespace entt::literals;
 
-PlayerType Player::GetType() const
-{
-    return m_type;
+using Player = entt::tag<"player"_hs>;
 }
 }  // namespace Runeterra
+
+#endif  // RUNETERRA_TAGS_HPP

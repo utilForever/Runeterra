@@ -1,10 +1,9 @@
 // Copyright (c) 2021 Runeterra Team
-// Chris Ohk, Dongyeon Park, Seungwon Seo
+// Chris Ohk, Seokmin Hong
 // We are making my contributions/submissions to this project solely in our
 // personal capacity and are not conveying any rights to any intellectual
 // property of any third parties.
 
-#include <Runeterra/Cards/Cards.hpp>
 #include <Runeterra/Commons/Constants.hpp>
 #include <Runeterra/Commons/Utils.hpp>
 #include <Runeterra/Utils/DeckCode.hpp>
@@ -16,9 +15,10 @@
 
 namespace Runeterra
 {
-Deck DeckCode::Decode(const std::string& deckCode)
+std::vector<std::string> DeckCode::Decode(const std::string& deckCode)
 {
-    Deck deck;
+    std::vector<std::string> deck;
+    deck.reserve(START_DECK_SIZE);
 
     // Fix padding and decode
     const std::size_t missingPaddingLen =
@@ -47,8 +47,8 @@ Deck DeckCode::Decode(const std::string& deckCode)
     return deck;
 }
 
-void DeckCode::DecodeGroup(std::vector<uint8_t>* cardStream, Deck& deck,
-                           int amount)
+void DeckCode::DecodeGroup(std::vector<uint8_t>* cardStream,
+                           std::vector<std::string>& deck, int amount)
 {
     const int setRegions = GetNextVarInt(cardStream);
     for (int i = 0; i < setRegions; i++)
@@ -66,7 +66,6 @@ void DeckCode::DecodeGroup(std::vector<uint8_t>* cardStream, Deck& deck,
         for (int j = 0; j < numRegionCards; j++)
         {
             std::string cardNum = std::to_string(GetNextVarInt(cardStream));
-
             if (cardNum.size() < 3)
             {
                 cardNum.insert(cardNum.begin(), 3 - cardNum.size(), '0');
@@ -75,11 +74,9 @@ void DeckCode::DecodeGroup(std::vector<uint8_t>* cardStream, Deck& deck,
             const std::string cardCode =
                 std::string{ set }.append(region).append(cardNum);
 
-            std::optional<Card> card =
-                Cards::GetInstance().FindCardByCode(cardCode);
-            if (card.has_value())
+            for (int k = 0; k < amount; ++k)
             {
-                deck.AddCard(card.value(), amount);
+                deck.emplace_back(cardCode);
             }
         }
     }

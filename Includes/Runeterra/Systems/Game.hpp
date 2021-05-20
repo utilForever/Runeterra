@@ -1,5 +1,5 @@
 // Copyright (c) 2021 Runeterra Team
-// Chris Ohk, Dongyeon Park, Seungwon Seo
+// Chris Ohk, Seokmin Hong
 // We are making my contributions/submissions to this project solely in our
 // personal capacity and are not conveying any rights to any intellectual
 // property of any third parties.
@@ -7,8 +7,8 @@
 #ifndef RUNETERRA_GAME_HPP
 #define RUNETERRA_GAME_HPP
 
-#include <Runeterra/Games/GameConfig.hpp>
 #include <Runeterra/Models/Player.hpp>
+#include <Runeterra/Systems/GameConfig.hpp>
 #include <Runeterra/Tasks/ITask.hpp>
 
 #include <array>

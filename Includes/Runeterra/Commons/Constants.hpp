@@ -1,5 +1,5 @@
 // Copyright (c) 2021 Runeterra Team
-// Chris Ohk, Dongyeon Park, Seungwon Seo
+// Chris Ohk, Seokmin Hong
 // We are making my contributions/submissions to this project solely in our
 // personal capacity and are not conveying any rights to any intellectual
 // property of any third parties.
@@ -11,7 +11,10 @@
 constexpr int NUM_ALL_CARDS = 844;
 
 //! The max known version.
-const int MAX_KNOWN_VERSION = 2;
+constexpr int MAX_KNOWN_VERSION = 2;
+
+//! The number of players.
+constexpr int NUM_PLAYERS = 2;
 
 //! The maximum number of cards that is allowed in the deck.
 constexpr int MAX_ALLOWED_IN_DECK = 3;

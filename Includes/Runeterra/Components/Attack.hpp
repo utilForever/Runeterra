@@ -4,17 +4,20 @@
 // personal capacity and are not conveying any rights to any intellectual
 // property of any third parties.
 
-#include <Runeterra/Models/Player.hpp>
+#ifndef RUNETERRA_ATTACK_HPP
+#define RUNETERRA_ATTACK_HPP
 
 namespace Runeterra
 {
-Player::Player(PlayerType type) : m_type{ type }
+//!
+//! \brief Attack struct.
+//!
+//! This struct stores the attack of the unit.
+//!
+struct Attack
 {
-    // Do nothing
-}
-
-PlayerType Player::GetType() const
-{
-    return m_type;
-}
+    int attack;
+};
 }  // namespace Runeterra
+
+#endif  // RUNETERRA_ATTACK_HPP

@@ -1,13 +1,13 @@
 // Copyright (c) 2021 Runeterra Team
-// Chris Ohk, Dongyeon Park, Seungwon Seo
+// Chris Ohk, Seokmin Hong
 // We are making my contributions/submissions to this project solely in our
 // personal capacity and are not conveying any rights to any intellectual
 // property of any third parties.
 
 #include <doctest.h>
 
-#include <Runeterra/Games/Game.hpp>
-#include <Runeterra/Games/GameConfig.hpp>
+#include <Runeterra/Systems/Game.hpp>
+#include <Runeterra/Systems/GameConfig.hpp>
 #include <Runeterra/Tasks/PlayerTasks/EndRoundTask.hpp>
 
 using namespace Runeterra;

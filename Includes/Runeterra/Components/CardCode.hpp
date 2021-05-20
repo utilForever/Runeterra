@@ -4,17 +4,22 @@
 // personal capacity and are not conveying any rights to any intellectual
 // property of any third parties.
 
-#include <Runeterra/Models/Player.hpp>
+#ifndef RUNETERRA_CARD_CODE_HPP
+#define RUNETERRA_CARD_CODE_HPP
+
+#include <string>
 
 namespace Runeterra
 {
-Player::Player(PlayerType type) : m_type{ type }
+//!
+//! \brief CardCode struct.
+//!
+//! This struct stores a unique card code.
+//!
+struct CardCode
 {
-    // Do nothing
-}
-
-PlayerType Player::GetType() const
-{
-    return m_type;
-}
+    std::string cardCode;
+};
 }  // namespace Runeterra
+
+#endif  // RUNETERRA_CARD_CODE_HPP

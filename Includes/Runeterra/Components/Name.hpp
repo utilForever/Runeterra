@@ -4,17 +4,22 @@
 // personal capacity and are not conveying any rights to any intellectual
 // property of any third parties.
 
-#include <Runeterra/Models/Player.hpp>
+#ifndef RUNETERRA_NAME_HPP
+#define RUNETERRA_NAME_HPP
+
+#include <string>
 
 namespace Runeterra
 {
-Player::Player(PlayerType type) : m_type{ type }
+//!
+//! \brief Name struct.
+//!
+//! This struct stores a card name.
+//!
+struct Name
 {
-    // Do nothing
-}
-
-PlayerType Player::GetType() const
-{
-    return m_type;
-}
+    std::string name;
+};
 }  // namespace Runeterra
+
+#endif  // RUNETERRA_NAME_HPP
