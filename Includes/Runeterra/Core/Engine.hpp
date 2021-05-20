@@ -30,6 +30,10 @@ class Engine
     void CreatePlayers(const std::vector<std::string>& deck1,
                        const std::vector<std::string>& deck2);
 
+    //! Checks that the engine can start the game.
+    //! \return The flag to indicate that the engine can start the game.
+    bool CanStartGame();
+
     //! Returns the number of all cards.
     //! \return The number of all cards.
     [[nodiscard]] int NumAllCards();
