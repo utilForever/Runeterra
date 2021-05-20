@@ -7,7 +7,7 @@
 #include <doctest.h>
 
 #include <Runeterra/Commons/Constants.hpp>
-#include <Runeterra/Core/Engine.hpp>
+#include <Runeterra/Systems/Engine.hpp>
 #include <Runeterra/Utils/DeckCode.hpp>
 
 using namespace Runeterra;

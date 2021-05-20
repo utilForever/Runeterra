@@ -4,8 +4,8 @@
 // personal capacity and are not conveying any rights to any intellectual
 // property of any third parties.
 
-#include <Runeterra/Games/Game.hpp>
-#include <Runeterra/Games/GameManager.hpp>
+#include <Runeterra/Systems/Game.hpp>
+#include <Runeterra/Systems/GameManager.hpp>
 #include <Runeterra/Tasks/PlayerTasks/EndRoundTask.hpp>
 
 namespace Runeterra::PlayerTasks

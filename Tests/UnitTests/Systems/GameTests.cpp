@@ -6,8 +6,8 @@
 
 #include <doctest.h>
 
-#include <Runeterra/Games/Game.hpp>
-#include <Runeterra/Games/GameConfig.hpp>
+#include <Runeterra/Systems/Game.hpp>
+#include <Runeterra/Systems/GameConfig.hpp>
 #include <Runeterra/Tasks/PlayerTasks/EndRoundTask.hpp>
 
 using namespace Runeterra;

@@ -7,8 +7,8 @@
 #ifndef RUNETERRA_GAME_HPP
 #define RUNETERRA_GAME_HPP
 
-#include <Runeterra/Games/GameConfig.hpp>
 #include <Runeterra/Models/Player.hpp>
+#include <Runeterra/Systems/GameConfig.hpp>
 #include <Runeterra/Tasks/ITask.hpp>
 
 #include <array>

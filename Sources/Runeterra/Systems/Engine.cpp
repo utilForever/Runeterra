@@ -9,8 +9,8 @@
 #include <Runeterra/Components/CardCode.hpp>
 #include <Runeterra/Components/Deck.hpp>
 #include <Runeterra/Components/Name.hpp>
-#include <Runeterra/Core/Engine.hpp>
 #include <Runeterra/Loaders/CardLoader.hpp>
+#include <Runeterra/Systems/Engine.hpp>
 
 using namespace entt::literals;
 
