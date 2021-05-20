@@ -10,6 +10,7 @@
 #include <entt/entt.hpp>
 
 #include <optional>
+#include <string>
 
 namespace Runeterra
 {
