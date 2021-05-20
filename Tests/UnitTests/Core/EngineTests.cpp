@@ -8,8 +8,23 @@
 
 #include <Runeterra/Commons/Constants.hpp>
 #include <Runeterra/Core/Engine.hpp>
+#include <Runeterra/Utils/DeckCode.hpp>
 
 using namespace Runeterra;
+
+TEST_CASE("[Engine] - CanStartGame")
+{
+    const std::vector<std::string> deck =
+        DeckCode::Decode("CEBAIAIFB4WDANQIAEAQGDAUDAQSIJZUAIAQCBIFAEAQCBAA");
+
+    Engine engine1;
+    engine1.CreatePlayers({}, {});
+    CHECK_EQ(engine1.CanStartGame(), false);
+
+    Engine engine2;
+    engine2.CreatePlayers(deck, deck);
+    CHECK_EQ(engine2.CanStartGame(), true);
+}
 
 TEST_CASE("[Engine] - GetAllCards")
 {
