@@ -6,7 +6,6 @@
 
 #include <doctest.h>
 
-#include <Runeterra/Cards/Cards.hpp>
 #include <Runeterra/Decks/Deck.hpp>
 #include <Runeterra/Utils/DeckCode.hpp>
 

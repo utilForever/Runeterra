@@ -4,7 +4,6 @@
 // personal capacity and are not conveying any rights to any intellectual
 // property of any third parties.
 
-#include <Runeterra/Cards/Cards.hpp>
 #include <Runeterra/Commons/Constants.hpp>
 #include <Runeterra/Commons/Utils.hpp>
 #include <Runeterra/Utils/DeckCode.hpp>
