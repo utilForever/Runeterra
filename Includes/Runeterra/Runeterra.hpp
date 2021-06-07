@@ -25,6 +25,5 @@
 #include <Runeterra/Helpers/DeckCodeHelpers.hpp>
 #include <Runeterra/Runeterra.hpp>
 #include <Runeterra/Systems/Engine.hpp>
-#include <Runeterra/Systems/Game.hpp>
 
 #endif  // RUNETERRA_HPP
