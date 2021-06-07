@@ -20,17 +20,9 @@
 
 namespace Runeterra::Card
 {
-void LoadData(entt::registry& registry)
+namespace Internal
 {
-    LoadDataInternal(registry,
-                     std::ifstream{ RESOURCES_DIR "set1-en_us.json" });
-    LoadDataInternal(registry,
-                     std::ifstream{ RESOURCES_DIR "set2-en_us.json" });
-    LoadDataInternal(registry,
-                     std::ifstream{ RESOURCES_DIR "set3-en_us.json" });
-}
-
-void LoadDataInternal(entt::registry& registry, std::ifstream&& stream)
+void LoadCardInfo(entt::registry& registry, std::ifstream&& stream)
 {
     // Read card data from JSON file
     nlohmann::json cardData;
@@ -91,5 +83,16 @@ void LoadDataInternal(entt::registry& registry, std::ifstream&& stream)
     }
 
     stream.close();
+}
+}  // namespace Internal
+
+void LoadData(entt::registry& registry)
+{
+    Internal::LoadCardInfo(registry,
+                           std::ifstream{ RESOURCES_DIR "set1-en_us.json" });
+    Internal::LoadCardInfo(registry,
+                           std::ifstream{ RESOURCES_DIR "set2-en_us.json" });
+    Internal::LoadCardInfo(registry,
+                           std::ifstream{ RESOURCES_DIR "set3-en_us.json" });
 }
 }  // namespace Runeterra::Card

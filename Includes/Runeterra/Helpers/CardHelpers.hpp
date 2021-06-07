@@ -14,11 +14,6 @@ namespace Runeterra::Card
 //! Loads card data from set{1|2|3}-en_us.json.
 //! \param registry A registry of the entity-component system.
 void LoadData(entt::registry& registry);
-
-//! Internal method of Load().
-//! \param registry A registry of the entity-component system.
-//! \param stream An input file stream to read data.
-void LoadDataInternal(entt::registry& registry, std::ifstream&& stream);
 }  // namespace Runeterra::Card
 
 #endif  // RUNETERRA_CARD_HELPERS_HPP
