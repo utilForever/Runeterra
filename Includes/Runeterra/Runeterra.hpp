@@ -27,6 +27,5 @@
 #include <Runeterra/Runeterra.hpp>
 #include <Runeterra/Systems/Engine.hpp>
 #include <Runeterra/Systems/Game.hpp>
-#include <Runeterra/Tasks/ITask.hpp>
 
 #endif  // RUNETERRA_HPP
