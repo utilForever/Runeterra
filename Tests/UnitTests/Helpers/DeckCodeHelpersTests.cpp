@@ -6,7 +6,7 @@
 
 #include <doctest.h>
 
-#include <Runeterra/Utils/DeckCode.hpp>
+#include <Runeterra/Helpers/DeckCodeHelpers.hpp>
 
 #include <algorithm>
 

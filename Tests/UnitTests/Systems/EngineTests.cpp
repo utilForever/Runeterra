@@ -7,8 +7,8 @@
 #include <doctest.h>
 
 #include <Runeterra/Commons/Constants.hpp>
+#include <Runeterra/Helpers/DeckCodeHelpers.hpp>
 #include <Runeterra/Systems/Engine.hpp>
-#include <Runeterra/Utils/DeckCode.hpp>
 
 #include <iostream>
 
