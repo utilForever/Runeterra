@@ -21,7 +21,6 @@
 #include <Runeterra/Enums/CardEnums.hpp>
 #include <Runeterra/Enums/GameEnums.hpp>
 #include <Runeterra/Enums/TaskEnums.hpp>
-#include <Runeterra/Loaders/CardLoader.hpp>
 #include <Runeterra/Models/Player.hpp>
 #include <Runeterra/Runeterra.hpp>
 #include <Runeterra/Systems/Engine.hpp>
