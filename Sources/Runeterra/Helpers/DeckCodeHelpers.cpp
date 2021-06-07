@@ -15,38 +15,8 @@
 
 namespace Runeterra::DeckCode
 {
-std::vector<std::string> Decode(const std::string& deckCode)
+namespace Internal
 {
-    std::vector<std::string> deck;
-    deck.reserve(START_DECK_SIZE);
-
-    // Fix padding and decode
-    const std::size_t missingPaddingLen =
-        (deckCode.size() / 8 + 1) * 8 - deckCode.size();
-    const std::string missingPadding =
-        std::string{ static_cast<char>(missingPaddingLen % 8), '=' };
-    const std::string encodedWithPadding =
-        missingPadding.empty() ? deckCode : deckCode + missingPadding;
-    std::vector<unsigned char> base32Decoded =
-        cppcodec::base32_rfc4648::decode(encodedWithPadding);
-
-    int version = GetNextVarInt(&base32Decoded);
-    version = version & 0xf;
-    if (version > MAX_KNOWN_VERSION)
-    {
-        const std::string msg =
-            std::string{ "Invalid version: " }.append(std::to_string(version));
-        throw std::runtime_error{ msg };
-    }
-
-    // References: https://github.com/RiotGames/LoRDeckCodes#process
-    DecodeGroup(&base32Decoded, deck, 3);
-    DecodeGroup(&base32Decoded, deck, 2);
-    DecodeGroup(&base32Decoded, deck, 1);
-
-    return deck;
-}
-
 void DecodeGroup(std::vector<uint8_t>* cardStream,
                  std::vector<std::string>& deck, int amount)
 {
@@ -80,5 +50,38 @@ void DecodeGroup(std::vector<uint8_t>* cardStream,
             }
         }
     }
+}
+}  // namespace Internal
+
+std::vector<std::string> Decode(const std::string& deckCode)
+{
+    std::vector<std::string> deck;
+    deck.reserve(START_DECK_SIZE);
+
+    // Fix padding and decode
+    const std::size_t missingPaddingLen =
+        (deckCode.size() / 8 + 1) * 8 - deckCode.size();
+    const std::string missingPadding =
+        std::string{ static_cast<char>(missingPaddingLen % 8), '=' };
+    const std::string encodedWithPadding =
+        missingPadding.empty() ? deckCode : deckCode + missingPadding;
+    std::vector<unsigned char> base32Decoded =
+        cppcodec::base32_rfc4648::decode(encodedWithPadding);
+
+    int version = GetNextVarInt(&base32Decoded);
+    version = version & 0xf;
+    if (version > MAX_KNOWN_VERSION)
+    {
+        const std::string msg =
+            std::string{ "Invalid version: " }.append(std::to_string(version));
+        throw std::runtime_error{ msg };
+    }
+
+    // References: https://github.com/RiotGames/LoRDeckCodes#process
+    Internal::DecodeGroup(&base32Decoded, deck, 3);
+    Internal::DecodeGroup(&base32Decoded, deck, 2);
+    Internal::DecodeGroup(&base32Decoded, deck, 1);
+
+    return deck;
 }
 }  // namespace Runeterra::DeckCode
