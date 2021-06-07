@@ -11,23 +11,18 @@
 #include <Runeterra/Components/Health.hpp>
 #include <Runeterra/Components/Name.hpp>
 #include <Runeterra/Enums/CardEnums.hpp>
-#include <Runeterra/Loaders/CardLoader.hpp>
+#include <Runeterra/Helpers/CardHelpers.hpp>
 
 #include <json/json.hpp>
 #include <magic_enum/magic_enum.hpp>
 
 #include <fstream>
 
-namespace Runeterra
+namespace Runeterra::Card
 {
-void CardLoader::Load(entt::registry& registry)
+namespace Internal
 {
-    LoadInternal(registry, std::ifstream{ RESOURCES_DIR "set1-en_us.json" });
-    LoadInternal(registry, std::ifstream{ RESOURCES_DIR "set2-en_us.json" });
-    LoadInternal(registry, std::ifstream{ RESOURCES_DIR "set3-en_us.json" });
-}
-
-void CardLoader::LoadInternal(entt::registry& registry, std::ifstream&& stream)
+void LoadCardInfo(entt::registry& registry, std::ifstream&& stream)
 {
     // Read card data from JSON file
     nlohmann::json cardData;
@@ -79,7 +74,7 @@ void CardLoader::LoadInternal(entt::registry& registry, std::ifstream&& stream)
         }
 
         // TODO: Process keywords
-        //for (auto& keyword : data["keywordRefs"])
+        // for (auto& keyword : data["keywordRefs"])
         //{
         //    card.keywords.emplace_back(
         //        magic_enum::enum_cast<Keyword>(keyword.get<std::string>())
@@ -89,4 +84,15 @@ void CardLoader::LoadInternal(entt::registry& registry, std::ifstream&& stream)
 
     stream.close();
 }
-}  // namespace Runeterra
+}  // namespace Internal
+
+void LoadData(entt::registry& registry)
+{
+    Internal::LoadCardInfo(registry,
+                           std::ifstream{ RESOURCES_DIR "set1-en_us.json" });
+    Internal::LoadCardInfo(registry,
+                           std::ifstream{ RESOURCES_DIR "set2-en_us.json" });
+    Internal::LoadCardInfo(registry,
+                           std::ifstream{ RESOURCES_DIR "set3-en_us.json" });
+}
+}  // namespace Runeterra::Card

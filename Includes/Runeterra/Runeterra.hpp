@@ -19,17 +19,9 @@
 #include <Runeterra/Components/Health.hpp>
 #include <Runeterra/Components/Name.hpp>
 #include <Runeterra/Enums/CardEnums.hpp>
-#include <Runeterra/Enums/GameEnums.hpp>
-#include <Runeterra/Enums/TaskEnums.hpp>
-#include <Runeterra/Loaders/CardLoader.hpp>
-#include <Runeterra/Models/Player.hpp>
+#include <Runeterra/Helpers/CardHelpers.hpp>
+#include <Runeterra/Helpers/DeckCodeHelpers.hpp>
 #include <Runeterra/Runeterra.hpp>
 #include <Runeterra/Systems/Engine.hpp>
-#include <Runeterra/Systems/Game.hpp>
-#include <Runeterra/Systems/GameConfig.hpp>
-#include <Runeterra/Systems/GameManager.hpp>
-#include <Runeterra/Tasks/ITask.hpp>
-#include <Runeterra/Tasks/PlayerTasks/EndRoundTask.hpp>
-#include <Runeterra/Utils/DeckCode.hpp>
 
 #endif  // RUNETERRA_HPP
