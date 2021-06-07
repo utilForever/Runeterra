@@ -46,9 +46,6 @@ class Engine
         std::string_view&& nameToFind);
 
  private:
-    //! Loads a card data from JSON files.
-    void LoadCardData();
-
     entt::registry m_registry;
 };
 }  // namespace Runeterra

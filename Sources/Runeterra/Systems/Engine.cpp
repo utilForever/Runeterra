@@ -9,7 +9,7 @@
 #include <Runeterra/Components/CardCode.hpp>
 #include <Runeterra/Components/Deck.hpp>
 #include <Runeterra/Components/Name.hpp>
-#include <Runeterra/Loaders/CardLoader.hpp>
+#include <Runeterra/Helpers/CardHelpers.hpp>
 #include <Runeterra/Systems/Engine.hpp>
 
 using namespace entt::literals;
@@ -18,7 +18,7 @@ namespace Runeterra
 {
 Engine::Engine()
 {
-    LoadCardData();
+    Card::LoadData(m_registry);
 }
 
 void Engine::CreatePlayers(const std::vector<std::string>& deck1,
@@ -76,10 +76,5 @@ std::optional<std::string> Engine::FindCardCodeByName(
     }
 
     return std::nullopt;
-}
-
-void Engine::LoadCardData()
-{
-    CardLoader::Load(m_registry);
 }
 }  // namespace Runeterra
