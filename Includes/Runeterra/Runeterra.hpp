@@ -28,7 +28,6 @@
 #include <Runeterra/Systems/Engine.hpp>
 #include <Runeterra/Systems/Game.hpp>
 #include <Runeterra/Systems/GameConfig.hpp>
-#include <Runeterra/Systems/GameManager.hpp>
 #include <Runeterra/Tasks/ITask.hpp>
 #include <Runeterra/Tasks/PlayerTasks/EndRoundTask.hpp>
 
