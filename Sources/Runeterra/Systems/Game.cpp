@@ -4,6 +4,7 @@
 // personal capacity and are not conveying any rights to any intellectual
 // property of any third parties.
 
+#include <Runeterra/Commons/Constants.hpp>
 #include <Runeterra/Commons/Tags.hpp>
 #include <Runeterra/Components/Deck.hpp>
 #include <Runeterra/Components/Name.hpp>
@@ -29,5 +30,26 @@ void Game::CreatePlayers(const std::vector<std::string>& deck1,
     m_registry.emplace<Tag::Player>(entity2);
     m_registry.emplace<Name>(entity2, "Player 2");
     m_registry.emplace<Deck>(entity2, deck1);
+}
+
+bool Game::CanStartGame() const
+{
+    if (const auto view = m_registry.view<Tag::Player>();
+        view.size() != NUM_PLAYERS)
+    {
+        return false;
+    }
+
+    const auto view = m_registry.view<Tag::Player, Deck>();
+
+    for (auto [entity, deck] : view.each())
+    {
+        if (deck.cards.size() != START_DECK_SIZE)
+        {
+            return false;
+        }
+    }
+
+    return true;
 }
 }  // namespace Runeterra

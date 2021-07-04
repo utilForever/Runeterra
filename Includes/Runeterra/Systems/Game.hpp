@@ -32,6 +32,10 @@ class Game
     void CreatePlayers(const std::vector<std::string>& deck1,
                        const std::vector<std::string>& deck2);
 
+    //! Checks that the game can start.
+    //! \return true if the game can start, flase otherwise.
+    bool CanStartGame() const;
+
  private:
     entt::registry m_registry;
 };
