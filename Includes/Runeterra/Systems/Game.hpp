@@ -35,7 +35,7 @@ class Game
 
     //! Checks that the game can start.
     //! \return true if the game can start, flase otherwise.
-    bool CanStartGame() const;
+    bool CanStartGame();
 
     //! Returns the number of all cards.
     //! \return The number of all cards.

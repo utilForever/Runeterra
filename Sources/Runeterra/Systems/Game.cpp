@@ -33,7 +33,7 @@ void Game::CreatePlayers(const std::vector<std::string>& deck1,
     m_registry.emplace<Deck>(entity2, deck1);
 }
 
-bool Game::CanStartGame() const
+bool Game::CanStartGame()
 {
     if (const auto view = m_registry.view<Tag::Player>();
         view.size() != NUM_PLAYERS)
