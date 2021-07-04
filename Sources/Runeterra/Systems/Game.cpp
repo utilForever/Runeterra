@@ -6,6 +6,7 @@
 
 #include <Runeterra/Commons/Constants.hpp>
 #include <Runeterra/Commons/Tags.hpp>
+#include <Runeterra/Components/CardCode.hpp>
 #include <Runeterra/Components/Deck.hpp>
 #include <Runeterra/Components/Name.hpp>
 #include <Runeterra/Helpers/CardHelpers.hpp>
@@ -51,5 +52,11 @@ bool Game::CanStartGame() const
     }
 
     return true;
+}
+
+int Game::NumAllCards()
+{
+    const auto view = m_registry.view<CardCode>();
+    return static_cast<int>(view.size());
 }
 }  // namespace Runeterra

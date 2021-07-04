@@ -36,6 +36,10 @@ class Game
     //! \return true if the game can start, flase otherwise.
     bool CanStartGame() const;
 
+    //! Returns the number of all cards.
+    //! \return The number of all cards.
+    [[nodiscard]] int NumAllCards();
+
  private:
     entt::registry m_registry;
 };
