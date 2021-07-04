@@ -10,19 +10,17 @@
 #include <Runeterra/Components/Deck.hpp>
 #include <Runeterra/Components/Name.hpp>
 #include <Runeterra/Helpers/CardHelpers.hpp>
-#include <Runeterra/Systems/Engine.hpp>
-
-using namespace entt::literals;
+#include <Runeterra/Systems/Game.hpp>
 
 namespace Runeterra
 {
-Engine::Engine()
+Game::Game()
 {
     Card::LoadData(m_registry);
 }
 
-void Engine::CreatePlayers(const std::vector<std::string>& deck1,
-                           const std::vector<std::string>& deck2)
+void Game::CreatePlayers(const std::vector<std::string>& deck1,
+                         const std::vector<std::string>& deck2)
 {
     auto entity1 = m_registry.create();
     m_registry.emplace<Tag::Player>(entity1);
@@ -32,10 +30,10 @@ void Engine::CreatePlayers(const std::vector<std::string>& deck1,
     auto entity2 = m_registry.create();
     m_registry.emplace<Tag::Player>(entity2);
     m_registry.emplace<Name>(entity2, "Player 2");
-    m_registry.emplace<Deck>(entity2, deck2);
+    m_registry.emplace<Deck>(entity2, deck1);
 }
 
-bool Engine::CanStartGame()
+bool Game::CanStartGame()
 {
     if (const auto view = m_registry.view<Tag::Player>();
         view.size() != NUM_PLAYERS)
@@ -56,20 +54,19 @@ bool Engine::CanStartGame()
     return true;
 }
 
-int Engine::NumAllCards()
+int Game::NumAllCards()
 {
     const auto view = m_registry.view<CardCode>();
     return static_cast<int>(view.size());
 }
 
-std::optional<std::string> Engine::FindCardCodeByName(
-    std::string_view&& nameToFind)
+std::optional<std::string> Game::FindCardCodeByName(std::string_view&& name)
 {
     const auto view = m_registry.view<CardCode, Name>();
 
-    for (auto [entity, cardCode, name] : view.each())
+    for (auto [entity, cardCode, cardName] : view.each())
     {
-        if (nameToFind == name.name)
+        if (name == cardName.name)
         {
             return cardCode.cardCode;
         }
