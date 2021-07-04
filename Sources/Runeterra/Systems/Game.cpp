@@ -4,8 +4,13 @@
 // personal capacity and are not conveying any rights to any intellectual
 // property of any third parties.
 
+#include <Runeterra/Helpers/CardHelpers.hpp>
 #include <Runeterra/Systems/Game.hpp>
 
 namespace Runeterra
 {
+Game::Game()
+{
+    Card::LoadData(m_registry);
+}
 }  // namespace Runeterra

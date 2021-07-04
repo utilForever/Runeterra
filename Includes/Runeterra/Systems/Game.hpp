@@ -7,6 +7,8 @@
 #ifndef RUNETERRA_GAME_HPP
 #define RUNETERRA_GAME_HPP
 
+#include <entt/entt.hpp>
+
 namespace Runeterra
 {
 //!
@@ -17,6 +19,12 @@ namespace Runeterra
 //!
 class Game
 {
+ public:
+    //! Constructs new game and loads card data.
+    Game();
+
+ private:
+    entt::registry m_registry;
 };
 }  // namespace Runeterra
 
