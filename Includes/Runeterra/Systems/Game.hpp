@@ -9,6 +9,7 @@
 
 #include <entt/entt.hpp>
 
+#include <optional>
 #include <string>
 #include <vector>
 
@@ -39,6 +40,12 @@ class Game
     //! Returns the number of all cards.
     //! \return The number of all cards.
     [[nodiscard]] int NumAllCards();
+
+    //! Returns a card code that matches \p name.
+    //! \param name The card name to find.
+    //! \return A card code that matches \p name.
+    [[nodiscard]] std::optional<std::string> FindCardCodeByName(
+        std::string_view&& name);
 
  private:
     entt::registry m_registry;

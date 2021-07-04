@@ -59,4 +59,19 @@ int Game::NumAllCards()
     const auto view = m_registry.view<CardCode>();
     return static_cast<int>(view.size());
 }
+
+std::optional<std::string> Game::FindCardCodeByName(std::string_view&& name)
+{
+    const auto view = m_registry.view<CardCode, Name>();
+
+    for (auto [entity, cardCode, cardName] : view.each())
+    {
+        if (name == cardName.name)
+        {
+            return cardCode.cardCode;
+        }
+    }
+
+    return std::nullopt;
+}
 }  // namespace Runeterra
