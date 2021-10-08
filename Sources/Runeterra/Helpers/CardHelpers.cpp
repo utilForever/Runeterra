@@ -94,5 +94,9 @@ void LoadData(entt::registry& registry)
                            std::ifstream{ RESOURCES_DIR "set2-en_us.json" });
     Internal::LoadCardInfo(registry,
                            std::ifstream{ RESOURCES_DIR "set3-en_us.json" });
+    Internal::LoadCardInfo(registry,
+                           std::ifstream{ RESOURCES_DIR "set4-en_us.json" });
+    Internal::LoadCardInfo(registry,
+                           std::ifstream{ RESOURCES_DIR "set5-en_us.json" });
 }
 }  // namespace Runeterra::Card
