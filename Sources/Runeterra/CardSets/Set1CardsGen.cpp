@@ -2661,22 +2661,1493 @@ void AddNoxusNonCollect(entt::registry& registry)
 
 void AddPiltoverZaun(entt::registry& registry)
 {
-    // Do nothing
+    // --------------------------------- Unit - Piltover-&-Zaun
+    // [01PZ040] Jinx - COST:4
+    // - Supertype: Champion, Set: Set1, Rarity: Champion
+    // --------------------------------------------------------
+    // Level Up Description: I see your hand is empty.
+    // --------------------------------------------------------
+    // Keyword:
+    // - Quick Attack = 1
+    // --------------------------------------------------------
+
+    // --------------------------------- Unit - Piltover-&-Zaun
+    // [01PZ008] Teemo - COST:1
+    // - Subtype: Yordle, Supertype: Champion, Set: Set1, Rarity: Champion
+    // --------------------------------------------------------
+    // Description: Nexus Strike: Plant 5 Poison Puffcaps
+    //              on random cards in the enemy deck.
+    // --------------------------------------------------------
+    // Level Up Description: You've planted 15+ Poison Puffcaps.
+    // --------------------------------------------------------
+    // Keyword:
+    // - Elusive = 1
+    // --------------------------------------------------------
+
+    // --------------------------------- Unit - Piltover-&-Zaun
+    // [01PZ056] Heimerdinger - COST:5
+    // - Subtype: Yordle, Supertype: Champion, Set: Set1, Rarity: Champion
+    // --------------------------------------------------------
+    // Description: When you cast a spell, create a Fleeting Turret
+    //              in hand with equal cost. It costs 0.
+    // --------------------------------------------------------
+    // Level Up Description: I've seen you summon 12+ Power of Turrets.
+    // --------------------------------------------------------
+    // Keyword:
+    // - Imbue = 1
+    // --------------------------------------------------------
+
+    // --------------------------------- Unit - Piltover-&-Zaun
+    // [01PZ013] Augmented Experimenter - COST:6
+    // - Set: Set1, Rarity: Epic
+    // --------------------------------------------------------
+    // Description: Play: Discard your hand. Draw 3.
+    //              Deal 3 to an enemy.
+    // --------------------------------------------------------
+
+    // --------------------------------- Unit - Piltover-&-Zaun
+    // [01PZ007] Parade Electrorig - COST:3
+    // - Set: Set1, Rarity: Common
+    // --------------------------------------------------------
+    // Description: Support: Create 4 copies of the supported
+    //              ally in your deck.
+    // --------------------------------------------------------
+
+    // --------------------------------- Unit - Piltover-&-Zaun
+    // [01PZ018] Academy Prodigy - COST:2
+    // - Set: Set1, Rarity: Common
+    // --------------------------------------------------------
+    // Keyword:
+    // - Quick Attack = 1
+    // --------------------------------------------------------
+
+    // --------------------------------- Unit - Piltover-&-Zaun
+    // [01PZ019] Eager Apprentice - COST:2
+    // - Set: Set1, Rarity: Common
+    // --------------------------------------------------------
+    // Description: When I'm summoned, refill 2 spell mana.
+    // --------------------------------------------------------
+
+    // --------------------------------- Unit - Piltover-&-Zaun
+    // [01PZ025] Puffcap Peddler - COST:3
+    // - Set: Set1, Rarity: Common
+    // --------------------------------------------------------
+    // Description: When you cast a spell, plant 3 Poison Puffcaps
+    //              on random cards in the enemy deck.
+    // --------------------------------------------------------
+    // Keyword:
+    // - Imbue = 1
+    // --------------------------------------------------------
+
+    // --------------------------------- Unit - Piltover-&-Zaun
+    // [01PZ048] Corina Veraza - COST:9
+    // - Set: Set1, Rarity: Epic
+    // --------------------------------------------------------
+    // Description: Play: Obliterate the top 5 cards of your deck
+    //              to deal 1 to all enemies and the enemy Nexus
+    //              for each spell obliterated.
+    // --------------------------------------------------------
+
+    // -------------------------------- Spell - Piltover-&-Zaun
+    // [01PZ028] Jury-Rig - COST:1
+    // - Set: Set1, Rarity: Common
+    // - Spell Speed: Burst
+    // --------------------------------------------------------
+    // Description: When cast or discarded, summon a Scrap Scuttler.
+    // --------------------------------------------------------
+    // Keyword:
+    // - Burst = 1
+    // --------------------------------------------------------
+
+    // -------------------------------- Spell - Piltover-&-Zaun
+    // [01PZ050] Rising Spell Force - COST:3
+    // - Set: Set1, Rarity: Common
+    // - Spell Speed: Burst
+    // --------------------------------------------------------
+    // Description: Give an ally +4|+0 and Quick Attack this round.
+    // --------------------------------------------------------
+    // Keyword:
+    // - Burst = 1
+    // --------------------------------------------------------
+
+    // --------------------------------- Unit - Piltover-&-Zaun
+    // [01PZ054] Boomcrew Rookie - COST:2
+    // - Set: Set1, Rarity: Common
+    // --------------------------------------------------------
+    // Description: Attack: Deal 2 to the enemy Nexus.
+    // --------------------------------------------------------
+
+    // --------------------------------- Unit - Piltover-&-Zaun
+    // [01PZ030] Shady Character - COST:4
+    // - Subtype: Yordle, Set: Set1, Rarity: Rare
+    // --------------------------------------------------------
+    // Description: Play: Pick a follower.
+    //              Transform me into an exact copy of it.
+    // --------------------------------------------------------
+
+    // --------------------------------- Unit - Piltover-&-Zaun
+    // [01PZ017] Used Cask Salesman - COST:3
+    // - Set: Set1, Rarity: Common
+    // --------------------------------------------------------
+    // Description: When I'm summoned, summon 2 Caustic Casks.
+    // --------------------------------------------------------
+
+    // --------------------------------- Unit - Piltover-&-Zaun
+    // [01PZ038] Sump Dredger - COST:3
+    // - Set: Set1, Rarity: Common
+    // --------------------------------------------------------
+    // Description: Play: Discard a card to draw 1.
+    // --------------------------------------------------------
+
+    // --------------------------------- Unit - Piltover-&-Zaun
+    // [01PZ036] Ezreal - COST:3
+    // - Supertype: Champion, Set: Set1, Rarity: Champion
+    // --------------------------------------------------------
+    // Description: Nexus Strike: Create a Fleeting Mystic Shot
+    //              in hand.
+    // --------------------------------------------------------
+    // Level Up Description: You've targeted enemies 6+ times.
+    // --------------------------------------------------------
+    // Keyword:
+    // - Elusive = 1
+    // --------------------------------------------------------
+
+    // --------------------------------- Unit - Piltover-&-Zaun
+    // [01PZ035] Jae Medarda - COST:6
+    // - Set: Set1, Rarity: Epic
+    // --------------------------------------------------------
+    // Description: When I'm targeted and survive, draw 1.
+    // --------------------------------------------------------
+
+    // -------------------------------- Spell - Piltover-&-Zaun
+    // [01PZ010] Mushroom Cloud - COST:1
+    // - Set: Set1, Rarity: Common
+    // - Spell Speed: Burst
+    // --------------------------------------------------------
+    // Description: Plant 5 Poison Puffcaps on random cards
+    //              in the enemy deck.
+    // --------------------------------------------------------
+    // Keyword:
+    // - Burst = 1
+    // --------------------------------------------------------
+
+    // --------------------------------- Unit - Piltover-&-Zaun
+    // [01PZ045] Zaunite Urchin - COST:1
+    // - Set: Set1, Rarity: Common
+    // --------------------------------------------------------
+    // Description: Play: Discard a card to draw 1.
+    // --------------------------------------------------------
+
+    // --------------------------------- Unit - Piltover-&-Zaun
+    // [01PZ002] Back Alley Barkeep - COST:4
+    // - Set: Set1, Rarity: Common
+    // --------------------------------------------------------
+    // Description: When I'm summoned, create in hand a random card
+    //              from your regions for each Back Alley Barkeep
+    //              you've summoned this game.
+    // --------------------------------------------------------
+
+    // -------------------------------- Spell - Piltover-&-Zaun
+    // [01PZ004] Trueshot Barrage - COST:7
+    // - Set: Set1, Rarity: Epic
+    // - Spell Speed: Slow
+    // --------------------------------------------------------
+    // Description: Deal 3 to an enemy or the enemy Nexus,
+    //              2 to another, and 1 to another.
+    // --------------------------------------------------------
+    // Keyword:
+    // - Slow = 1
+    // --------------------------------------------------------
+
+    // --------------------------------- Unit - Piltover-&-Zaun
+    // [01PZ020] Daring Poro - COST:1
+    // - Subtype: Poro, Set: Set1, Rarity: Common
+    // --------------------------------------------------------
+    // Keyword:
+    // - Elusive = 1
+    // --------------------------------------------------------
+
+    // -------------------------------- Spell - Piltover-&-Zaun
+    // [01PZ046] Counterfeit Copies - COST:1
+    // - Set: Set1, Rarity: Rare
+    // - Spell Speed: Burst
+    // --------------------------------------------------------
+    // Description: Pick a card in hand.
+    //              Create 4 exact copies of it in your deck.
+    // --------------------------------------------------------
+    // Keyword:
+    // - Burst = 1
+    // --------------------------------------------------------
+
+    // -------------------------------- Spell - Piltover-&-Zaun
+    // [01PZ052] Mystic Shot - COST:2
+    // - Set: Set1, Rarity: Common
+    // - Spell Speed: Fast
+    // --------------------------------------------------------
+    // Description: Deal 2 to anything.
+    // --------------------------------------------------------
+    // Keyword:
+    // - Fast = 1
+    // --------------------------------------------------------
+
+    // -------------------------------- Spell - Piltover-&-Zaun
+    // [01PZ033] Purrsuit of Perfection - COST:5
+    // - Set: Set1, Rarity: Epic
+    // - Spell Speed: Slow
+    // --------------------------------------------------------
+    // Description: If you've played 20 cards with different names
+    //              this game, summon Catastrophe.
+    // --------------------------------------------------------
+    // Keyword:
+    // - Slow = 1
+    // --------------------------------------------------------
+
+    // -------------------------------- Spell - Piltover-&-Zaun
+    // [01PZ005] Hextech Transmogulator - COST:6
+    // - Set: Set1, Rarity: Rare
+    // - Spell Speed: Fast
+    // --------------------------------------------------------
+    // Description: Transform a follower into an exact copy
+    //              of another follower.
+    // --------------------------------------------------------
+    // Keyword:
+    // - Fast = 1
+    // --------------------------------------------------------
+
+    // --------------------------------- Unit - Piltover-&-Zaun
+    // [01PZ021] Midenstokke Henchmen - COST:5
+    // - Set: Set1, Rarity: Rare
+    // --------------------------------------------------------
+    // Description: Nexus Strike: Summon an exact copy of me.
+    // --------------------------------------------------------
+
+    // -------------------------------- Spell - Piltover-&-Zaun
+    // [01PZ031] Statikk Shock - COST:4
+    // - Set: Set1, Rarity: Rare
+    // - Spell Speed: Fast
+    // --------------------------------------------------------
+    // Description: Deal 1 to an enemy or the enemy Nexus,
+    //              and 1 to another. Draw 1.
+    // --------------------------------------------------------
+    // Keyword:
+    // - Fast = 1
+    // --------------------------------------------------------
+
+    // --------------------------------- Unit - Piltover-&-Zaun
+    // [01PZ059] Golden Crushbot - COST:3
+    // - Set: Set1, Rarity: Common
+    // --------------------------------------------------------
+
+    // -------------------------------- Spell - Piltover-&-Zaun
+    // [01PZ001] Rummage - COST:2
+    // - Set: Set1, Rarity: Common
+    // - Spell Speed: Burst
+    // --------------------------------------------------------
+    // Description: To play, discard up to 2 cards.
+    //              Draw 1 for each card you discarded.
+    // --------------------------------------------------------
+    // Keyword:
+    // - Burst = 1
+    // --------------------------------------------------------
+
+    // -------------------------------- Spell - Piltover-&-Zaun
+    // [01PZ057] Scrapdash Assembly - COST:2
+    // - Set: Set1, Rarity: Common
+    // - Spell Speed: Slow
+    // --------------------------------------------------------
+    // Description: Summon 2 Scrap Scuttlers.
+    // --------------------------------------------------------
+    // Keyword:
+    // - Slow = 1
+    // --------------------------------------------------------
+
+    // -------------------------------- Spell - Piltover-&-Zaun
+    // [01PZ027] Thermogenic Beam - COST:0
+    // - Set: Set1, Rarity: Rare
+    // - Spell Speed: Slow
+    // --------------------------------------------------------
+    // Description: To play, spend all your mana.
+    //              Deal that much to a unit.
+    // --------------------------------------------------------
+    // Keyword:
+    // - Slow = 1
+    // --------------------------------------------------------
+
+    // --------------------------------- Unit - Piltover-&-Zaun
+    // [01PZ055] Astute Academic - COST:1
+    // - Set: Set1, Rarity: Common
+    // --------------------------------------------------------
+    // Description: When you draw a card, give me +1|+0 this round.
+    // --------------------------------------------------------
+
+    // -------------------------------- Spell - Piltover-&-Zaun
+    // [01PZ014] Unlicensed Innovation - COST:6
+    // - Set: Set1, Rarity: Common
+    // - Spell Speed: Slow
+    // --------------------------------------------------------
+    // Description: Summon an Illegal Contraption.
+    // --------------------------------------------------------
+    // Keyword:
+    // - Slow = 1
+    // --------------------------------------------------------
+
+    // --------------------------------- Unit - Piltover-&-Zaun
+    // [01PZ034] Sumpsnipe Scavenger - COST:4
+    // - Set: Set1, Rarity: Rare
+    // --------------------------------------------------------
+    // Description: Allegiance: Create a Sumpworks Map in hand.
+    //              It costs 0 this round.
+    // --------------------------------------------------------
+
+    // --------------------------------- Unit - Piltover-&-Zaun
+    // [01PZ003] Assembly Bot - COST:3
+    // - Set: Set1, Rarity: Rare
+    // --------------------------------------------------------
+    // Description: When you cast a spell, grant me +1|+1.
+    // --------------------------------------------------------
+    // Keyword:
+    // - Imbue = 1
+    // --------------------------------------------------------
+
+    // --------------------------------- Unit - Piltover-&-Zaun
+    // [01PZ044] Chempunk Shredder - COST:5
+    // - Set: Set1, Rarity: Rare
+    // --------------------------------------------------------
+    // Description: Play: Deal 1 to all enemies.
+    // --------------------------------------------------------
+
+    // --------------------------------- Unit - Piltover-&-Zaun
+    // [01PZ029] Eminent Benefactor - COST:4
+    // - Set: Set1, Rarity: Rare
+    // --------------------------------------------------------
+    // Description: Last Breath: Create in hand a random Epic card
+    //              from your regions.
+    // --------------------------------------------------------
+    // Keyword:
+    // - Last Breath = 1
+    // --------------------------------------------------------
+
+    // --------------------------------- Unit - Piltover-&-Zaun
+    // [01PZ051] Funsmith - COST:4
+    // - Set: Set1, Rarity: Rare
+    // --------------------------------------------------------
+    // Description: All of your spells and skills deal 1 extra damage.
+    // --------------------------------------------------------
+    // Keyword:
+    // - Missing Translation = 1
+    // --------------------------------------------------------
+
+    // --------------------------------- Unit - Piltover-&-Zaun
+    // [01PZ023] Professor von Yipp - COST:4
+    // - Set: Set1, Rarity: Rare
+    // --------------------------------------------------------
+    // Description: When you summon a 1 cost ally, grant it +2|+2.
+    // --------------------------------------------------------
+
+    // --------------------------------- Unit - Piltover-&-Zaun
+    // [01PZ024] Unstable Voltician - COST:5
+    // - Set: Set1, Rarity: Rare
+    // --------------------------------------------------------
+    // Description: Grant me +4|+0 and Quick Attack once
+    //              you've cast a 6+ cost spell this game.
+    // --------------------------------------------------------
+
+    // -------------------------------- Spell - Piltover-&-Zaun
+    // [01PZ049] Progress Day! - COST:8
+    // - Set: Set1, Rarity: Epic
+    // - Spell Speed: Burst
+    // --------------------------------------------------------
+    // Description: Draw 3, then reduce those cards' costs by 1.
+    // --------------------------------------------------------
+    // Keyword:
+    // - Burst = 1
+    // --------------------------------------------------------
+
+    // --------------------------------- Unit - Piltover-&-Zaun
+    // [01PZ006] Plaza Guardian - COST:10
+    // - Set: Set1, Rarity: Rare
+    // --------------------------------------------------------
+    // Description: Reduce my cost by 1 for each spell
+    //              you've cast this game.
+    // --------------------------------------------------------
+    // Keyword:
+    // - Quick Attack = 1
+    // --------------------------------------------------------
+
+    // --------------------------------- Unit - Piltover-&-Zaun
+    // [01PZ053] Clump of Whumps - COST:2
+    // - Set: Set1, Rarity: Common
+    // --------------------------------------------------------
+    // Description: When I'm summoned,
+    //              create a Mushroom Cloud in hand.
+    // --------------------------------------------------------
+
+    // --------------------------------- Unit - Piltover-&-Zaun
+    // [01PZ012] Flame Chompers! - COST:2
+    // - Set: Set1, Rarity: Common
+    // --------------------------------------------------------
+    // Description: When I'm discarded, summon me.
+    // --------------------------------------------------------
+    // Keyword:
+    // - Challenger = 1
+    // --------------------------------------------------------
+
+    // -------------------------------- Spell - Piltover-&-Zaun
+    // [01PZ039] Get Excited! - COST:3
+    // - Set: Set1, Rarity: Rare
+    // - Spell Speed: Fast
+    // --------------------------------------------------------
+    // Description: To play, discard 1.
+    //              Deal 3 to anything.
+    // --------------------------------------------------------
+    // Keyword:
+    // - Fast = 1
+    // --------------------------------------------------------
+
+    // -------------------------------- Spell - Piltover-&-Zaun
+    // [01PZ016] Flash of Brilliance - COST:3
+    // - Set: Set1, Rarity: Common
+    // - Spell Speed: Burst
+    // --------------------------------------------------------
+    // Description: Create in hand a random 6+ cost spell
+    //              from your regions. Refill your spell mana.
+    // --------------------------------------------------------
+    // Keyword:
+    // - Burst = 1
+    // --------------------------------------------------------
+
+    // --------------------------------- Unit - Piltover-&-Zaun
+    // [01PZ058] Chump Whump - COST:4
+    // - Subtype: Yordle, Set: Set1, Rarity: Rare
+    // --------------------------------------------------------
+    // Description: When I'm summoned,
+    //              create 2 Mushroom Clouds in hand.
+    // --------------------------------------------------------
+
+    // --------------------------------- Unit - Piltover-&-Zaun
+    // [01PZ009] Amateur Aeronaut - COST:3
+    // - Set: Set1, Rarity: Common
+    // --------------------------------------------------------
+    // Keyword:
+    // - Elusive = 1
+    // --------------------------------------------------------
+
+    // --------------------------------- Unit - Piltover-&-Zaun
+    // [01PZ042] Intrepid Mariner - COST:2
+    // - Set: Set1, Rarity: Rare
+    // --------------------------------------------------------
+    // Description: Support: Give my supported ally Elusive
+    //              this round.
+    // --------------------------------------------------------
+
+    // -------------------------------- Spell - Piltover-&-Zaun
+    // [01PZ026] Sumpworks Map - COST:2
+    // - Set: Set1, Rarity: Common
+    // - Spell Speed: Burst
+    // --------------------------------------------------------
+    // Description: Grant an ally Elusive.
+    // --------------------------------------------------------
+    // Keyword:
+    // - Burst = 1
+    // --------------------------------------------------------
+
+    // --------------------------------- Unit - Piltover-&-Zaun
+    // [01PZ043] Chempunk Pickpocket - COST:2
+    // - Set: Set1, Rarity: Rare
+    // --------------------------------------------------------
+    // Description: Nexus Strike: Create in hand an exact copy
+    //              of a random spell from the enemy's deck.
+    // --------------------------------------------------------
+
+    // --------------------------------- Unit - Piltover-&-Zaun
+    // [01PZ047] Caustic Cask - COST:0
+    // - Set: Set1, Rarity: Common
+    // --------------------------------------------------------
+    // Description: Last Breath: Deal 1 to EACH Nexus.
+    // --------------------------------------------------------
+    // Keyword:
+    // - Last Breath = 1
+    // - Ephemeral = 1
+    // --------------------------------------------------------
 }
 
 void AddPiltoverZaunNonCollect(entt::registry& registry)
 {
-    // Do nothing
+    // -------------------------------- Spell - Piltover-&-Zaun
+    // [01PZ040T3] Jinx's Get Excited! - COST:3
+    // - Supertype: Champion, Set: Set1, Rarity: None
+    // - Spell Speed: Fast
+    // --------------------------------------------------------
+    // Description: To play, discard 1. Deal 3 to anything.
+    //              Create a Jinx in your deck.
+    // --------------------------------------------------------
+    // Keyword:
+    // - Fast = 1
+    // --------------------------------------------------------
+
+    // -------------------------------- Spell - Piltover-&-Zaun
+    // [01PZ040T2] Super Mega Death Rocket! - COST:1
+    // - Set: Set1, Rarity: None
+    // - Spell Speed: Slow
+    // --------------------------------------------------------
+    // Description: Deal 4 to the enemy nexus and 1 to all enemies.
+    // --------------------------------------------------------
+    // Keyword:
+    // - Slow = 1
+    // - Fleeting = 1
+    // --------------------------------------------------------
+
+    // --------------------------------- Unit - Piltover-&-Zaun
+    // [01PZ040T1] Jinx - COST:4
+    // - Supertype: Champion, Set: Set1, Rarity: None
+    // --------------------------------------------------------
+    // Description: Round Start: Draw 1.
+    //              Each round, the first time you empty your hand,
+    //              create a Super Mega Death Rocket! in hand.
+    // --------------------------------------------------------
+    // Keyword:
+    // - Quick Attack = 1
+    // --------------------------------------------------------
+
+    // --------------------------------- Unit - Piltover-&-Zaun
+    // [01PZ008T2] Teemo - COST:1
+    // - Subtype: Yordle, Supertype: Champion, Set: Set1, Rarity: None
+    // --------------------------------------------------------
+    // Description: Nexus Strike: Double the Poison Puffcaps
+    //              in the enemy deck.
+    // --------------------------------------------------------
+    // Keyword:
+    // - Elusive = 1
+    // --------------------------------------------------------
+
+    // -------------------------------- Spell - Piltover-&-Zaun
+    // [01PZ008T1] Teemo's Mushroom Cloud - COST:1
+    // - Supertype: Champion, Set: Set1, Rarity: None
+    // - Spell Speed: Burst
+    // --------------------------------------------------------
+    // Description: Plant 5 Poison Puffcaps on random cards
+    //              in the enemy deck.
+    //              Create a Teemo in your deck.
+    // --------------------------------------------------------
+    // Keyword:
+    // - Burst = 1
+    // --------------------------------------------------------
+
+    // --------------------------------- Unit - Piltover-&-Zaun
+    // [01PZ056T10] Heimerdinger - COST:5
+    // - Subtype: Yordle, Supertype: Champion, Set: Set1, Rarity: None
+    // --------------------------------------------------------
+    // Description: When you cast a spell, create a Fleeting Turret
+    //              in hand with equal cost.
+    //              Grant it +1|+1 and it costs 0.
+    // --------------------------------------------------------
+    // Keyword:
+    // - Imbue = 1
+    // --------------------------------------------------------
+
+    // --------------------------------- Unit - Piltover-&-Zaun
+    // [01PZ056T7] Mk2: Evolution Turret - COST:2
+    // - Subtype: Tech, Set: Set1, Rarity: None
+    // --------------------------------------------------------
+    // Keyword:
+    // - Tough = 1
+    // --------------------------------------------------------
+
+    // --------------------------------- Unit - Piltover-&-Zaun
+    // [01PZ056T9] Mk4: Stormlobber - COST:4
+    // - Subtype: Tech, Set: Set1, Rarity: None
+    // --------------------------------------------------------
+    // Keyword:
+    // - Overwhelm = 1
+    // --------------------------------------------------------
+
+    // -------------------------------- Spell - Piltover-&-Zaun
+    // [01PZ056T3] Heimerdinger's Progress Day! - COST:8
+    // - Supertype: Champion, Set: Set1, Rarity: None
+    // - Spell Speed: Burst
+    // --------------------------------------------------------
+    // Description: Draw 3, then reduce those cards' costs by 1.
+    //              Create a Heimerdinger in your deck.
+    // --------------------------------------------------------
+    // Keyword:
+    // - Burst = 1
+    // --------------------------------------------------------
+
+    // --------------------------------- Unit - Piltover-&-Zaun
+    // [01PZ056T8] Mk3: Apex Turret - COST:3
+    // - Subtype: Tech, Set: Set1, Rarity: None
+    // --------------------------------------------------------
+    // Keyword:
+    // - Fearsome = 1
+    // --------------------------------------------------------
+
+    // --------------------------------- Unit - Piltover-&-Zaun
+    // [01PZ056T2] Mk5: Rocket Blaster - COST:5
+    // - Subtype: Tech, Set: Set1, Rarity: None
+    // --------------------------------------------------------
+    // Keyword:
+    // - Quick Attack = 1
+    // --------------------------------------------------------
+
+    // --------------------------------- Unit - Piltover-&-Zaun
+    // [01PZ056T5] Mk7: Armored Stomper - COST:7
+    // - Subtype: Tech, Set: Set1, Rarity: None
+    // --------------------------------------------------------
+    // Keyword:
+    // - Barrier = 1
+    // --------------------------------------------------------
+
+    // --------------------------------- Unit - Piltover-&-Zaun
+    // [01PZ056T1] Mk0: Windup Shredder - COST:0
+    // - Subtype: Tech, Set: Set1, Rarity: None
+    // --------------------------------------------------------
+    // Keyword:
+    // - Challenger = 1
+    // --------------------------------------------------------
+
+    // --------------------------------- Unit - Piltover-&-Zaun
+    // [01PZ056T4] Mk1: Wrenchbot - COST:1
+    // - Subtype: Tech, Set: Set1, Rarity: None
+    // --------------------------------------------------------
+
+    // --------------------------------- Unit - Piltover-&-Zaun
+    // [01PZ056T6] Mk6: Floor-B-Gone - COST:6
+    // - Subtype: Tech, Set: Set1, Rarity: None
+    // --------------------------------------------------------
+    // Keyword:
+    // - Elusive = 1
+    // --------------------------------------------------------
+
+    // ------------------------------ Ability - Piltover-&-Zaun
+    // [01PZ048T1] Magnum Opus - COST:0
+    // - Set: Set1, Rarity: None
+    // --------------------------------------------------------
+    // Description: Obliterate the top 5 cards of your deck
+    //              to deal 1 to all enemies and the enemy Nexus
+    //              for each spell obliterated.
+    // --------------------------------------------------------
+    // Keyword:
+    // - Skill = 1
+    // --------------------------------------------------------
+
+    // --------------------------------- Unit - Piltover-&-Zaun
+    // [01PZ032] Scrap Scuttler - COST:1
+    // - Set: Set1, Rarity: None
+    // --------------------------------------------------------
+
+    // --------------------------------- Unit - Piltover-&-Zaun
+    // [01PZ015] T-Hex - COST:8
+    // - Subtype: Tech, Set: Set1, Rarity: None
+    // --------------------------------------------------------
+
+    // --------------------------------- Trap - Piltover-&-Zaun
+    // [01PZ022] Poison Puffcap - COST:0
+    // - Set: Set1, Rarity: None
+    // --------------------------------------------------------
+    // Description: Deal 1 to your Nexus.
+    // --------------------------------------------------------
+    // Keyword:
+    // - Trap = 1
+    // --------------------------------------------------------
+
+    // ------------------------------ Ability - Piltover-&-Zaun
+    // [01PZ054T1] Undermine - COST:0
+    // - Set: Set1, Rarity: None
+    // --------------------------------------------------------
+    // Description: Deal 2 to the enemy Nexus.
+    // --------------------------------------------------------
+    // Keyword:
+    // - Skill = 1
+    // --------------------------------------------------------
+
+    // ------------------------------ Ability - Piltover-&-Zaun
+    // [01PZ030T1] Impersonate - COST:0
+    // - Set: Set1, Rarity: None
+    // --------------------------------------------------------
+    // Description: Pick a follower.
+    //              Transform me into an exact copy of it.
+    // --------------------------------------------------------
+    // Keyword:
+    // - Skill = 1
+    // --------------------------------------------------------
+
+    // --------------------------------- Unit - Piltover-&-Zaun
+    // [01PZ036T1] Ezreal - COST:3
+    // - Supertype: Champion, Set: Set1, Rarity: None
+    // --------------------------------------------------------
+    // Description: Nexus Strike: Create a Fleeting Mystic Shot in hand.
+    //              When you cast a spell, deal 1 to the enemy Nexus.
+    //              If it targeted an enemy,
+    //              deal 2 to the enemy Nexus instead.
+    // --------------------------------------------------------
+    // Keyword:
+    // - Elusive = 1
+    // - Imbue = 1
+    // --------------------------------------------------------
+
+    // -------------------------------- Spell - Piltover-&-Zaun
+    // [01PZ036T2] Ezreal's Mystic Shot - COST:2
+    // - Supertype: Champion, Set: Set1, Rarity: None
+    // - Spell Speed: Fast
+    // --------------------------------------------------------
+    // Description: Deal 2 to anything.
+    //              Create an Ezreal in your deck.
+    // --------------------------------------------------------
+    // Keyword:
+    // - Fast = 1
+    // --------------------------------------------------------
+
+    // ------------------------------ Ability - Piltover-&-Zaun
+    // [01PZ013T1] Reckless Research - COST:0
+    // - Set: Set1, Rarity: None
+    // --------------------------------------------------------
+    // Description: Discard your hand. Draw 3. Deal 3 to an enemy.
+    // --------------------------------------------------------
+    // Keyword:
+    // - Skill = 1
+    // --------------------------------------------------------
+
+    // --------------------------------- Unit - Piltover-&-Zaun
+    // [01PZ033T1] Catastrophe - COST:1
+    // - Set: Set1, Rarity: None
+    // --------------------------------------------------------
+    // Keyword:
+    // - Overwhelm = 1
+    // --------------------------------------------------------
+
+    // --------------------------------- Unit - Piltover-&-Zaun
+    // [01PZ014T1] Illegal Contraption - COST:6
+    // - Set: Set1, Rarity: None
+    // --------------------------------------------------------
+
+    // -------------------------------- Spell - Piltover-&-Zaun
+    // [01PZ060] Accelerated Purrsuit - COST:5
+    // - Set: Set1, Rarity: Epic
+    // - Spell Speed: Slow
+    // --------------------------------------------------------
+    // Description: If you've played 15 cards with different names
+    //              this game, summon Catastrophe.
+    // --------------------------------------------------------
+    // Keyword:
+    // - Slow = 1
+    // --------------------------------------------------------
+
+    // ------------------------------ Ability - Piltover-&-Zaun
+    // [01PZ044T2] Face-Melter - COST:0
+    // - Set: Set1, Rarity: None
+    // --------------------------------------------------------
+    // Description: Deal 1 to all enemies.
+    // --------------------------------------------------------
+    // Keyword:
+    // - Skill = 1
+    // --------------------------------------------------------
 }
 
 void AddShadowIsles(entt::registry& registry)
 {
-    // Do nothing
+    // ------------------------------------ Unit - Shadow-Isles
+    // [01SI038] Phantom Prankster - COST:3
+    // - Set: Set1, Rarity: Rare
+    // --------------------------------------------------------
+    // Description: When another ally dies,
+    //              deal 1 to the enemy Nexus.
+    // --------------------------------------------------------
+
+    // ----------------------------------- Spell - Shadow-Isles
+    // [01SI049] Glimpse Beyond - COST:2
+    // - Set: Set1, Rarity: Common
+    // - Spell Speed: Fast
+    // --------------------------------------------------------
+    // Description: Kill an ally to draw 2.
+    // --------------------------------------------------------
+    // Keyword:
+    // - Fast = 1
+    // --------------------------------------------------------
+
+    // ------------------------------------ Unit - Shadow-Isles
+    // [01SI053] Elise - COST:2
+    // - Subtype: Spider, Supertype: Champion, Set: Set1, Rarity: Champion
+    // --------------------------------------------------------
+    // Description: Attack: Summon an attacking Spiderling.
+    // --------------------------------------------------------
+    // Level Up Description: Round Start: You have 3+ other Spiders.
+    // --------------------------------------------------------
+    // Keyword:
+    // - Fearsome = 1
+    // --------------------------------------------------------
+
+    // ------------------------------------ Unit - Shadow-Isles
+    // [01SI057] Ancient Crocolith - COST:4
+    // - Set: Set1, Rarity: Rare
+    // --------------------------------------------------------
+    // Description: To play me, kill 2 allies.
+    // --------------------------------------------------------
+
+    // ------------------------------------ Unit - Shadow-Isles
+    // [01SI023] Soul Shepherd - COST:2
+    // - Set: Set1, Rarity: Common
+    // --------------------------------------------------------
+    // Description: When you summon an Ephemeral ally,
+    //              grant it +1|+1.
+    // --------------------------------------------------------
+
+    // ----------------------------------- Spell - Shadow-Isles
+    // [01SI010] Onslaught of Shadows - COST:2
+    // - Set: Set1, Rarity: Common
+    // - Spell Speed: Slow
+    // --------------------------------------------------------
+    // Description: Summon 2 Spectral Riders.
+    // --------------------------------------------------------
+    // Keyword:
+    // - Slow = 1
+    // --------------------------------------------------------
+
+    // ------------------------------------ Unit - Shadow-Isles
+    // [01SI042] Hecarim - COST:6
+    // - Supertype: Champion, Set: Set1, Rarity: Champion
+    // --------------------------------------------------------
+    // Description: Attack: Summon 2 attacking Spectral Riders.
+    // --------------------------------------------------------
+    // Level Up Description: You've attacked
+    //                       with 7+ Ephemeral allies.
+    // --------------------------------------------------------
+    // Keyword:
+    // - Overwhelm = 1
+    // --------------------------------------------------------
+
+    // ----------------------------------- Spell - Shadow-Isles
+    // [01SI027] Fresh Offerings - COST:3
+    // - Set: Set1, Rarity: Rare
+    // - Spell Speed: Slow
+    // --------------------------------------------------------
+    // Description: If 3+ allies have died this round,
+    //              summon Vilemaw.
+    // --------------------------------------------------------
+    // Keyword:
+    // - Slow = 1
+    // --------------------------------------------------------
+
+    // ------------------------------------ Unit - Shadow-Isles
+    // [01SI048] Cursed Keeper - COST:2
+    // - Set: Set1, Rarity: Common
+    // --------------------------------------------------------
+    // Description: Last Breath: Summon an Escaped Abomination.
+    // --------------------------------------------------------
+    // Keyword:
+    // - Can't Block = 1
+    // - Last Breath = 1
+    // --------------------------------------------------------
+
+    // ------------------------------------ Unit - Shadow-Isles
+    // [01SI018] Scribe of Sorrows - COST:3
+    // - Set: Set1, Rarity: Common
+    // --------------------------------------------------------
+    // Description: When I'm summoned, create a copy in hand
+    //              of an ally that died this game.
+    // --------------------------------------------------------
+
+    // ------------------------------------ Unit - Shadow-Isles
+    // [01SI030] Kalista - COST:3
+    // - Supertype: Champion, Set: Set1, Rarity: Champion
+    // --------------------------------------------------------
+    // Level Up Description: I've seen 3+ allies die.
+    // --------------------------------------------------------
+    // Keyword:
+    // - Fearsome = 1
+    // --------------------------------------------------------
+
+    // ------------------------------------ Unit - Shadow-Isles
+    // [01SI035] Rhasa the Sunderer - COST:8
+    // - Set: Set1, Rarity: Epic
+    // --------------------------------------------------------
+    // Description: Play: Kill the 2 weakest enemies
+    //              if an ally died this round.
+    // --------------------------------------------------------
+    // Keyword:
+    // - Fearsome = 1
+    // --------------------------------------------------------
+
+    // ------------------------------------ Unit - Shadow-Isles
+    // [01SI005] Scuttlegeist - COST:10
+    // - Set: Set1, Rarity: Rare
+    // --------------------------------------------------------
+    // Description: Reduce my cost by 1 for each ally
+    //              that died this game.
+    // --------------------------------------------------------
+    // Keyword:
+    // - Fearsome = 1
+    // --------------------------------------------------------
+
+    // ------------------------------------ Unit - Shadow-Isles
+    // [01SI037] Sinister Poro - COST:1
+    // - Subtype: Poro, Set: Set1, Rarity: Common
+    // --------------------------------------------------------
+    // Keyword:
+    // - Fearsome = 1
+    // --------------------------------------------------------
+
+    // ------------------------------------ Unit - Shadow-Isles
+    // [01SI052] Thresh - COST:5
+    // - Supertype: Champion, Set: Set1, Rarity: Champion
+    // --------------------------------------------------------
+    // Level Up Description: I've seen 6+ units die.
+    // --------------------------------------------------------
+    // Keyword:
+    // - Challenger = 1
+    // --------------------------------------------------------
+
+    // ------------------------------------ Unit - Shadow-Isles
+    // [01SI033] Commander Ledros - COST:9
+    // - Set: Set1, Rarity: Epic
+    // --------------------------------------------------------
+    // Description: Play: Deal damage to the enemy Nexus equal
+    //              to half its Health, rounded up.
+    //              Last Breath: Return me to hand.
+    // --------------------------------------------------------
+    // Keyword:
+    // - Fearsome = 1
+    // - Last Breath = 1
+    // --------------------------------------------------------
+
+    // ----------------------------------- Spell - Shadow-Isles
+    // [01SI003] The Harrowing - COST:9
+    // - Set: Set1, Rarity: Epic
+    // - Spell Speed: Slow
+    // --------------------------------------------------------
+    // Description: Revive the 6 strongest allies that
+    //              died this game and grant them Ephemeral.
+    // --------------------------------------------------------
+    // Keyword:
+    // - Slow = 1
+    // --------------------------------------------------------
+
+    // ------------------------------------ Unit - Shadow-Isles
+    // [01SI041] The Undying - COST:3
+    // - Set: Set1, Rarity: Epic
+    // --------------------------------------------------------
+    // Description: Last Breath: Revive me at the next Round Start
+    //              and grant me +1|+1 for each time I've died.
+    // --------------------------------------------------------
+    // Keyword:
+    // - Can't Block = 1
+    // - Last Breath = 1
+    // --------------------------------------------------------
+
+    // ----------------------------------- Spell - Shadow-Isles
+    // [01SI045] Absorb Soul - COST:1
+    // - Set: Set1, Rarity: Common
+    // - Spell Speed: Fast
+    // --------------------------------------------------------
+    // Description: Drain 4 from an ally.
+    // --------------------------------------------------------
+    // Keyword:
+    // - Fast = 1
+    // --------------------------------------------------------
+
+    // ----------------------------------- Spell - Shadow-Isles
+    // [01SI036] Crawling Sensation - COST:1
+    // - Set: Set1, Rarity: Common
+    // - Spell Speed: Slow
+    // --------------------------------------------------------
+    // Description: If an ally died this round,
+    //              summon 2 Spiderlings.
+    // --------------------------------------------------------
+    // Keyword:
+    // - Slow = 1
+    // --------------------------------------------------------
+
+    // ------------------------------------ Unit - Shadow-Isles
+    // [01SI051] Tortured Prodigy - COST:5
+    // - Set: Set1, Rarity: Rare
+    // --------------------------------------------------------
+    // Description: When an ally dies, refill your spell mana.
+    // --------------------------------------------------------
+
+    // ------------------------------------ Unit - Shadow-Isles
+    // [01SI012] Oblivious Islander - COST:1
+    // - Set: Set1, Rarity: Common
+    // --------------------------------------------------------
+    // Description: Play: Grant an ally in hand Ephemeral
+    //              and reduce its cost by 1.
+    // --------------------------------------------------------
+
+    // ------------------------------------ Unit - Shadow-Isles
+    // [01SI031] Iron Harbinger - COST:3
+    // - Set: Set1, Rarity: Rare
+    // --------------------------------------------------------
+    // Description: Attack: Grant me +1|+0 for each Ephemeral
+    //              ally you have.
+    // --------------------------------------------------------
+    // Keyword:
+    // - Fearsome = 1
+    // --------------------------------------------------------
+
+    // ----------------------------------- Spell - Shadow-Isles
+    // [01SI034] Black Spear - COST:3
+    // - Set: Set1, Rarity: Common
+    // - Spell Speed: Fast
+    // --------------------------------------------------------
+    // Description: If an ally died this round, deal 4 to a unit.
+    // --------------------------------------------------------
+    // Keyword:
+    // - Fast = 1
+    // --------------------------------------------------------
+
+    // ------------------------------------ Unit - Shadow-Isles
+    // [01SI043] Hapless Aristocrat - COST:1
+    // - Set: Set1, Rarity: Common
+    // --------------------------------------------------------
+    // Description: Last Breath: Summon a Spiderling.
+    // --------------------------------------------------------
+    // Keyword:
+    // - Last Breath = 1
+    // --------------------------------------------------------
+
+    // ------------------------------------ Unit - Shadow-Isles
+    // [01SI009] Stirred Spirits - COST:2
+    // - Set: Set1, Rarity: Common
+    // --------------------------------------------------------
+    // Description: Support: Grant my supported ally +2|+0
+    //              and Ephemeral.
+    // --------------------------------------------------------
+
+    // ----------------------------------- Spell - Shadow-Isles
+    // [01SI007] Haunted Relic - COST:2
+    // - Set: Set1, Rarity: Common
+    // - Spell Speed: Slow
+    // --------------------------------------------------------
+    // Description: Summon 3 Unleashed Spirits.
+    // --------------------------------------------------------
+    // Keyword:
+    // - Slow = 1
+    // --------------------------------------------------------
+
+    // ------------------------------------ Unit - Shadow-Isles
+    // [01SI056] Frenzied Skitterer - COST:3
+    // - Subtype: Spider, Set: Set1, Rarity: Rare
+    // --------------------------------------------------------
+    // Description: When I'm summoned, give other Spider allies
+    //              +1|+0 and enemies -1|-0 this round.
+    // --------------------------------------------------------
+    // Keyword:
+    // - Fearsome = 1
+    // --------------------------------------------------------
+
+    // ----------------------------------- Spell - Shadow-Isles
+    // [01SI001] Vengeance - COST:7
+    // - Set: Set1, Rarity: Common
+    // - Spell Speed: Fast
+    // --------------------------------------------------------
+    // Description: Kill a unit.
+    // --------------------------------------------------------
+    // Keyword:
+    // - Fast = 1
+    // --------------------------------------------------------
+
+    // ----------------------------------- Spell - Shadow-Isles
+    // [01SI019] The Box - COST:4
+    // - Set: Set1, Rarity: Rare
+    // - Spell Speed: Fast
+    // --------------------------------------------------------
+    // Description: Deal 3 to each enemy that was summoned
+    //              this round.
+    // --------------------------------------------------------
+    // Keyword:
+    // - Fast = 1
+    // --------------------------------------------------------
+
+    // ------------------------------------ Unit - Shadow-Isles
+    // [01SI014] Mistwraith - COST:2
+    // - Set: Set1, Rarity: Common
+    // --------------------------------------------------------
+    // Description: When I'm summoned, grant other allied
+    //              Mistwraiths everywhere +1|+0.
+    // --------------------------------------------------------
+    // Keyword:
+    // - Fearsome = 1
+    // --------------------------------------------------------
+
+    // ----------------------------------- Spell - Shadow-Isles
+    // [01SI022] Mark of the Isles - COST:1
+    // - Set: Set1, Rarity: Common
+    // - Spell Speed: Burst
+    // --------------------------------------------------------
+    // Description: Grant an ally +2|+2 and Ephemeral.
+    // --------------------------------------------------------
+    // Keyword:
+    // - Burst = 1
+    // --------------------------------------------------------
+
+    // ----------------------------------- Spell - Shadow-Isles
+    // [01SI006] Possession - COST:5
+    // - Set: Set1, Rarity: Rare
+    // - Spell Speed: Slow
+    // --------------------------------------------------------
+    // Description: Steal an enemy follower this round.
+    //              (Can't play if you have 6 allies
+    //              or landmarks already.)
+    // --------------------------------------------------------
+    // Keyword:
+    // - Slow = 1
+    // --------------------------------------------------------
+
+    // ----------------------------------- Spell - Shadow-Isles
+    // [01SI028] Splinter Soul - COST:3
+    // - Set: Set1, Rarity: Rare
+    // - Spell Speed: Slow
+    // --------------------------------------------------------
+    // Description: Summon an exact copy of an ally.
+    //              It's Ephemeral and 1|1.
+    // --------------------------------------------------------
+    // Keyword:
+    // - Slow = 1
+    // --------------------------------------------------------
+
+    // ----------------------------------- Spell - Shadow-Isles
+    // [01SI025] Atrocity - COST:7
+    // - Set: Set1, Rarity: Rare
+    // - Spell Speed: Fast
+    // --------------------------------------------------------
+    // Description: Kill an ally to deal damage equal to
+    //              its Power to anything.
+    // --------------------------------------------------------
+    // Keyword:
+    // - Fast = 1
+    // --------------------------------------------------------
+
+    // ------------------------------------ Unit - Shadow-Isles
+    // [01SI011] Ravenous Butcher - COST:0
+    // - Set: Set1, Rarity: Common
+    // --------------------------------------------------------
+    // Description: To play me, kill an ally.
+    // --------------------------------------------------------
+
+    // ----------------------------------- Spell - Shadow-Isles
+    // [01SI046] Mist's Call - COST:3
+    // - Set: Set1, Rarity: Common
+    // - Spell Speed: Fast
+    // --------------------------------------------------------
+    // Description: Revive a random ally that died this round.
+    // --------------------------------------------------------
+    // Keyword:
+    // - Fast = 1
+    // --------------------------------------------------------
+
+    // ----------------------------------- Spell - Shadow-Isles
+    // [01SI050] Brood Awakening - COST:6
+    // - Set: Set1, Rarity: Rare
+    // - Spell Speed: Slow
+    // --------------------------------------------------------
+    // Description: Summon 3 Spiderlings,
+    //              then grant Spider allies +1|+0.
+    // --------------------------------------------------------
+    // Keyword:
+    // - Slow = 1
+    // --------------------------------------------------------
+
+    // ------------------------------------ Unit - Shadow-Isles
+    // [01SI016] Wraithcaller - COST:4
+    // - Set: Set1, Rarity: Rare
+    // --------------------------------------------------------
+    // Description: Allegiance: Summon a Mistwraith.
+    // --------------------------------------------------------
+
+    // ------------------------------------ Unit - Shadow-Isles
+    // [01SI021] Shark Chariot - COST:2
+    // - Set: Set1, Rarity: Rare
+    // --------------------------------------------------------
+    // Description: Last Breath: The next time an Ephemeral ally
+    //              attacks, revive me attacking.
+    // --------------------------------------------------------
+    // Keyword:
+    // - Can't Block = 1
+    // - Ephemeral = 1
+    // - Last Breath = 1
+    // --------------------------------------------------------
+
+    // ------------------------------------ Unit - Shadow-Isles
+    // [01SI032] Chronicler of Ruin - COST:4
+    // - Set: Set1, Rarity: Common
+    // --------------------------------------------------------
+    // Description: Play: Kill an ally, then revive it.
+    // --------------------------------------------------------
+
+    // ------------------------------------ Unit - Shadow-Isles
+    // [01SI058] Ethereal Remitter - COST:5
+    // - Set: Set1, Rarity: Rare
+    // --------------------------------------------------------
+    // Description: Play: Kill an ally to summon a random follower
+    //              that costs 2 more.
+    // --------------------------------------------------------
+
+    // ----------------------------------- Spell - Shadow-Isles
+    // [01SI054] Grasp of the Undying - COST:5
+    // - Set: Set1, Rarity: Common
+    // - Spell Speed: Fast
+    // --------------------------------------------------------
+    // Description: Drain 3 from any unit.
+    // --------------------------------------------------------
+    // Keyword:
+    // - Fast = 1
+    // --------------------------------------------------------
+
+    // ------------------------------------ Unit - Shadow-Isles
+    // [01SI044] Spectral Matron - COST:8
+    // - Set: Set1, Rarity: Epic
+    // --------------------------------------------------------
+    // Description: Play: Pick an ally in hand.
+    //              Summon an exact copy of it. It's Ephemeral.
+    // --------------------------------------------------------
+    // Keyword:
+    // - Fearsome = 1
+    // --------------------------------------------------------
+
+    // ------------------------------------ Unit - Shadow-Isles
+    // [01SI039] Arachnoid Horror - COST:2
+    // - Subtype: Spider, Set: Set1, Rarity: Common
+    // --------------------------------------------------------
+    // Keyword:
+    // - Fearsome = 1
+    // --------------------------------------------------------
+
+    // ------------------------------------ Unit - Shadow-Isles
+    // [01SI020] The Rekindler - COST:7
+    // - Set: Set1, Rarity: Rare
+    // --------------------------------------------------------
+    // Description: When I'm summoned,
+    //              revive the strongest dead allied champion.
+    // --------------------------------------------------------
+
+    // ----------------------------------- Spell - Shadow-Isles
+    // [01SI029] Withering Wail - COST:5
+    // - Set: Set1, Rarity: Common
+    // - Spell Speed: Fast
+    // --------------------------------------------------------
+    // Description: Deal 1 to all enemies. Heal your Nexus 3.
+    // --------------------------------------------------------
+    // Keyword:
+    // - Fast = 1
+    // --------------------------------------------------------
+
+    // ------------------------------------ Unit - Shadow-Isles
+    // [01SI004] Darkwater Scourge - COST:3
+    // - Set: Set1, Rarity: Common
+    // --------------------------------------------------------
+    // Keyword:
+    // - Ephemeral = 1
+    // - Lifesteal = 1
+    // --------------------------------------------------------
+
+    // ------------------------------------ Unit - Shadow-Isles
+    // [01SI026] Warden's Prey - COST:1
+    // - Set: Set1, Rarity: Common
+    // --------------------------------------------------------
+    // Description: Last Breath: Create in hand another random
+    //              Last Breath follower that costs 3 or less.
+    // --------------------------------------------------------
+    // Keyword:
+    // - Last Breath = 1
+    // --------------------------------------------------------
+
+    // ----------------------------------- Spell - Shadow-Isles
+    // [01SI040] Vile Feast - COST:2
+    // - Set: Set1, Rarity: Common
+    // - Spell Speed: Fast
+    // --------------------------------------------------------
+    // Description: Drain 1 from a unit to summon a Spiderling.
+    // --------------------------------------------------------
+    // Keyword:
+    // - Fast = 1
+    // --------------------------------------------------------
+
+    // ----------------------------------- Spell - Shadow-Isles
+    // [01SI015] The Ruination - COST:9
+    // - Set: Set1, Rarity: Epic
+    // - Spell Speed: Slow
+    // --------------------------------------------------------
+    // Description: Kill ALL units.
+    // --------------------------------------------------------
+    // Keyword:
+    // - Slow = 1
+    // --------------------------------------------------------
+
+    // ------------------------------------ Unit - Shadow-Isles
+    // [01SI055] Soulgorger - COST:6
+    // - Set: Set1, Rarity: Rare
+    // --------------------------------------------------------
+    // Keyword:
+    // - Lifesteal = 1
+    // --------------------------------------------------------
+
+    // ----------------------------------- Spell - Shadow-Isles
+    // [01SI047] Fading Memories - COST:0
+    // - Set: Set1, Rarity: Rare
+    // - Spell Speed: Burst
+    // --------------------------------------------------------
+    // Description: Pick a follower.
+    //              Create an Ephemeral copy of it in hand.
+    // --------------------------------------------------------
+    // Keyword:
+    // - Burst = 1
+    // --------------------------------------------------------
 }
 
 void AddShadowIslesyNonCollect(entt::registry& registry)
 {
-    // Do nothing
+    // ----------------------------------- Spell - Shadow-Isles
+    // [01SI053T1] Elise's Crawling Sensation - COST:1
+    // - Supertype: Champion, Set: Set1, Rarity: None
+    // - Spell Speed: Slow
+    // --------------------------------------------------------
+    // Description: If an ally died this round,
+    //              summon 2 Spiderlings.
+    //              Create an Elise in your deck.
+    // --------------------------------------------------------
+    // Keyword:
+    // - Slow = 1
+    // --------------------------------------------------------
+
+    // ------------------------------------ Unit - Shadow-Isles
+    // [01SI053T2] Spider Queen Elise - COST:2
+    // - Subtype: Spider, Supertype: Champion, Set: Set1, Rarity: None
+    // --------------------------------------------------------
+    // Description: Other Spider allies have Challenger
+    //              and Fearsome.
+    // --------------------------------------------------------
+    // Keyword:
+    // - Fearsome = 1
+    // - Challenger = 1
+    // --------------------------------------------------------
+
+    // ------------------------------------ Unit - Shadow-Isles
+    // [01SI042T1] Hecarim - COST:6
+    // - Supertype: Champion, Set: Set1, Rarity: None
+    // --------------------------------------------------------
+    // Description: Ephemeral allies have +3|+0.
+    //              Attack: Summon 2 attacking Spectral Riders.
+    // --------------------------------------------------------
+    // Keyword:
+    // - Overwhelm = 1
+    // - Missing Translation = 1
+    // --------------------------------------------------------
+
+    // ----------------------------------- Spell - Shadow-Isles
+    // [01SI042T2] Hecarim's Onslaught of Shadows - COST:2
+    // - Supertype: Champion, Set: Set1, Rarity: None
+    // - Spell Speed: Slow
+    // --------------------------------------------------------
+    // Description: Summon 2 Spectral Riders.
+    //              Create a Hecarim in your deck.
+    // --------------------------------------------------------
+    // Keyword:
+    // - Slow = 1
+    // --------------------------------------------------------
+
+    // ------------------------------------ Unit - Shadow-Isles
+    // [01SI027T1] Vilemaw - COST:3
+    // - Subtype: Spider, Set: Set1, Rarity: None
+    // --------------------------------------------------------
+    // Keyword:
+    // - Fearsome = 1
+    // --------------------------------------------------------
+
+    // ------------------------------------ Unit - Shadow-Isles
+    // [01SI030T2] Kalista - COST:3
+    // - Supertype: Champion, Set: Set1, Rarity: None
+    // --------------------------------------------------------
+    // Description: Each round, the first time I attack revive
+    //              an attacking Ephemeral copy of the strongest
+    //              dead allied follower. This round, we're bonded
+    //              and it takes damage for me.
+    // --------------------------------------------------------
+    // Keyword:
+    // - Fearsome = 1
+    // --------------------------------------------------------
+
+    // ----------------------------------- Spell - Shadow-Isles
+    // [01SI030T1] Kalista's Black Spear - COST:3
+    // - Supertype: Champion, Set: Set1, Rarity: None
+    // - Spell Speed: Fast
+    // --------------------------------------------------------
+    // Description: If an ally died this round, deal 4 to a unit.
+    //              Create a Kalista in your deck.
+    // --------------------------------------------------------
+    // Keyword:
+    // - Fast = 1
+    // --------------------------------------------------------
+
+    // --------------------------------- Ability - Shadow-Isles
+    // [01SI035T1] Night Harvest - COST:0
+    // - Set: Set1, Rarity: None
+    // --------------------------------------------------------
+    // Description: Kill the 2 Weakest enemies
+    //              if an ally died this round.
+    // --------------------------------------------------------
+    // Keyword:
+    // - Skill = 1
+    // --------------------------------------------------------
+
+    // ------------------------------------ Unit - Shadow-Isles
+    // [01SI002] Spiderling - COST:1
+    // - Subtype: Spider, Set: Set1, Rarity: None
+    // --------------------------------------------------------
+
+    // ------------------------------------ Unit - Shadow-Isles
+    // [01SI024] Spectral Rider - COST:2
+    // - Set: Set1, Rarity: None
+    // --------------------------------------------------------
+    // Keyword:
+    // - Ephemeral = 1
+    // --------------------------------------------------------
+
+    // ------------------------------------ Unit - Shadow-Isles
+    // [01SI048T1] Escaped Abomination - COST:2
+    // - Set: Set1, Rarity: None
+    // --------------------------------------------------------
+
+    // ----------------------------------- Spell - Shadow-Isles
+    // [01SI052T2] Thresh's The Box - COST:4
+    // - Supertype: Champion, Set: Set1, Rarity: None
+    // - Spell Speed: Fast
+    // --------------------------------------------------------
+    // Description: Deal 3 to each enemy that was summoned
+    //              this round.
+    //              Create a Thresh in your deck.
+    // --------------------------------------------------------
+    // Keyword:
+    // - Fast = 1
+    // --------------------------------------------------------
+
+    // ------------------------------------ Unit - Shadow-Isles
+    // [01SI052T1] Thresh - COST:5
+    // - Supertype: Champion, Set: Set1, Rarity: None
+    // --------------------------------------------------------
+    // Description: The first time I attack this game,
+    //              summon another attacking champion
+    //              from your deck or hand.
+    // --------------------------------------------------------
+    // Keyword:
+    // - Challenger = 1
+    // --------------------------------------------------------
+
+    // ------------------------------------ Unit - Shadow-Isles
+    // [01SI007T1] Unleashed Spirit - COST:1
+    // - Set: Set1, Rarity: None
+    // --------------------------------------------------------
+    // Keyword:
+    // - Ephemeral = 1
+    // --------------------------------------------------------
+
+    // --------------------------------- Ability - Shadow-Isles
+    // [01SI033T1] Blade of Ledros - COST:0
+    // - Set: Set1, Rarity: None
+    // --------------------------------------------------------
+    // Description: Deal damage to the enemy Nexus equal to
+    //              half its Health, rounded up.
+    // --------------------------------------------------------
+    // Keyword:
+    // - Skill = 1
+    // --------------------------------------------------------
 }
 
 void AddShurima(entt::registry& registry)
