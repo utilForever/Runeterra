@@ -1590,22 +1590,272 @@ void AddNoxusNonCollect(entt::registry& registry)
 
 void AddPiltoverZaun(entt::registry& registry)
 {
-    // Do nothing
+    // --------------------------------- Unit - Piltover-&-Zaun
+    // [02PZ001] Subpurrsible - COST:5
+    // - Set: Set2, Rarity: Epic
+    // --------------------------------------------------------
+    // Description: When I'm summoned, draw 1.
+    //              Then, if you've played at least 10 other cards
+    //              with different names, grant me +4|+0.
+    // --------------------------------------------------------
+    // Keyword:
+    // - Elusive = 1
+    // --------------------------------------------------------
+
+    // --------------------------------- Unit - Piltover-&-Zaun
+    // [02PZ010] Veteran Investigator - COST:2
+    // - Subtype: Yordle, Set: Set2, Rarity: Common
+    // --------------------------------------------------------
+    // Description: When I'm summoned, ALL players draw 1.
+    // --------------------------------------------------------
+
+    // -------------------------------- Spell - Piltover-&-Zaun
+    // [02PZ006] Gotcha! - COST:4
+    // - Set: Set2, Rarity: Common
+    // - Spell Speed: Fast
+    // --------------------------------------------------------
+    // Description: When drawn, costs 2 less this round.
+    //              Deal 3 to a unit.
+    // --------------------------------------------------------
+    // Keyword:
+    // - Fast = 1
+    // --------------------------------------------------------
+
+    // -------------------------------- Spell - Piltover-&-Zaun
+    // [02PZ004] Vault Breaker - COST:3
+    // - Set: Set2, Rarity: Rare
+    // - Spell Speed: Burst
+    // --------------------------------------------------------
+    // Description: Give an ally +2|+0 this round.
+    //              Create a Fleeting Vault Breaker in hand.
+    // --------------------------------------------------------
+    // Keyword:
+    // - Burst = 1
+    // --------------------------------------------------------
+
+    // --------------------------------- Unit - Piltover-&-Zaun
+    // [02PZ007] Insightful Investigator - COST:4
+    // - Set: Set2, Rarity: Rare
+    // --------------------------------------------------------
+    // Description: When you play a 2 cost card,
+    //              draw 1 and give it Fleeting.
+    // --------------------------------------------------------
+
+    // --------------------------------- Unit - Piltover-&-Zaun
+    // [02PZ002] Chief Mechanist Zevi - COST:6
+    // - Set: Set2, Rarity: Epic
+    // --------------------------------------------------------
+    // Description: When you draw a card, give it Fleeting
+    //              and create an exact copy of it in hand.
+    // --------------------------------------------------------
+
+    // --------------------------------- Unit - Piltover-&-Zaun
+    // [02PZ008] Vi - COST:5
+    // - Supertype: Champion, Set: Set2, Rarity: Champion
+    // --------------------------------------------------------
+    // Description: While I'm in play or in hand, grant me +1|+0
+    //              when you play another card (max +8|+0).
+    // --------------------------------------------------------
+    // Level Up Description: I've struck for 10+ Damage.
+    // --------------------------------------------------------
+    // Keyword:
+    // - Challenger = 1
+    // - Tough = 1
+    // --------------------------------------------------------
+
+    // -------------------------------- Spell - Piltover-&-Zaun
+    // [02PZ009] Trail of Evidence - COST:2
+    // - Set: Set2, Rarity: Common
+    // - Spell Speed: Burst
+    // --------------------------------------------------------
+    // Description: Create in hand a random 2 cost card
+    //              from your regions. It costs 0 this round.
+    // --------------------------------------------------------
+    // Keyword:
+    // - Burst = 1
+    // --------------------------------------------------------
+
+    // -------------------------------- Spell - Piltover-&-Zaun
+    // [02PZ003] Suit Up! - COST:4
+    // - Set: Set2, Rarity: Rare
+    // - Spell Speed: Burst
+    // --------------------------------------------------------
+    // Description: When drawn, costs 2 less this round.
+    //              Grow an ally to 4|4.
+    // --------------------------------------------------------
+    // Keyword:
+    // - Burst = 1
+    // --------------------------------------------------------
+
+    // --------------------------------- Unit - Piltover-&-Zaun
+    // [02PZ005] Patrol Wardens - COST:3
+    // - Set: Set2, Rarity: Common
+    // --------------------------------------------------------
+    // Description: When I'm drawn, I cost 1 less this round.
+    // --------------------------------------------------------
 }
 
 void AddPiltoverZaunNonCollect(entt::registry& registry)
 {
-    // Do nothing
+    // --------------------------------- Unit - Piltover-&-Zaun
+    // [02PZ008T2] Vi - COST:5
+    // - Supertype: Champion, Set: Set2, Rarity: None
+    // --------------------------------------------------------
+    // Description: When I strike a unit while attacking,
+    //              deal 5 to the enemy Nexus.
+    // --------------------------------------------------------
+    // Keyword:
+    // - Challenger = 1
+    // - Tough = 1
+    // --------------------------------------------------------
+
+    // -------------------------------- Spell - Piltover-&-Zaun
+    // [02PZ008T1] Vi's Vault Breaker - COST:3
+    // - Supertype: Champion, Set: Set2, Rarity: None
+    // - Spell Speed: Burst
+    // --------------------------------------------------------
+    // Description: Give an ally +2|+0 this round.
+    //              Create a Fleeting Vault Breaker in hand.
+    //              Create a Vi in your deck.
+    // --------------------------------------------------------
+    // Keyword:
+    // - Burst = 1
+    // --------------------------------------------------------
 }
 
 void AddShadowIsles(entt::registry& registry)
 {
-    // Do nothing
+    // ----------------------------------- Spell - Shadow-Isles
+    // [02SI005] Sap Magic - COST:3
+    // - Set: Set2, Rarity: Rare
+    // - Spell Speed: Burst
+    // --------------------------------------------------------
+    // Description: Toss 3.
+    //              Heal all allies 3.
+    // --------------------------------------------------------
+    // Keyword:
+    // - Burst = 1
+    // --------------------------------------------------------
+
+    // ------------------------------------ Unit - Shadow-Isles
+    // [02SI010] Deadbloom Wanderer - COST:3
+    // - Set: Set2, Rarity: Common
+    // --------------------------------------------------------
+    // Description: When I'm summoned, Toss 3.
+    // --------------------------------------------------------
+    // Keyword:
+    // - Lifesteal = 1
+    // --------------------------------------------------------
+
+    // ------------------------------------ Unit - Shadow-Isles
+    // [02SI008] Maokai - COST:4
+    // - Supertype: Champion, Set: Set2, Rarity: Champion
+    // --------------------------------------------------------
+    // Description: Each round, the first time you play another ally,
+    //              Toss 2 and summon a Sapling.
+    // --------------------------------------------------------
+    // Level Up Description: Your units have died or your cards
+    //                       have been Tossed 25 times.
+    // --------------------------------------------------------
+
+    // ------------------------------------ Unit - Shadow-Isles
+    // [02SI007] Thorny Toad - COST:2
+    // - Set: Set2, Rarity: Common
+    // --------------------------------------------------------
+    // Description: Last Breath: Toss 2 and heal your Nexus 2.
+    // --------------------------------------------------------
+    // Keyword:
+    // - Last Breath = 1
+    // --------------------------------------------------------
+
+    // ------------------------------------ Unit - Shadow-Isles
+    // [02SI003] Terror of the Tides - COST:8
+    // - Subtype: Sea monster, Set: Set2, Rarity: Epic
+    // --------------------------------------------------------
+    // Description: Sea Monster allies have Fearsome.
+    //              Attack: Give enemies -2|-0 this round.
+    // --------------------------------------------------------
+    // Keyword:
+    // - Deep = 1
+    // --------------------------------------------------------
+
+    // ------------------------------------ Unit - Shadow-Isles
+    // [02SI001] Neverglade Collector - COST:5
+    // - Set: Set2, Rarity: Rare
+    // --------------------------------------------------------
+    // Description: When another ally dies,
+    //              drain 1 from the enemy Nexus.
+    // --------------------------------------------------------
+
+    // ------------------------------------ Unit - Shadow-Isles
+    // [02SI002] Overgrown Snapvine - COST:7
+    // - Set: Set2, Rarity: Epic
+    // --------------------------------------------------------
+    // Description: When you summon a follower,
+    //              kill it to summon an Overgrown Snapvine.
+    // --------------------------------------------------------
+
+    // ------------------------------------ Unit - Shadow-Isles
+    // [02SI004] Blighted Caretaker - COST:3
+    // - Set: Set2, Rarity: Rare
+    // --------------------------------------------------------
+    // Description: Play: Kill an ally to summon 2 Saplings.
+    // --------------------------------------------------------
+
+    // ------------------------------------ Unit - Shadow-Isles
+    // [02SI006] Barkbeast - COST:1
+    // - Set: Set2, Rarity: Common
+    // --------------------------------------------------------
+    // Description: The first time an ally dies, grant me +2|+2.
+    // --------------------------------------------------------
+
+    // ----------------------------------- Spell - Shadow-Isles
+    // [02SI009] Sapling Toss - COST:1
+    // - Set: Set2, Rarity: Common
+    // - Spell Speed: Burst
+    // --------------------------------------------------------
+    // Description: Summon a Sapling at the next Round Start.
+    // --------------------------------------------------------
+    // Keyword:
+    // - Burst = 1
+    // --------------------------------------------------------
 }
 
 void AddShadowIslesyNonCollect(entt::registry& registry)
 {
-    // Do nothing
+    // ------------------------------------ Unit - Shadow-Isles
+    // [02SI008T3] Sapling - COST:1
+    // - Set: Set2, Rarity: None
+    // --------------------------------------------------------
+    // Keyword:
+    // - Ephemeral = 1
+    // - Challenger = 1
+    // --------------------------------------------------------
+
+    // ----------------------------------- Spell - Shadow-Isles
+    // [02SI008T1] Maokai's Sap Magic - COST:3
+    // - Supertype: Champion, Set: Set2, Rarity: None
+    // - Spell Speed: Burst
+    // --------------------------------------------------------
+    // Description: Toss 3.
+    //              Heal all allies 3.
+    //              Create a Maokai in your deck.
+    // --------------------------------------------------------
+    // Keyword:
+    // - Burst = 1
+    // --------------------------------------------------------
+
+    // ------------------------------------ Unit - Shadow-Isles
+    // [02SI008T2] Maokai - COST:4
+    // - Supertype: Champion, Set: Set2, Rarity: None
+    // --------------------------------------------------------
+    // Description: When I Level Up, Obliterate the enemy deck,
+    //              leaving 4 non-champions.
+    //              Round Start: Summon a Sapling.
+    // --------------------------------------------------------
+    // Keyword:
+    // - Regeneration = 1
+    // --------------------------------------------------------
 }
 
 void AddShurima(entt::registry& registry)
