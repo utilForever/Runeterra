@@ -1127,22 +1127,503 @@ void AddNoxusNonCollect(entt::registry& registry)
 
 void AddPiltoverZaun(entt::registry& registry)
 {
-    // Do nothing
+    // ----------------------------- Landmark - Piltover-&-Zaun
+    // [03PZ001] The University of Piltover - COST:5
+    // - Set: Set3, Rarity: Epic
+    // --------------------------------------------------------
+    // Description: Round Start: Discard your hand.
+    //              Create 3 random cards in hand
+    //              and grant them Fleeting.
+    // --------------------------------------------------------
+    // Keyword:
+    // - Landmark = 1
+    // --------------------------------------------------------
+
+    // --------------------------------- Unit - Piltover-&-Zaun
+    // [03PZ019] Patched Porobot - COST:2
+    // - Set: Set3, Rarity: Rare
+    // --------------------------------------------------------
+    // Description: While in hand, I have a random keyword that
+    //              changes each round. When I'm summoned,
+    //              grant me this keyword.
+    // --------------------------------------------------------
+
+    // --------------------------------- Unit - Piltover-&-Zaun
+    // [03PZ005] Ballistic Bot - COST:2
+    // - Set: Set3, Rarity: Common
+    // --------------------------------------------------------
+    // Description: Round Start: Create a Ignition in hand.
+    // --------------------------------------------------------
+    // Keyword:
+    // - Augment = 1
+    // --------------------------------------------------------
+
+    // -------------------------------- Spell - Piltover-&-Zaun
+    // [03PZ004] Death Ray - Mk 1 - COST:1
+    // - Set: Set3, Rarity: Rare
+    // - Spell Speed: Fast
+    // --------------------------------------------------------
+    // Description: Deal 1 to a unit. Create a Death Ray - Mk 2
+    //              in the top 3 cards of your deck.
+    // --------------------------------------------------------
+    // Keyword:
+    // - Fast = 1
+    // --------------------------------------------------------
+
+    // --------------------------------- Unit - Piltover-&-Zaun
+    // [03PZ003] Viktor - COST:4
+    // - Supertype: Champion, Set: Set3, Rarity: Champion
+    // --------------------------------------------------------
+    // Description: When I'm summoned or Round Start:
+    //              Create a Hex Core Upgrade in hand.
+    // --------------------------------------------------------
+    // Level Up Description: You've played 7+ created cards.
+    // --------------------------------------------------------
+    // Keyword:
+    // - Augment = 1
+    // --------------------------------------------------------
+
+    // --------------------------------- Unit - Piltover-&-Zaun
+    // [03PZ010] Mechanized Mimic - COST:5
+    // - Set: Set3, Rarity: Epic
+    // --------------------------------------------------------
+    // Description: Attack: Grant me all keywords on allies.
+    // --------------------------------------------------------
+    // Keyword:
+    // - Augment = 1
+    // --------------------------------------------------------
+
+    // -------------------------------- Spell - Piltover-&-Zaun
+    // [03PZ022] Give It All - COST:8
+    // - Set: Set3, Rarity: Epic
+    // - Spell Speed: Slow
+    // --------------------------------------------------------
+    // Description: Grow all allies' Power and Health to
+    //              the highest Power or Health among allies.
+    //              Grant all allies allied keywords.
+    // --------------------------------------------------------
+    // Keyword:
+    // - Slow = 1
+    // --------------------------------------------------------
+
+    // -------------------------------- Spell - Piltover-&-Zaun
+    // [03PZ014] Calculated Creations - COST:2
+    // - Set: Set3, Rarity: Common
+    // - Spell Speed: Burst
+    // --------------------------------------------------------
+    // Description: Create a Armed Gearhead, Ballistic Bot,
+    //              or Nyandroid in hand.
+    // --------------------------------------------------------
+    // Keyword:
+    // - Burst = 1
+    // --------------------------------------------------------
+
+    // -------------------------------- Spell - Piltover-&-Zaun
+    // [03PZ013] Iterative Improvement - COST:2
+    // - Set: Set3, Rarity: Common
+    // - Spell Speed: Burst
+    // --------------------------------------------------------
+    // Description: Pick a follower.
+    //              Create a copy of it in hand with +1|+1.
+    // --------------------------------------------------------
+    // Keyword:
+    // - Burst = 1
+    // --------------------------------------------------------
+
+    // -------------------------------- Spell - Piltover-&-Zaun
+    // [03PZ025] Stress Testing - COST:1
+    // - Set: Set3, Rarity: Rare
+    // - Spell Speed: Burst
+    // --------------------------------------------------------
+    // Description: Remove Fleeting from all cards in hand.
+    //              When I'm discarded, draw 1 Fleeting.
+    // --------------------------------------------------------
+    // Keyword:
+    // - Burst = 1
+    // --------------------------------------------------------
+
+    // --------------------------------- Unit - Piltover-&-Zaun
+    // [03PZ012] Armed Gearhead - COST:1
+    // - Set: Set3, Rarity: Common
+    // --------------------------------------------------------
+    // Keyword:
+    // - Augment = 1
+    // - Quick Attack = 1
+    // --------------------------------------------------------
+
+    // ----------------------------- Landmark - Piltover-&-Zaun
+    // [03PZ020] Hexcore Foundry - COST:3
+    // - Set: Set3, Rarity: Rare
+    // --------------------------------------------------------
+    // Description: Round Start: ALL players draw 1.
+    // --------------------------------------------------------
+    // Keyword:
+    // - Landmark = 1
+    // --------------------------------------------------------
+
+    // --------------------------------- Unit - Piltover-&-Zaun
+    // [03PZ002] Nyandroid - COST:3
+    // - Set: Set3, Rarity: Rare
+    // --------------------------------------------------------
+    // Keyword:
+    // - Augment = 1
+    // - Elusive = 1
+    // --------------------------------------------------------
+
+    // -------------------------------- Spell - Piltover-&-Zaun
+    // [03PZ011] Aftershock - COST:4
+    // - Set: Set3, Rarity: Common
+    // - Spell Speed: Slow
+    // --------------------------------------------------------
+    // Description: Deal 3 to anything or destroy a landmark.
+    // --------------------------------------------------------
+    // Keyword:
+    // - Slow = 1
+    // --------------------------------------------------------
+
+    // -------------------------------- Spell - Piltover-&-Zaun
+    // [03PZ017] Tri-beam Improbulator - COST:5
+    // - Set: Set3, Rarity: Epic
+    // - Spell Speed: Slow
+    // --------------------------------------------------------
+    // Description: Deal 1 to a unit.
+    //              Summon a random 1 cost follower.
+    //              While I'm in hand, increase both by 1
+    //              when you play a 3 cost card.
+    // --------------------------------------------------------
+    // Keyword:
+    // - Slow = 1
+    // --------------------------------------------------------
+
+    // -------------------------------- Spell - Piltover-&-Zaun
+    // [03PZ018] Poro Cannon - COST:0
+    // - Set: Set3, Rarity: Common
+    // - Spell Speed: Burst
+    // --------------------------------------------------------
+    // Description: To play, discard 1.
+    //              Create 2 Daring Poros in hand.
+    // --------------------------------------------------------
+    // Keyword:
+    // - Burst = 1
+    // --------------------------------------------------------
 }
 
 void AddPiltoverZaunNonCollect(entt::registry& registry)
 {
-    // Do nothing
+    // -------------------------------- Spell - Piltover-&-Zaun
+    // [03PZ004T2] Death Ray - Mk 3 - COST:3
+    // - Set: Set3, Rarity: None
+    // - Spell Speed: Fast
+    // --------------------------------------------------------
+    // Description: Deal 3 to a unit.
+    // --------------------------------------------------------
+    // Keyword:
+    // - Fast = 1
+    // --------------------------------------------------------
+
+    // -------------------------------- Spell - Piltover-&-Zaun
+    // [03PZ004T1] Death Ray - Mk 2 - COST:2
+    // - Set: Set3, Rarity: None
+    // - Spell Speed: Fast
+    // --------------------------------------------------------
+    // Description: Deal 2 to a unit. Create a Death Ray - Mk 3
+    //              in the top 3 cards of your deck.
+    // --------------------------------------------------------
+    // Keyword:
+    // - Fast = 1
+    // --------------------------------------------------------
+
+    // --------------------------------- Unit - Piltover-&-Zaun
+    // [03PZ003T1] Viktor - COST:4
+    // - Supertype: Champion, Set: Set3, Rarity: None
+    // --------------------------------------------------------
+    // Description: Your created cards cost 1 less.
+    //              When I'm summoned or Round Start:
+    //              Create a Hex Core Upgrade in hand.
+    // --------------------------------------------------------
+    // Keyword:
+    // - Augment = 1
+    // --------------------------------------------------------
+
+    // -------------------------------- Spell - Piltover-&-Zaun
+    // [03PZ003T15] Viktor's Death Ray - Mk 1 - COST:1
+    // - Supertype: Champion, Set: Set3, Rarity: None
+    // - Spell Speed: Fast
+    // --------------------------------------------------------
+    // Description: Deal 1 to a unit. Create a Death Ray - Mk 2
+    //              in the top 3 cards of your deck.
+    //              Create a Viktor in your deck.
+    // --------------------------------------------------------
+    // Keyword:
+    // - Fast = 1
+    // --------------------------------------------------------
+
+    // -------------------------------- Spell - Piltover-&-Zaun
+    // [03PZ003T11] Hex Core Upgrade - COST:1
+    // - Set: Set3, Rarity: None
+    // - Spell Speed: Slow
+    // --------------------------------------------------------
+    // Description: Grant Viktor a random keyword.
+    // --------------------------------------------------------
+    // Keyword:
+    // - Slow = 1
+    // - Fleeting = 1
+    // --------------------------------------------------------
+
+    // -------------------------------- Spell - Piltover-&-Zaun
+    // [03PZ016] Ignition - COST:1
+    // - Set: Set3, Rarity: None
+    // - Spell Speed: Slow
+    // --------------------------------------------------------
+    // Description: Deal 1 to the enemy Nexus.
+    // --------------------------------------------------------
+    // Keyword:
+    // - Slow = 1
+    // - Fleeting = 1
+    // --------------------------------------------------------
 }
 
 void AddShadowIsles(entt::registry& registry)
 {
-    // Do nothing
+    // -------------------------------- Landmark - Shadow-Isles
+    // [03SI009] Vaults of Helia - COST:5
+    // - Set: Set3, Rarity: Epic
+    // --------------------------------------------------------
+    // Description: Round Start: If you can, kill your
+    //              most expensive ally to summon an ally
+    //              from your deck that costs 1 more.
+    // --------------------------------------------------------
+    // Keyword:
+    // - Landmark = 1
+    // --------------------------------------------------------
+
+    // ----------------------------------- Spell - Shadow-Isles
+    // [03SI008] Crumble - COST:5
+    // - Set: Set3, Rarity: Rare
+    // - Spell Speed: Slow
+    // --------------------------------------------------------
+    // Description: Kill an ally to kill a unit
+    //              or destroy a landmark.
+    // --------------------------------------------------------
+    // Keyword:
+    // - Slow = 1
+    // --------------------------------------------------------
+
+    // ----------------------------------- Spell - Shadow-Isles
+    // [03SI004] Stalking Shadows - COST:3
+    // - Set: Set3, Rarity: Rare
+    // - Spell Speed: Burst
+    // --------------------------------------------------------
+    // Description: Pick a follower from the top 4 cards
+    //              in your deck. Draw it, place the rest
+    //              into your deck, then create an exact
+    //              Ephemeral copy in hand.
+    // --------------------------------------------------------
+    // Keyword:
+    // - Burst = 1
+    // --------------------------------------------------------
+
+    // ------------------------------------ Unit - Shadow-Isles
+    // [03SI001] Evershade Stalker - COST:2
+    // - Set: Set3, Rarity: Epic
+    // --------------------------------------------------------
+    // Description: Nightfall: Create a copy of me in hand.
+    // --------------------------------------------------------
+    // Keyword:
+    // - Ephemeral = 1
+    // - Fearsome = 1
+    // - Can't Block = 1
+    // --------------------------------------------------------
+
+    // ----------------------------------- Spell - Shadow-Isles
+    // [03SI018] Gluttony - COST:3
+    // - Set: Set3, Rarity: Rare
+    // - Spell Speed: Fast
+    // --------------------------------------------------------
+    // Description: Kill an ally with Last Breath to summon
+    //              a follower from your deck that costs 1 more.
+    // --------------------------------------------------------
+    // Keyword:
+    // - Fast = 1
+    // --------------------------------------------------------
+
+    // ----------------------------------- Spell - Shadow-Isles
+    // [03SI012] Passage Unearned - COST:3
+    // - Set: Set3, Rarity: Rare
+    // - Spell Speed: Fast
+    // --------------------------------------------------------
+    // Description: Obliterate all units that were summoned,
+    //              but not played, this round.
+    // --------------------------------------------------------
+    // Keyword:
+    // - Fast = 1
+    // --------------------------------------------------------
+
+    // ----------------------------------- Spell - Shadow-Isles
+    // [03SI014] Encroaching Shadows - COST:4
+    // - Set: Set3, Rarity: Epic
+    // - Spell Speed: Burst
+    // --------------------------------------------------------
+    // Description: Grant ALL allies in deck and
+    //              hand +2|+2 and Ephemeral.
+    // --------------------------------------------------------
+    // Keyword:
+    // - Burst = 1
+    // --------------------------------------------------------
+
+    // ----------------------------------- Spell - Shadow-Isles
+    // [03SI016] Go Hard - COST:1
+    // - Set: Set3, Rarity: Epic
+    // - Spell Speed: Slow
+    // --------------------------------------------------------
+    // Description: Drain 1 from a unit and create 2 copies of
+    //              me in your deck. Once you've cast me 3 times,
+    //              transform all copies of me everywhere into
+    //              Pack Your Bags.
+    // --------------------------------------------------------
+    // Keyword:
+    // - Slow = 1
+    // --------------------------------------------------------
+
+    // ----------------------------------- Spell - Shadow-Isles
+    // [03SI007] Shroud of Darkness - COST:1
+    // - Set: Set3, Rarity: Common
+    // - Spell Speed: Burst
+    // --------------------------------------------------------
+    // Description: The next time you summon an ally this round,
+    //              give it +1|+0 and SpellShield this round.
+    // --------------------------------------------------------
+    // Keyword:
+    // - Burst = 1
+    // --------------------------------------------------------
+
+    // ----------------------------------- Spell - Shadow-Isles
+    // [03SI013] Risen Mists - COST:4
+    // - Set: Set3, Rarity: Common
+    // - Spell Speed: Burst
+    // --------------------------------------------------------
+    // Description: Summon a Mistwraith.
+    // --------------------------------------------------------
+    // Keyword:
+    // - Burst = 1
+    // --------------------------------------------------------
+
+    // ------------------------------------ Unit - Shadow-Isles
+    // [03SI005] Nocturne - COST:4
+    // - Supertype: Champion, Set: Set3, Rarity: Champion
+    // --------------------------------------------------------
+    // Description: Nightfall: Grant an enemy Vulnerable and
+    //              give enemies -1|-0 this round.
+    // --------------------------------------------------------
+    // Level Up Description: You've attacked with 5+ Nightfall allies.
+    // --------------------------------------------------------
+    // Keyword:
+    // - Fearsome = 1
+    // --------------------------------------------------------
+
+    // ------------------------------------ Unit - Shadow-Isles
+    // [03SI006] Doombeast - COST:3
+    // - Set: Set3, Rarity: Common
+    // --------------------------------------------------------
+    // Description: Nightfall: Drain 2 from the enemy Nexus.
+    // --------------------------------------------------------
+
+    // ------------------------------------ Unit - Shadow-Isles
+    // [03SI015] Pesky Specter - COST:0
+    // - Set: Set3, Rarity: Common
+    // --------------------------------------------------------
+    // Description: Last Breath: Create 2 copies of me
+    //              in the enemy deck.
+    // --------------------------------------------------------
+    // Keyword:
+    // - Ephemeral = 1
+    // - Last Breath = 1
+    // --------------------------------------------------------
+
+    // ------------------------------------ Unit - Shadow-Isles
+    // [03SI003] Stygian Onlooker - COST:1
+    // - Set: Set3, Rarity: Common
+    // --------------------------------------------------------
+    // Description: Nightfall: Give me +2|+0 and Fearsome
+    //              this round.
+    // --------------------------------------------------------
+
+    // ----------------------------------- Spell - Shadow-Isles
+    // [03SI002] Unspeakable Horror - COST:2
+    // - Set: Set3, Rarity: Common
+    // - Spell Speed: Fast
+    // --------------------------------------------------------
+    // Description: Drain 1 from anything.
+    //              Nightfall: Create a random Nightfall card
+    //              in hand.
+    // --------------------------------------------------------
+    // Keyword:
+    // - Fast = 1
+    // --------------------------------------------------------
+
+    // ------------------------------------ Unit - Shadow-Isles
+    // [03SI010] Duskrider - COST:5
+    // - Set: Set3, Rarity: Rare
+    // --------------------------------------------------------
+    // Description: Nightfall: Grant me +1|+0 for each time
+    //              we've activated Nightfall this game.
+    // --------------------------------------------------------
+    // Keyword:
+    // - Fearsome = 1
+    // --------------------------------------------------------
 }
 
 void AddShadowIslesyNonCollect(entt::registry& registry)
 {
-    // Do nothing
+    // ----------------------------------- Spell - Shadow-Isles
+    // [03SI016T1] Pack Your Bags - COST:5
+    // - Set: Set3, Rarity: None
+    // - Spell Speed: Slow
+    // --------------------------------------------------------
+    // Description: Deal 5 to all enemies and the enemy Nexus.
+    //              Transform all copies of me everywhere back
+    //              to Go Hard.
+    // --------------------------------------------------------
+    // Keyword:
+    // - Slow = 1
+    // --------------------------------------------------------
+
+    // ----------------------------------- Spell - Shadow-Isles
+    // [03SI005T3] Nocturne's Unspeakable Horror - COST:2
+    // - Supertype: Champion, Set: Set3, Rarity: None
+    // - Spell Speed: Fast
+    // --------------------------------------------------------
+    // Description: Drain 1 from anything.
+    //              Create a Nocturne in your deck.
+    //              Nightfall: Create a random non-champion
+    //              Nightfall card in hand.
+    // --------------------------------------------------------
+    // Keyword:
+    // - Fast = 1
+    // --------------------------------------------------------
+
+    // ------------------------------------ Unit - Shadow-Isles
+    // [03SI005T1] Nocturne - COST:4
+    // - Supertype: Champion, Set: Set3, Rarity: None
+    // --------------------------------------------------------
+    // Description: Other allies have Fearsome.
+    //              When you play a unit,
+    //              give enemies -1|-0 this round.
+    // --------------------------------------------------------
+    // Keyword:
+    // - Fearsome = 1
+    // - Missing Translation = 1
+    // --------------------------------------------------------
+
+    // --------------------------------- Ability - Shadow-Isles
+    // [03SI006T1] Torment - COST:0
+    // - Set: Set3, Rarity: None
+    // --------------------------------------------------------
+    // Description: Drain 2 from the enemy Nexus.
+    // --------------------------------------------------------
+    // Keyword:
+    // - Skill = 1
+    // --------------------------------------------------------
 }
 
 void AddShurima(entt::registry& registry)
