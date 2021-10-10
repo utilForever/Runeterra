@@ -11,6 +11,7 @@
 #include <Runeterra/CardSets/Set2CardsGen.hpp>
 #include <Runeterra/CardSets/Set3CardsGen.hpp>
 #include <Runeterra/CardSets/Set4CardsGen.hpp>
+#include <Runeterra/CardSets/Set5CardsGen.hpp>
 #include <Runeterra/Commons/Constants.hpp>
 #include <Runeterra/Commons/Macros.hpp>
 #include <Runeterra/Commons/Tags.hpp>
