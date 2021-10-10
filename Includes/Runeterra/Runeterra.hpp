@@ -7,6 +7,7 @@
 #ifndef RUNETERRA_HPP
 #define RUNETERRA_HPP
 
+#include <Runeterra/CardSets/Set1CardsGen.hpp>
 #include <Runeterra/Commons/Constants.hpp>
 #include <Runeterra/Commons/Macros.hpp>
 #include <Runeterra/Commons/Tags.hpp>
