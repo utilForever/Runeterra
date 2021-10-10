@@ -94,7 +94,7 @@ def generate_cards_comment(set_num):
         if "collectible" in card.keys() and card["collectible"] is True:
             collectible_cnt += 1
 
-        if card["region"] == "BandleCity":
+        if card["region"] == "Bandle City":
             data = generate_card_comment(card)
             data = data + "\n" + "\n"
             if "collectible" in card.keys() and card["collectible"]:
@@ -136,14 +136,14 @@ def generate_cards_comment(set_num):
                 noxus.append(data)
             else:
                 noxus_non_collect.append(data)
-        elif card["region"] == "PiltoverZaun":
+        elif card["region"] == "Piltover & Zaun":
             data = generate_card_comment(card)
             data = data + "\n" + "\n"
             if "collectible" in card.keys() and card["collectible"]:
                 piltover_zaun.append(data)
             else:
                 piltover_zaun_non_collect.append(data)
-        elif card["region"] == "ShadowIsles":
+        elif card["region"] == "Shadow Isles":
             data = generate_card_comment(card)
             data = data + "\n" + "\n"
             if "collectible" in card.keys() and card["collectible"]:
