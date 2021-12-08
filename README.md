@@ -2,7 +2,7 @@
 
 <img src="./Medias/Logos/Logo.png" width=256 height=256 />
 
-[![License](https://img.shields.io/badge/Licence-MIT-blue.svg)](https://github.com/utilForever/Runeterra/blob/master/LICENSE) ![Windows](https://github.com/utilForever/Runeterra/workflows/Windows/badge.svg) ![Ubuntu](https://github.com/utilForever/Runeterra/workflows/Ubuntu/badge.svg) ![macOS](https://github.com/utilForever/Runeterra/workflows/macOS/badge.svg) ![Ubuntu - Codecov](https://github.com/utilForever/Runeterra/workflows/Ubuntu%20-%20Codecov/badge.svg) [![Build Status](https://travis-ci.com/utilForever/Runeterra.svg?branch=main)](https://travis-ci.com/utilForever/Runeterra)
+[![License](https://img.shields.io/badge/Licence-MIT-blue.svg)](https://github.com/utilForever/Runeterra/blob/master/LICENSE) ![Windows](https://github.com/utilForever/Runeterra/workflows/Windows/badge.svg) ![Ubuntu](https://github.com/utilForever/Runeterra/workflows/Ubuntu/badge.svg) ![macOS](https://github.com/utilForever/Runeterra/workflows/macOS/badge.svg) ![Ubuntu - Codecov](https://github.com/utilForever/Runeterra/workflows/Ubuntu%20-%20Codecov/badge.svg) ![Ubuntu - SonarCloud](https://github.com/utilForever/Runeterra/workflows/Ubuntu%20-%20SonarCloud/badge.svg)
 
 [![codecov](https://codecov.io/gh/utilForever/Runeterra/branch/main/graph/badge.svg)](https://codecov.io/gh/utilForever/Runeterra)
 [![Codacy Badge](https://app.codacy.com/project/badge/Grade/048c90cb358f4132982cb9be4d776b29)](https://www.codacy.com/gh/utilForever/Runeterra/dashboard?utm_source=github.com&amp;utm_medium=referral&amp;utm_content=utilForever/Runeterra&amp;utm_campaign=Badge_Grade)
@@ -77,8 +77,9 @@ The class is licensed under the [MIT License](http://opensource.org/licenses/MIT
 
 Copyright &copy; 2021 Runeterra Team
 
-  * [Chris Ohk](http://www.github.com/utilForever)
+  * [Chris Ohk](https://github.com/utilForever)
   * [Seokmin Hong](https://github.com/SeokminHong)
+  * [Woojin Kim](https://github.com/wojino)
 
 Permission is hereby granted, free of charge, to any person obtaining a copy of this software and associated documentation files (the "Software"), to deal in the Software without restriction, including without limitation the rights to use, copy, modify, merge, publish, distribute, sublicense, and/or sell copies of the Software, and to permit persons to whom the Software is furnished to do so, subject to the following conditions:
 
