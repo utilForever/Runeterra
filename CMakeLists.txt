@@ -48,6 +48,7 @@ set(RESOURCES_JSONS
     ${RESOURCES_DIR}/set3-en_us.json)
 
 # Project modules
+add_subdirectory(Extensions/RuneConsole)
 add_subdirectory(Libraries/doctest)
 add_subdirectory(Sources/Runeterra)
 add_subdirectory(Tests/UnitTests)
