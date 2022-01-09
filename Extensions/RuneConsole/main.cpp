@@ -4,7 +4,21 @@
 // personal capacity and are not conveying any rights to any intellectual
 // property of any third parties.
 
+#include <Runeterra/Helpers/DeckCodeHelpers.hpp>
+#include <Runeterra/Systems/GameSystem.hpp>
+
+#include <entt/entt.hpp>
+
+#include <string>
+#include <vector>
+
+using namespace Runeterra;
+
 int main()
 {
-    return 0;
+    const std::vector<std::string> deck =
+        DeckCode::Decode("CEBAIAIFB4WDANQIAEAQGDAUDAQSIJZUAIAQCBIFAEAQCBAA");
+
+    entt::registry registry;
+    Game::CreatePlayers(registry, deck, deck);
 }
