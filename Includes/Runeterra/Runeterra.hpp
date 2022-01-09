@@ -27,6 +27,5 @@
 #include <Runeterra/Helpers/CardHelpers.hpp>
 #include <Runeterra/Helpers/DeckCodeHelpers.hpp>
 #include <Runeterra/Runeterra.hpp>
-#include <Runeterra/Systems/Game.hpp>
 
 #endif  // RUNETERRA_HPP
