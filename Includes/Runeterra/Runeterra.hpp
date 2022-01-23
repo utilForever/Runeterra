@@ -23,6 +23,7 @@
 #include <Runeterra/Components/Deck.hpp>
 #include <Runeterra/Components/Health.hpp>
 #include <Runeterra/Components/Name.hpp>
+#include <Runeterra/Components/Nexus.hpp>
 #include <Runeterra/Enums/CardEnums.hpp>
 #include <Runeterra/Helpers/CardHelpers.hpp>
 #include <Runeterra/Helpers/DeckCodeHelpers.hpp>
