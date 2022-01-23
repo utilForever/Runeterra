@@ -7,8 +7,13 @@
 #ifndef RUNETERRA_GAME_SYSTEM_HPP
 #define RUNETERRA_GAME_SYSTEM_HPP
 
+#include <entt/entt.hpp>
+
 namespace Runeterra
 {
+//! Updates game system.
+//! \param registry A registry that handles entities.
+void UpdateGameSystem(entt::registry& registry);
 }  // namespace Runeterra
 
 #endif  // RUNETERRA_GAME_SYSTEM_HPP
