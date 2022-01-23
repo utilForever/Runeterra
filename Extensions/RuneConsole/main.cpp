@@ -5,7 +5,7 @@
 // property of any third parties.
 
 #include <Runeterra/Helpers/DeckCodeHelpers.hpp>
-#include <Runeterra/Systems/GameSystem.hpp>
+#include <Runeterra/Helpers/GameHelpers.hpp>
 
 #include <entt/entt.hpp>
 
