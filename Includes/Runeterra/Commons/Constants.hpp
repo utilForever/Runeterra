@@ -19,6 +19,9 @@ constexpr int NUM_PLAYERS = 2;
 //! The maximum number of cards that is allowed in the deck.
 constexpr int MAX_ALLOWED_IN_DECK = 3;
 
+//! The maximum value of Nexus's health point.
+constexpr int MAX_NEXUS_HEALTH_POINT = 20;
+
 //! The number of cards that can be stored in the deck at game start.
 constexpr int START_DECK_SIZE = 40;
 
