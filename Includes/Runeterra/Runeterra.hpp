@@ -21,6 +21,7 @@
 #include <Runeterra/Components/Collectible.hpp>
 #include <Runeterra/Components/Cost.hpp>
 #include <Runeterra/Components/Deck.hpp>
+#include <Runeterra/Components/Game.hpp>
 #include <Runeterra/Components/Health.hpp>
 #include <Runeterra/Components/Name.hpp>
 #include <Runeterra/Components/Nexus.hpp>
