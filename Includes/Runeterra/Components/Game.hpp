@@ -9,8 +9,8 @@
 
 namespace Runeterra
 {
-//! \brief An enumerator for identifying the game state.
-enum class GameState
+//! \brief An enumerator for identifying the play state.
+enum class PlayState
 {
     INVALID,
     PLAYING,
@@ -27,7 +27,7 @@ enum class GameState
 //!
 struct Game
 {
-    GameState state;
+    PlayState state;
 };
 }  // namespace Runeterra
 
