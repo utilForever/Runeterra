@@ -20,5 +20,6 @@ int main()
         DeckCode::Decode("CEBAIAIFB4WDANQIAEAQGDAUDAQSIJZUAIAQCBIFAEAQCBAA");
 
     entt::registry registry;
+    Game::Initialize(registry);
     Game::CreatePlayers(registry, deck, deck);
 }
