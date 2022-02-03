@@ -27,6 +27,6 @@ void CreatePlayers(entt::registry& registry,
     registry.emplace<Tag::Player>(entity2);
     registry.emplace<Name>(entity2, "Player 2");
     registry.emplace<Nexus>(entity2, MAX_NEXUS_HEALTH_POINT);
-    registry.emplace<Deck>(entity2, deck1);
+    registry.emplace<Deck>(entity2, deck2);
 }
 }  // namespace Runeterra::Game
