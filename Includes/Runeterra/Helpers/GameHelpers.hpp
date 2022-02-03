@@ -14,6 +14,9 @@
 
 namespace Runeterra::Game
 {
+//! Initializes a game according to game config.
+void Initialize(entt::registry& registry);
+
 //! Creates two players to play the game.
 //! \param registry A registry that handles entities.
 //! \param deck1 A list of cards to create the deck for player 1.

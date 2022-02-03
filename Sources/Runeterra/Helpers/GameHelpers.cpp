@@ -7,12 +7,20 @@
 #include <Runeterra/Commons/Constants.hpp>
 #include <Runeterra/Commons/Tags.hpp>
 #include <Runeterra/Components/Deck.hpp>
+#include <Runeterra/Components/GameState.hpp>
 #include <Runeterra/Components/Name.hpp>
 #include <Runeterra/Components/Nexus.hpp>
 #include <Runeterra/Helpers/GameHelpers.hpp>
 
 namespace Runeterra::Game
 {
+void Initialize(entt::registry& registry)
+{
+    auto entity = registry.create();
+    registry.emplace<Tag::Game>(entity);
+    registry.emplace<GameState>(entity, PlayState::INVALID);
+}
+
 void CreatePlayers(entt::registry& registry,
                    const std::vector<std::string>& deck1,
                    const std::vector<std::string>& deck2)
