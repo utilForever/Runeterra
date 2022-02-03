@@ -21,11 +21,11 @@ enum class PlayState
 };
 
 //!
-//! \brief Game struct.
+//! \brief GameState struct.
 //!
-//! This struct stores game configs and states.
+//! This struct stores game states.
 //!
-struct Game
+struct GameState
 {
     PlayState state;
 };
