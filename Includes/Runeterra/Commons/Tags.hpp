@@ -15,8 +15,9 @@ namespace Tag
 {
 using namespace entt::literals;
 
+using Game = entt::tag<"game"_hs>;
 using Player = entt::tag<"player"_hs>;
-}
+}  // namespace Tag
 }  // namespace Runeterra
 
 #endif  // RUNETERRA_TAGS_HPP
